@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace PeminjamanInventaris
 {
-    public partial class BarangForm : Form
+    public partial class DataMasterForm : Form
     {
-        public BarangForm()
+        public DataMasterForm()
         {
             InitializeComponent();
         }
 
-        private void txtIDBarang_TextChanged(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnKBarang_Click(object sender, EventArgs e)
-        {
-            KategoriForm kat = new KategoriForm();
-            kat.Show();
+            MainMenuForm mainMenu = new MainMenuForm();
+            mainMenu.Show();
             this.Hide();
         }
     }

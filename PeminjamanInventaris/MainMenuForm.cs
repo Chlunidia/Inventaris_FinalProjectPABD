@@ -17,13 +17,6 @@ namespace PeminjamanInventaris
             InitializeComponent();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            TambahDataForm tambahData = new TambahDataForm();
-            tambahData.Show();
-            this.Hide();
-        }
-
         private void btnPengembalian_Click(object sender, EventArgs e)
         {
             PengembalianForm pengembalian = new PengembalianForm();
@@ -49,6 +42,13 @@ namespace PeminjamanInventaris
         {
             PeminjamanForm peminjaman = new PeminjamanForm();
             peminjaman.Show();
+            this.Hide();
+        }
+
+        private void btnDataMaster_Click(object sender, EventArgs e)
+        {
+            DataMasterForm dm = new DataMasterForm();
+            dm.Show();
             this.Hide();
         }
     }

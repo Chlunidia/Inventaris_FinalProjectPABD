@@ -52,6 +52,12 @@
     <Compile Include="BarangForm.Designer.cs">
       <DependentUpon>BarangForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataMasterForm.Designer.cs">
+      <DependentUpon>DataMasterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     <Compile Include="PeminjamanForm.Designer.cs">
       <DependentUpon>PeminjamanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PeminjamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeminjamForm.Designer.cs">
+      <DependentUpon>PeminjamForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PengembalianForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,14 +119,11 @@
     <Compile Include="RiwayatForm.Designer.cs">
       <DependentUpon>RiwayatForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TambahDataForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TambahDataForm.Designer.cs">
-      <DependentUpon>TambahDataForm.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="BarangForm.resx">
       <DependentUpon>BarangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataMasterForm.resx">
+      <DependentUpon>DataMasterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -130,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PeminjamanForm.resx">
       <DependentUpon>PeminjamanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeminjamForm.resx">
+      <DependentUpon>PeminjamForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PengembalianForm.resx">
       <DependentUpon>PengembalianForm.cs</DependentUpon>
@@ -148,9 +160,6 @@
     </Compile>
     <EmbeddedResource Include="RiwayatForm.resx">
       <DependentUpon>RiwayatForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TambahDataForm.resx">
-      <DependentUpon>TambahDataForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="inventarisDataSet.xsc">
       <DependentUpon>inventarisDataSet.xsd</DependentUpon>

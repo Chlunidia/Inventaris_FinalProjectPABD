@@ -1,6 +1,6 @@
 ﻿namespace PeminjamanInventaris
 {
-    partial class RiwayatForm
+    partial class PeminjamForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,91 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.labelRiwayat = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.labelIDPeminjam = new System.Windows.Forms.Label();
+            this.labelIDB = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labelPeminjam = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 146);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(886, 477);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // labelRiwayat
-            // 
-            this.labelRiwayat.AutoSize = true;
-            this.labelRiwayat.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRiwayat.Location = new System.Drawing.Point(187, 16);
-            this.labelRiwayat.Name = "labelRiwayat";
-            this.labelRiwayat.Size = new System.Drawing.Size(584, 114);
-            this.labelRiwayat.TabIndex = 1;
-            this.labelRiwayat.Text = "Riwayat Peminjaman\r\n";
             // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(417, 707);
+            this.btnBack.Location = new System.Drawing.Point(420, 704);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(120, 52);
-            this.btnBack.TabIndex = 71;
+            this.btnBack.TabIndex = 77;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(702, 648);
+            this.btnSearch.Location = new System.Drawing.Point(714, 645);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(120, 52);
-            this.btnSearch.TabIndex = 70;
+            this.btnSearch.TabIndex = 76;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // labelIDPeminjam
+            // labelIDB
             // 
-            this.labelIDPeminjam.AutoSize = true;
-            this.labelIDPeminjam.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIDPeminjam.Location = new System.Drawing.Point(118, 657);
-            this.labelIDPeminjam.Name = "labelIDPeminjam";
-            this.labelIDPeminjam.Size = new System.Drawing.Size(215, 22);
-            this.labelIDPeminjam.TabIndex = 69;
-            this.labelIDPeminjam.Text = "Masukkan ID Peminjaman";
+            this.labelIDB.AutoSize = true;
+            this.labelIDB.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIDB.Location = new System.Drawing.Point(116, 653);
+            this.labelIDB.Name = "labelIDB";
+            this.labelIDB.Size = new System.Drawing.Size(223, 22);
+            this.labelIDB.TabIndex = 75;
+            this.labelIDB.Text = "Masukkan Nama Peminjam";
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(358, 654);
+            this.textBox1.Location = new System.Drawing.Point(370, 651);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(318, 38);
-            this.textBox1.TabIndex = 68;
+            this.textBox1.TabIndex = 74;
             // 
-            // RiwayatForm
+            // labelPeminjam
+            // 
+            this.labelPeminjam.AutoSize = true;
+            this.labelPeminjam.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPeminjam.Location = new System.Drawing.Point(290, 13);
+            this.labelPeminjam.Name = "labelPeminjam";
+            this.labelPeminjam.Size = new System.Drawing.Size(442, 114);
+            this.labelPeminjam.TabIndex = 73;
+            this.labelPeminjam.Text = "Data Peminjam\r\n";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(40, 143);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.Size = new System.Drawing.Size(886, 477);
+            this.dataGridView1.TabIndex = 72;
+            // 
+            // PeminjamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(956, 788);
+            this.ClientSize = new System.Drawing.Size(962, 791);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.labelIDPeminjam);
+            this.Controls.Add(this.labelIDB);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.labelRiwayat);
+            this.Controls.Add(this.labelPeminjam);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "RiwayatForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RiwayatForm";
+            this.Name = "PeminjamForm";
+            this.Text = "PeminjamForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -121,11 +117,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label labelRiwayat;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label labelIDPeminjam;
+        private System.Windows.Forms.Label labelIDB;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelPeminjam;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

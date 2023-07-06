@@ -19,8 +19,8 @@ namespace PeminjamanInventaris
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            TambahDataForm tambahData = new TambahDataForm();
-            tambahData.Show();
+            DataMasterForm dm = new DataMasterForm();
+            dm.Show();
             this.Hide();
         }
     }

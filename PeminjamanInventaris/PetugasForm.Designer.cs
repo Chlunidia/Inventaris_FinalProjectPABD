@@ -60,7 +60,7 @@
             // dataGridViewPeminjam
             // 
             this.dataGridViewPeminjam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPeminjam.Location = new System.Drawing.Point(543, 81);
+            this.dataGridViewPeminjam.Location = new System.Drawing.Point(543, 137);
             this.dataGridViewPeminjam.Name = "dataGridViewPeminjam";
             this.dataGridViewPeminjam.RowHeadersWidth = 62;
             this.dataGridViewPeminjam.RowTemplate.Height = 28;
@@ -70,7 +70,8 @@
             // txtOrganisasi
             // 
             this.txtOrganisasi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtOrganisasi.Location = new System.Drawing.Point(190, 389);
+            this.txtOrganisasi.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrganisasi.Location = new System.Drawing.Point(190, 445);
             this.txtOrganisasi.Multiline = true;
             this.txtOrganisasi.Name = "txtOrganisasi";
             this.txtOrganisasi.Size = new System.Drawing.Size(318, 38);
@@ -79,7 +80,8 @@
             // txtNoTlp
             // 
             this.txtNoTlp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNoTlp.Location = new System.Drawing.Point(190, 345);
+            this.txtNoTlp.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoTlp.Location = new System.Drawing.Point(190, 401);
             this.txtNoTlp.Multiline = true;
             this.txtNoTlp.Name = "txtNoTlp";
             this.txtNoTlp.Size = new System.Drawing.Size(318, 38);
@@ -88,7 +90,8 @@
             // txtKodePos
             // 
             this.txtKodePos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtKodePos.Location = new System.Drawing.Point(190, 301);
+            this.txtKodePos.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKodePos.Location = new System.Drawing.Point(190, 357);
             this.txtKodePos.Multiline = true;
             this.txtKodePos.Name = "txtKodePos";
             this.txtKodePos.Size = new System.Drawing.Size(318, 38);
@@ -97,7 +100,8 @@
             // txtAKota
             // 
             this.txtAKota.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAKota.Location = new System.Drawing.Point(190, 213);
+            this.txtAKota.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAKota.Location = new System.Drawing.Point(190, 269);
             this.txtAKota.Multiline = true;
             this.txtAKota.Name = "txtAKota";
             this.txtAKota.Size = new System.Drawing.Size(318, 38);
@@ -106,7 +110,8 @@
             // txtAJalan
             // 
             this.txtAJalan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAJalan.Location = new System.Drawing.Point(190, 169);
+            this.txtAJalan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAJalan.Location = new System.Drawing.Point(190, 225);
             this.txtAJalan.Multiline = true;
             this.txtAJalan.Name = "txtAJalan";
             this.txtAJalan.Size = new System.Drawing.Size(318, 38);
@@ -115,7 +120,8 @@
             // txtNamaPetugas
             // 
             this.txtNamaPetugas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNamaPetugas.Location = new System.Drawing.Point(190, 125);
+            this.txtNamaPetugas.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamaPetugas.Location = new System.Drawing.Point(190, 181);
             this.txtNamaPetugas.Multiline = true;
             this.txtNamaPetugas.Name = "txtNamaPetugas";
             this.txtNamaPetugas.Size = new System.Drawing.Size(318, 38);
@@ -124,7 +130,8 @@
             // txtIDPetugas
             // 
             this.txtIDPetugas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDPetugas.Location = new System.Drawing.Point(190, 81);
+            this.txtIDPetugas.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDPetugas.Location = new System.Drawing.Point(190, 137);
             this.txtIDPetugas.Multiline = true;
             this.txtIDPetugas.Name = "txtIDPetugas";
             this.txtIDPetugas.Size = new System.Drawing.Size(318, 38);
@@ -132,7 +139,8 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(876, 450);
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(876, 506);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 52);
             this.btnDelete.TabIndex = 35;
@@ -141,7 +149,8 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(217, 450);
+            this.btnClear.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(217, 506);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 52);
             this.btnClear.TabIndex = 34;
@@ -150,7 +159,8 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(91, 450);
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(91, 506);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(120, 52);
             this.btnAdd.TabIndex = 33;
@@ -160,89 +170,98 @@
             // labelJabatan
             // 
             this.labelJabatan.AutoSize = true;
-            this.labelJabatan.Location = new System.Drawing.Point(33, 392);
+            this.labelJabatan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJabatan.Location = new System.Drawing.Point(33, 448);
             this.labelJabatan.Name = "labelJabatan";
-            this.labelJabatan.Size = new System.Drawing.Size(67, 20);
+            this.labelJabatan.Size = new System.Drawing.Size(69, 22);
             this.labelJabatan.TabIndex = 31;
             this.labelJabatan.Text = "Jabatan";
             // 
             // labelNoTlp
             // 
             this.labelNoTlp.AutoSize = true;
-            this.labelNoTlp.Location = new System.Drawing.Point(33, 348);
+            this.labelNoTlp.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoTlp.Location = new System.Drawing.Point(33, 404);
             this.labelNoTlp.Name = "labelNoTlp";
-            this.labelNoTlp.Size = new System.Drawing.Size(94, 20);
+            this.labelNoTlp.Size = new System.Drawing.Size(108, 22);
             this.labelNoTlp.TabIndex = 30;
             this.labelNoTlp.Text = "No. Telepon";
             // 
             // labelKodePos
             // 
             this.labelKodePos.AutoSize = true;
-            this.labelKodePos.Location = new System.Drawing.Point(33, 304);
+            this.labelKodePos.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKodePos.Location = new System.Drawing.Point(33, 360);
             this.labelKodePos.Name = "labelKodePos";
-            this.labelKodePos.Size = new System.Drawing.Size(77, 20);
+            this.labelKodePos.Size = new System.Drawing.Size(87, 22);
             this.labelKodePos.TabIndex = 29;
             this.labelKodePos.Text = "Kode Pos";
             // 
             // labelAProvinsi
             // 
             this.labelAProvinsi.AutoSize = true;
-            this.labelAProvinsi.Location = new System.Drawing.Point(33, 260);
+            this.labelAProvinsi.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAProvinsi.Location = new System.Drawing.Point(33, 316);
             this.labelAProvinsi.Name = "labelAProvinsi";
-            this.labelAProvinsi.Size = new System.Drawing.Size(117, 20);
+            this.labelAProvinsi.Size = new System.Drawing.Size(139, 22);
             this.labelAProvinsi.TabIndex = 28;
             this.labelAProvinsi.Text = "Alamat Provinsi";
             // 
             // labelAKota
             // 
             this.labelAKota.AutoSize = true;
-            this.labelAKota.Location = new System.Drawing.Point(33, 216);
+            this.labelAKota.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAKota.Location = new System.Drawing.Point(33, 272);
             this.labelAKota.Name = "labelAKota";
-            this.labelAKota.Size = new System.Drawing.Size(96, 20);
+            this.labelAKota.Size = new System.Drawing.Size(110, 22);
             this.labelAKota.TabIndex = 27;
             this.labelAKota.Text = "Alamat Kota";
             // 
             // labelAJalan
             // 
             this.labelAJalan.AutoSize = true;
-            this.labelAJalan.Location = new System.Drawing.Point(33, 172);
+            this.labelAJalan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAJalan.Location = new System.Drawing.Point(33, 228);
             this.labelAJalan.Name = "labelAJalan";
-            this.labelAJalan.Size = new System.Drawing.Size(101, 20);
+            this.labelAJalan.Size = new System.Drawing.Size(113, 22);
             this.labelAJalan.TabIndex = 26;
             this.labelAJalan.Text = "Alamat Jalan";
             // 
             // labelNamaPetugas
             // 
             this.labelNamaPetugas.AutoSize = true;
-            this.labelNamaPetugas.Location = new System.Drawing.Point(33, 128);
+            this.labelNamaPetugas.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNamaPetugas.Location = new System.Drawing.Point(33, 184);
             this.labelNamaPetugas.Name = "labelNamaPetugas";
-            this.labelNamaPetugas.Size = new System.Drawing.Size(114, 20);
+            this.labelNamaPetugas.Size = new System.Drawing.Size(121, 22);
             this.labelNamaPetugas.TabIndex = 25;
             this.labelNamaPetugas.Text = "Nama Petugas";
             // 
             // labelIDPetugas
             // 
             this.labelIDPetugas.AutoSize = true;
-            this.labelIDPetugas.Location = new System.Drawing.Point(33, 84);
+            this.labelIDPetugas.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIDPetugas.Location = new System.Drawing.Point(33, 140);
             this.labelIDPetugas.Name = "labelIDPetugas";
-            this.labelIDPetugas.Size = new System.Drawing.Size(89, 20);
+            this.labelIDPetugas.Size = new System.Drawing.Size(95, 22);
             this.labelIDPetugas.TabIndex = 24;
             this.labelIDPetugas.Text = "ID Petugas";
             // 
             // labelPetugas
             // 
             this.labelPetugas.AutoSize = true;
-            this.labelPetugas.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPetugas.Location = new System.Drawing.Point(417, 9);
+            this.labelPetugas.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPetugas.Location = new System.Drawing.Point(524, 12);
             this.labelPetugas.Name = "labelPetugas";
-            this.labelPetugas.Size = new System.Drawing.Size(201, 55);
+            this.labelPetugas.Size = new System.Drawing.Size(235, 114);
             this.labelPetugas.TabIndex = 23;
             this.labelPetugas.Text = "Petugas";
             // 
             // txtIDP
             // 
             this.txtIDP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDP.Location = new System.Drawing.Point(791, 395);
+            this.txtIDP.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDP.Location = new System.Drawing.Point(799, 451);
             this.txtIDP.Multiline = true;
             this.txtIDP.Name = "txtIDP";
             this.txtIDP.Size = new System.Drawing.Size(318, 38);
@@ -251,15 +270,17 @@
             // labelIDP
             // 
             this.labelIDP.AutoSize = true;
-            this.labelIDP.Location = new System.Drawing.Point(599, 398);
+            this.labelIDP.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIDP.Location = new System.Drawing.Point(595, 454);
             this.labelIDP.Name = "labelIDP";
-            this.labelIDP.Size = new System.Drawing.Size(166, 20);
+            this.labelIDP.Size = new System.Drawing.Size(179, 22);
             this.labelIDP.TabIndex = 55;
             this.labelIDP.Text = "Masukkan ID Petugas";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(750, 450);
+            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(750, 506);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(120, 52);
             this.btnSearch.TabIndex = 57;
@@ -268,7 +289,8 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(343, 450);
+            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(343, 506);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(120, 52);
             this.btnUpdate.TabIndex = 58;
@@ -277,7 +299,8 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(543, 515);
+            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(543, 571);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(120, 52);
             this.btnBack.TabIndex = 62;
@@ -287,17 +310,19 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(190, 262);
+            this.comboBox1.Location = new System.Drawing.Point(190, 313);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(318, 28);
+            this.comboBox1.Size = new System.Drawing.Size(318, 30);
             this.comboBox1.TabIndex = 63;
             // 
             // PetugasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 589);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(1204, 653);
             this.ControlBox = false;
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnBack);

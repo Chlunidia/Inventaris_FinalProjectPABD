@@ -53,7 +53,8 @@
             // txtJumlah
             // 
             this.txtJumlah.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtJumlah.Location = new System.Drawing.Point(211, 184);
+            this.txtJumlah.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJumlah.Location = new System.Drawing.Point(214, 230);
             this.txtJumlah.Multiline = true;
             this.txtJumlah.Name = "txtJumlah";
             this.txtJumlah.Size = new System.Drawing.Size(318, 38);
@@ -62,7 +63,8 @@
             // txtNamaBarang
             // 
             this.txtNamaBarang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNamaBarang.Location = new System.Drawing.Point(211, 140);
+            this.txtNamaBarang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamaBarang.Location = new System.Drawing.Point(214, 186);
             this.txtNamaBarang.Multiline = true;
             this.txtNamaBarang.Name = "txtNamaBarang";
             this.txtNamaBarang.Size = new System.Drawing.Size(318, 38);
@@ -71,7 +73,8 @@
             // txtIDBarang
             // 
             this.txtIDBarang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDBarang.Location = new System.Drawing.Point(211, 96);
+            this.txtIDBarang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDBarang.Location = new System.Drawing.Point(214, 142);
             this.txtIDBarang.Multiline = true;
             this.txtIDBarang.Name = "txtIDBarang";
             this.txtIDBarang.Size = new System.Drawing.Size(318, 38);
@@ -81,52 +84,57 @@
             // labelAKota
             // 
             this.labelAKota.AutoSize = true;
-            this.labelAKota.Location = new System.Drawing.Point(32, 228);
+            this.labelAKota.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAKota.Location = new System.Drawing.Point(35, 274);
             this.labelAKota.Name = "labelAKota";
-            this.labelAKota.Size = new System.Drawing.Size(145, 20);
+            this.labelAKota.Size = new System.Drawing.Size(165, 22);
             this.labelAKota.TabIndex = 43;
             this.labelAKota.Text = "ID Kategori Barang";
             // 
             // labelJumlah
             // 
             this.labelJumlah.AutoSize = true;
-            this.labelJumlah.Location = new System.Drawing.Point(32, 184);
+            this.labelJumlah.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJumlah.Location = new System.Drawing.Point(35, 230);
             this.labelJumlah.Name = "labelJumlah";
-            this.labelJumlah.Size = new System.Drawing.Size(60, 20);
+            this.labelJumlah.Size = new System.Drawing.Size(65, 22);
             this.labelJumlah.TabIndex = 42;
             this.labelJumlah.Text = "Jumlah";
             // 
             // labelNamaBarang
             // 
             this.labelNamaBarang.AutoSize = true;
-            this.labelNamaBarang.Location = new System.Drawing.Point(32, 140);
+            this.labelNamaBarang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNamaBarang.Location = new System.Drawing.Point(35, 186);
             this.labelNamaBarang.Name = "labelNamaBarang";
-            this.labelNamaBarang.Size = new System.Drawing.Size(107, 20);
+            this.labelNamaBarang.Size = new System.Drawing.Size(117, 22);
             this.labelNamaBarang.TabIndex = 41;
             this.labelNamaBarang.Text = "Nama Barang";
             // 
             // labelIDBarang
             // 
             this.labelIDBarang.AutoSize = true;
-            this.labelIDBarang.Location = new System.Drawing.Point(32, 96);
+            this.labelIDBarang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIDBarang.Location = new System.Drawing.Point(35, 142);
             this.labelIDBarang.Name = "labelIDBarang";
-            this.labelIDBarang.Size = new System.Drawing.Size(82, 20);
+            this.labelIDBarang.Size = new System.Drawing.Size(91, 22);
             this.labelIDBarang.TabIndex = 40;
             this.labelIDBarang.Text = "ID Barang";
             // 
             // labelBarang
             // 
             this.labelBarang.AutoSize = true;
-            this.labelBarang.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBarang.Location = new System.Drawing.Point(304, 20);
+            this.labelBarang.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBarang.Location = new System.Drawing.Point(283, 13);
             this.labelBarang.Name = "labelBarang";
-            this.labelBarang.Size = new System.Drawing.Size(180, 55);
+            this.labelBarang.Size = new System.Drawing.Size(239, 114);
             this.labelBarang.TabIndex = 48;
             this.labelBarang.Text = "Barang";
             // 
             // btnKBarang
             // 
-            this.btnKBarang.Location = new System.Drawing.Point(552, 228);
+            this.btnKBarang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKBarang.Location = new System.Drawing.Point(555, 274);
             this.btnKBarang.Name = "btnKBarang";
             this.btnKBarang.Size = new System.Drawing.Size(202, 38);
             this.btnKBarang.TabIndex = 49;
@@ -136,7 +144,8 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(401, 573);
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(402, 619);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 52);
             this.btnDelete.TabIndex = 52;
@@ -145,7 +154,8 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(552, 140);
+            this.btnClear.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(555, 186);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(202, 38);
             this.btnClear.TabIndex = 51;
@@ -154,7 +164,8 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(552, 96);
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(555, 142);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(202, 38);
             this.btnAdd.TabIndex = 50;
@@ -164,7 +175,8 @@
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(306, 520);
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(323, 566);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(318, 38);
@@ -173,16 +185,17 @@
             // labelIDB
             // 
             this.labelIDB.AutoSize = true;
-            this.labelIDB.Location = new System.Drawing.Point(122, 523);
+            this.labelIDB.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIDB.Location = new System.Drawing.Point(124, 569);
             this.labelIDB.Name = "labelIDB";
-            this.labelIDB.Size = new System.Drawing.Size(159, 20);
+            this.labelIDB.Size = new System.Drawing.Size(175, 22);
             this.labelIDB.TabIndex = 54;
             this.labelIDB.Text = "Masukkan ID Barang";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 289);
+            this.dataGridView1.Location = new System.Drawing.Point(39, 335);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -191,7 +204,8 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(275, 573);
+            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(276, 619);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(120, 52);
             this.btnSearch.TabIndex = 56;
@@ -200,7 +214,8 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(552, 184);
+            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(555, 230);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(202, 38);
             this.btnUpdate.TabIndex = 59;
@@ -209,28 +224,30 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(211, 230);
+            this.comboBox1.Location = new System.Drawing.Point(214, 276);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(318, 28);
+            this.comboBox1.Size = new System.Drawing.Size(318, 30);
             this.comboBox1.TabIndex = 60;
             // 
             // btnBack
             // 
+            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBack.Location = new System.Drawing.Point(340, 631);
+            this.btnBack.Location = new System.Drawing.Point(341, 677);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(120, 52);
             this.btnBack.TabIndex = 61;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // BarangForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 713);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(793, 768);
             this.ControlBox = false;
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.comboBox1);
