@@ -37,5 +37,19 @@ namespace PeminjamanInventaris
             f1.Show();
             this.Hide();
         }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            RiwayatForm riwayat = new RiwayatForm();
+            riwayat.Show();
+            this.Hide();
+        }
+
+        private void btnPeminjaman_Click(object sender, EventArgs e)
+        {
+            PeminjamanForm peminjaman = new PeminjamanForm();
+            peminjaman.Show();
+            this.Hide();
+        }
     }
 }

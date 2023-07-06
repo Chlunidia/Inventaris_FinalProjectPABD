@@ -79,6 +79,7 @@
             // 
             // txtUserID
             // 
+            this.txtUserID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserID.Location = new System.Drawing.Point(36, 146);
             this.txtUserID.Multiline = true;
             this.txtUserID.Name = "txtUserID";
@@ -87,6 +88,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Location = new System.Drawing.Point(36, 228);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";

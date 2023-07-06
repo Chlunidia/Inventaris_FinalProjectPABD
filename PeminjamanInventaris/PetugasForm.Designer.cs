@@ -39,7 +39,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.labelOrganisasi = new System.Windows.Forms.Label();
+            this.labelJabatan = new System.Windows.Forms.Label();
             this.labelNoTlp = new System.Windows.Forms.Label();
             this.labelKodePos = new System.Windows.Forms.Label();
             this.labelAProvinsi = new System.Windows.Forms.Label();
@@ -69,6 +69,7 @@
             // 
             // txtOrganisasi
             // 
+            this.txtOrganisasi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOrganisasi.Location = new System.Drawing.Point(190, 389);
             this.txtOrganisasi.Multiline = true;
             this.txtOrganisasi.Name = "txtOrganisasi";
@@ -77,6 +78,7 @@
             // 
             // txtNoTlp
             // 
+            this.txtNoTlp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNoTlp.Location = new System.Drawing.Point(190, 345);
             this.txtNoTlp.Multiline = true;
             this.txtNoTlp.Name = "txtNoTlp";
@@ -85,6 +87,7 @@
             // 
             // txtKodePos
             // 
+            this.txtKodePos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtKodePos.Location = new System.Drawing.Point(190, 301);
             this.txtKodePos.Multiline = true;
             this.txtKodePos.Name = "txtKodePos";
@@ -93,6 +96,7 @@
             // 
             // txtAKota
             // 
+            this.txtAKota.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAKota.Location = new System.Drawing.Point(190, 213);
             this.txtAKota.Multiline = true;
             this.txtAKota.Name = "txtAKota";
@@ -101,6 +105,7 @@
             // 
             // txtAJalan
             // 
+            this.txtAJalan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAJalan.Location = new System.Drawing.Point(190, 169);
             this.txtAJalan.Multiline = true;
             this.txtAJalan.Name = "txtAJalan";
@@ -109,6 +114,7 @@
             // 
             // txtNamaPetugas
             // 
+            this.txtNamaPetugas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNamaPetugas.Location = new System.Drawing.Point(190, 125);
             this.txtNamaPetugas.Multiline = true;
             this.txtNamaPetugas.Name = "txtNamaPetugas";
@@ -117,6 +123,7 @@
             // 
             // txtIDPetugas
             // 
+            this.txtIDPetugas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDPetugas.Location = new System.Drawing.Point(190, 81);
             this.txtIDPetugas.Multiline = true;
             this.txtIDPetugas.Name = "txtIDPetugas";
@@ -150,14 +157,14 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // labelOrganisasi
+            // labelJabatan
             // 
-            this.labelOrganisasi.AutoSize = true;
-            this.labelOrganisasi.Location = new System.Drawing.Point(33, 392);
-            this.labelOrganisasi.Name = "labelOrganisasi";
-            this.labelOrganisasi.Size = new System.Drawing.Size(119, 20);
-            this.labelOrganisasi.TabIndex = 31;
-            this.labelOrganisasi.Text = "Organisasi Asal";
+            this.labelJabatan.AutoSize = true;
+            this.labelJabatan.Location = new System.Drawing.Point(33, 392);
+            this.labelJabatan.Name = "labelJabatan";
+            this.labelJabatan.Size = new System.Drawing.Size(67, 20);
+            this.labelJabatan.TabIndex = 31;
+            this.labelJabatan.Text = "Jabatan";
             // 
             // labelNoTlp
             // 
@@ -234,6 +241,7 @@
             // 
             // txtIDP
             // 
+            this.txtIDP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDP.Location = new System.Drawing.Point(791, 395);
             this.txtIDP.Multiline = true;
             this.txtIDP.Name = "txtIDP";
@@ -308,7 +316,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.labelOrganisasi);
+            this.Controls.Add(this.labelJabatan);
             this.Controls.Add(this.labelNoTlp);
             this.Controls.Add(this.labelKodePos);
             this.Controls.Add(this.labelAProvinsi);
@@ -319,7 +327,7 @@
             this.Controls.Add(this.labelPetugas);
             this.Name = "PetugasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PetugasForm";
+            this.Text = "Petugas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -339,7 +347,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label labelOrganisasi;
+        private System.Windows.Forms.Label labelJabatan;
         private System.Windows.Forms.Label labelNoTlp;
         private System.Windows.Forms.Label labelKodePos;
         private System.Windows.Forms.Label labelAProvinsi;

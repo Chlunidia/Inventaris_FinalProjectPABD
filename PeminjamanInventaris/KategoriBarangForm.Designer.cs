@@ -47,7 +47,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(230, 181);
+            this.btnClear.Location = new System.Drawing.Point(230, 187);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(121, 52);
             this.btnClear.TabIndex = 58;
@@ -56,7 +56,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(103, 181);
+            this.btnAdd.Location = new System.Drawing.Point(103, 187);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(121, 52);
             this.btnAdd.TabIndex = 57;
@@ -67,7 +67,7 @@
             // 
             this.labelBarang.AutoSize = true;
             this.labelBarang.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBarang.Location = new System.Drawing.Point(106, 9);
+            this.labelBarang.Location = new System.Drawing.Point(107, 18);
             this.labelBarang.Name = "labelBarang";
             this.labelBarang.Size = new System.Drawing.Size(372, 55);
             this.labelBarang.TabIndex = 56;
@@ -75,7 +75,8 @@
             // 
             // txtNamaBarang
             // 
-            this.txtNamaBarang.Location = new System.Drawing.Point(219, 129);
+            this.txtNamaBarang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNamaBarang.Location = new System.Drawing.Point(219, 135);
             this.txtNamaBarang.Multiline = true;
             this.txtNamaBarang.Name = "txtNamaBarang";
             this.txtNamaBarang.Size = new System.Drawing.Size(318, 38);
@@ -83,7 +84,8 @@
             // 
             // txtIDBarang
             // 
-            this.txtIDBarang.Location = new System.Drawing.Point(219, 85);
+            this.txtIDBarang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIDBarang.Location = new System.Drawing.Point(219, 91);
             this.txtIDBarang.Multiline = true;
             this.txtIDBarang.Name = "txtIDBarang";
             this.txtIDBarang.Size = new System.Drawing.Size(318, 38);
@@ -92,7 +94,7 @@
             // labelNamaBarang
             // 
             this.labelNamaBarang.AutoSize = true;
-            this.labelNamaBarang.Location = new System.Drawing.Point(40, 129);
+            this.labelNamaBarang.Location = new System.Drawing.Point(40, 135);
             this.labelNamaBarang.Name = "labelNamaBarang";
             this.labelNamaBarang.Size = new System.Drawing.Size(114, 20);
             this.labelNamaBarang.TabIndex = 53;
@@ -101,7 +103,7 @@
             // labelIDKBarang
             // 
             this.labelIDKBarang.AutoSize = true;
-            this.labelIDKBarang.Location = new System.Drawing.Point(40, 85);
+            this.labelIDKBarang.Location = new System.Drawing.Point(40, 91);
             this.labelIDKBarang.Name = "labelIDKBarang";
             this.labelIDKBarang.Size = new System.Drawing.Size(145, 20);
             this.labelIDKBarang.TabIndex = 52;
@@ -109,7 +111,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(357, 181);
+            this.btnUpdate.Location = new System.Drawing.Point(357, 187);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(121, 52);
             this.btnUpdate.TabIndex = 60;
@@ -118,7 +120,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(172, 526);
+            this.btnSearch.Location = new System.Drawing.Point(172, 532);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(120, 52);
             this.btnSearch.TabIndex = 65;
@@ -128,7 +130,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 249);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 255);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -138,7 +140,7 @@
             // labelIDB
             // 
             this.labelIDB.AutoSize = true;
-            this.labelIDB.Location = new System.Drawing.Point(40, 474);
+            this.labelIDB.Location = new System.Drawing.Point(40, 480);
             this.labelIDB.Name = "labelIDB";
             this.labelIDB.Size = new System.Drawing.Size(159, 20);
             this.labelIDB.TabIndex = 63;
@@ -146,7 +148,8 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(219, 471);
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(219, 477);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(318, 38);
@@ -154,7 +157,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(298, 526);
+            this.btnDelete.Location = new System.Drawing.Point(298, 532);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 52);
             this.btnDelete.TabIndex = 61;
@@ -163,7 +166,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(235, 584);
+            this.btnBack.Location = new System.Drawing.Point(235, 590);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(120, 52);
             this.btnBack.TabIndex = 66;
