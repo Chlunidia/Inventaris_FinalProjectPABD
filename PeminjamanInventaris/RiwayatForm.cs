@@ -19,8 +19,8 @@ namespace PeminjamanInventaris
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            MainMenuForm mainMenu = new MainMenuForm();
-            mainMenu.Show();
+            DataMasterForm dataMaster = new DataMasterForm();
+            dataMaster.Show();
             this.Hide();
         }
 

@@ -52,6 +52,12 @@
     <Compile Include="BarangForm.Designer.cs">
       <DependentUpon>BarangForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CetakSuratForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CetakSuratForm.Designer.cs">
+      <DependentUpon>CetakSuratForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataMasterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,17 +75,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>inventarisDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="inventarisDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>inventarisDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="KategoriBarangForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KategoriBarangForm.Designer.cs">
       <DependentUpon>KategoriBarangForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KategoriForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KategoriForm.Designer.cs">
-      <DependentUpon>KategoriForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
@@ -98,6 +103,12 @@
     </Compile>
     <Compile Include="PeminjamForm.Designer.cs">
       <DependentUpon>PeminjamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PengelolaanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PengelolaanForm.Designer.cs">
+      <DependentUpon>PengelolaanForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PengembalianForm.cs">
       <SubType>Form</SubType>
@@ -119,8 +130,17 @@
     <Compile Include="RiwayatForm.Designer.cs">
       <DependentUpon>RiwayatForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuratPeminjamanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuratPeminjamanForm.Designer.cs">
+      <DependentUpon>SuratPeminjamanForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BarangForm.resx">
       <DependentUpon>BarangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CetakSuratForm.resx">
+      <DependentUpon>CetakSuratForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataMasterForm.resx">
       <DependentUpon>DataMasterForm.cs</DependentUpon>
@@ -131,9 +151,6 @@
     <EmbeddedResource Include="KategoriBarangForm.resx">
       <DependentUpon>KategoriBarangForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KategoriForm.resx">
-      <DependentUpon>KategoriForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PeminjamForm.resx">
       <DependentUpon>PeminjamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PengelolaanForm.resx">
+      <DependentUpon>PengelolaanForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PengembalianForm.resx">
       <DependentUpon>PengembalianForm.cs</DependentUpon>
@@ -161,6 +181,9 @@
     <EmbeddedResource Include="RiwayatForm.resx">
       <DependentUpon>RiwayatForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SuratPeminjamanForm.resx">
+      <DependentUpon>SuratPeminjamanForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="inventarisDataSet.xsc">
       <DependentUpon>inventarisDataSet.xsd</DependentUpon>
     </None>
@@ -171,6 +194,17 @@
     </None>
     <None Include="inventarisDataSet.xss">
       <DependentUpon>inventarisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="inventarisDataSet1.xsc">
+      <DependentUpon>inventarisDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="inventarisDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>inventarisDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inventarisDataSet1.xss">
+      <DependentUpon>inventarisDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

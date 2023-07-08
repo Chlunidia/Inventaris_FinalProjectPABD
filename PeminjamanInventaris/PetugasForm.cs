@@ -23,5 +23,10 @@ namespace PeminjamanInventaris
             dm.Show();
             this.Hide();
         }
+
+        private void txtNamaPetugas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

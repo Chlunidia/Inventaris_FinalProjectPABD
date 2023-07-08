@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace PeminjamanInventaris
 {
-    public partial class KategoriForm : Form
+    public partial class PengelolaanForm : Form
     {
-        public KategoriForm()
+        public PengelolaanForm()
         {
             InitializeComponent();
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            BarangForm barang = new BarangForm();
-            barang.Show();
-            this.Hide();
         }
     }
 }

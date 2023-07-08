@@ -21,35 +21,35 @@ namespace PeminjamanInventaris
         {
             PengembalianForm pengembalian = new PengembalianForm();
             pengembalian.Show();
-            this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
             f1.Show();
-            this.Hide();
         }
 
         private void btnRiwayat_Click(object sender, EventArgs e)
         {
             RiwayatForm riwayat = new RiwayatForm();
             riwayat.Show();
-            this.Hide();
         }
 
         private void btnPeminjaman_Click(object sender, EventArgs e)
         {
             PeminjamanForm peminjaman = new PeminjamanForm();
             peminjaman.Show();
-            this.Hide();
         }
 
         private void btnDataMaster_Click(object sender, EventArgs e)
         {
             DataMasterForm dm = new DataMasterForm();
             dm.Show();
-            this.Hide();
+        }
+
+        private void MainMenuForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

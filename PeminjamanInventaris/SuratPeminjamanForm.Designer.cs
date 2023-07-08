@@ -1,6 +1,6 @@
 ﻿namespace PeminjamanInventaris
 {
-    partial class KategoriForm
+    partial class SuratPeminjamanForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,54 +29,45 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.labelKategori = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.labelSurat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 142);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 161);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(482, 349);
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1188, 563);
             this.dataGridView1.TabIndex = 0;
             // 
-            // labelKategori
+            // labelSurat
             // 
-            this.labelKategori.AutoSize = true;
-            this.labelKategori.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKategori.Location = new System.Drawing.Point(48, 14);
-            this.labelKategori.Name = "labelKategori";
-            this.labelKategori.Size = new System.Drawing.Size(456, 114);
-            this.labelKategori.TabIndex = 1;
-            this.labelKategori.Text = "Kategori Barang";
+            this.labelSurat.AutoSize = true;
+            this.labelSurat.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSurat.Location = new System.Drawing.Point(363, 25);
+            this.labelSurat.Name = "labelSurat";
+            this.labelSurat.Size = new System.Drawing.Size(526, 114);
+            this.labelSurat.TabIndex = 73;
+            this.labelSurat.Text = "Surat Peminjaman";
             // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(211, 511);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(120, 52);
-            this.btnBack.TabIndex = 62;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // KategoriForm
+            // SuratPeminjamanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(543, 586);
+            this.ClientSize = new System.Drawing.Size(1278, 894);
             this.ControlBox = false;
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.labelKategori);
+            this.Controls.Add(this.labelSurat);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "KategoriForm";
+            this.Name = "SuratPeminjamanForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KategoriForm";
+            this.Text = "Surat Peminjaman";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -86,7 +77,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label labelKategori;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label labelSurat;
     }
 }

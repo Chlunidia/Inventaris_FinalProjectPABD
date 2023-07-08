@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="inventarisDataSet1" targetNamespace="http://tempuri.org/inventarisDataSet1.xsd" xmlns:mstns="http://tempuri.org/inventarisDataSet1.xsd" xmlns="http://tempuri.org/inventarisDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="inventarisConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="inventarisConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PeminjamanInventaris.Properties.Settings.GlobalReference.Default.inventarisConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Kategori_BarangTableAdapter" GeneratorDataComponentClassName="Kategori_BarangTableAdapter" Name="Kategori_Barang" UserDataComponentName="Kategori_BarangTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inventarisConnectionString (Settings)" DbObjectName="inventaris.dbo.Kategori_Barang" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT nama_kategori FROM dbo.Kategori_Barang</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nama_kategori" DataSetColumn="nama_kategori" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="inventarisDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="inventarisDataSet1" msprop:Generator_DataSetName="inventarisDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Kategori_Barang" msprop:Generator_RowEvHandlerName="Kategori_BarangRowChangeEventHandler" msprop:Generator_RowDeletedName="Kategori_BarangRowDeleted" msprop:Generator_RowDeletingName="Kategori_BarangRowDeleting" msprop:Generator_RowEvArgName="Kategori_BarangRowChangeEvent" msprop:Generator_TablePropName="Kategori_Barang" msprop:Generator_RowChangedName="Kategori_BarangRowChanged" msprop:Generator_RowChangingName="Kategori_BarangRowChanging" msprop:Generator_TableClassName="Kategori_BarangDataTable" msprop:Generator_RowClassName="Kategori_BarangRow" msprop:Generator_TableVarName="tableKategori_Barang" msprop:Generator_UserTableName="Kategori_Barang">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nama_kategori" msprop:Generator_ColumnPropNameInRow="nama_kategori" msprop:Generator_ColumnPropNameInTable="nama_kategoriColumn" msprop:Generator_ColumnVarNameInTable="columnnama_kategori" msprop:Generator_UserColumnName="nama_kategori" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -23,5 +23,41 @@ namespace PeminjamanInventaris
             mainMenu.Show();
             this.Hide();
         }
+
+        private void btnBarang_Click(object sender, EventArgs e)
+        {
+            BarangForm barangForm = new BarangForm();
+            barangForm.Show();
+        }
+
+        private void btnKategori_Click(object sender, EventArgs e)
+        {
+            KategoriBarangForm kategoriBarangForm = new KategoriBarangForm();
+            kategoriBarangForm.Show();
+        }
+
+        private void btnPetugas_Click(object sender, EventArgs e)
+        {
+            PetugasForm petugasForm = new PetugasForm();
+            petugasForm.Show();
+        }
+
+        private void btnPeminjam_Click(object sender, EventArgs e)
+        {
+            PeminjamForm peminjamForm = new PeminjamForm();
+            peminjamForm.Show();
+        }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            RiwayatForm riwayatForm = new RiwayatForm();
+            riwayatForm.Show();
+        }
+
+        private void btnSurat_Click(object sender, EventArgs e)
+        {
+            SuratPeminjamanForm suratPeminjaman = new SuratPeminjamanForm();
+            suratPeminjaman.Show();
+        }
     }
 }

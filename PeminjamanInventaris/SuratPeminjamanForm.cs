@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace PeminjamanInventaris
 {
-    public partial class PeminjamForm : Form
+    public partial class SuratPeminjamanForm : Form
     {
-        public PeminjamForm()
+        public SuratPeminjamanForm()
         {
             InitializeComponent();
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            DataMasterForm dataMasterForm = new DataMasterForm();
-            dataMasterForm.Show();
-            this.Hide();
         }
     }
 }

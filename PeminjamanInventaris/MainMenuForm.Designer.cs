@@ -38,53 +38,57 @@
             // 
             // btnPeminjaman
             // 
-            this.btnPeminjaman.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPeminjaman.Location = new System.Drawing.Point(111, 306);
+            this.btnPeminjaman.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnPeminjaman.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPeminjaman.Location = new System.Drawing.Point(384, 491);
             this.btnPeminjaman.Name = "btnPeminjaman";
-            this.btnPeminjaman.Size = new System.Drawing.Size(178, 68);
+            this.btnPeminjaman.Size = new System.Drawing.Size(236, 84);
             this.btnPeminjaman.TabIndex = 1;
             this.btnPeminjaman.Text = "Peminjaman";
-            this.btnPeminjaman.UseVisualStyleBackColor = true;
+            this.btnPeminjaman.UseVisualStyleBackColor = false;
             this.btnPeminjaman.Click += new System.EventHandler(this.btnPeminjaman_Click);
             // 
             // btnPengembalian
             // 
-            this.btnPengembalian.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPengembalian.Location = new System.Drawing.Point(306, 306);
+            this.btnPengembalian.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnPengembalian.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPengembalian.Location = new System.Drawing.Point(655, 491);
             this.btnPengembalian.Name = "btnPengembalian";
-            this.btnPengembalian.Size = new System.Drawing.Size(178, 68);
+            this.btnPengembalian.Size = new System.Drawing.Size(236, 84);
             this.btnPengembalian.TabIndex = 2;
             this.btnPengembalian.Text = "Pengembalian";
-            this.btnPengembalian.UseVisualStyleBackColor = true;
+            this.btnPengembalian.UseVisualStyleBackColor = false;
             this.btnPengembalian.Click += new System.EventHandler(this.btnPengembalian_Click);
             // 
             // btnLogout
             // 
-            this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(306, 391);
+            this.btnLogout.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(655, 592);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(178, 66);
+            this.btnLogout.Size = new System.Drawing.Size(236, 82);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnDataMaster
             // 
-            this.btnDataMaster.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDataMaster.Location = new System.Drawing.Point(111, 391);
+            this.btnDataMaster.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnDataMaster.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDataMaster.Location = new System.Drawing.Point(384, 592);
             this.btnDataMaster.Name = "btnDataMaster";
-            this.btnDataMaster.Size = new System.Drawing.Size(180, 66);
+            this.btnDataMaster.Size = new System.Drawing.Size(238, 82);
             this.btnDataMaster.TabIndex = 4;
             this.btnDataMaster.Text = "Data Master";
-            this.btnDataMaster.UseVisualStyleBackColor = true;
+            this.btnDataMaster.UseVisualStyleBackColor = false;
             this.btnDataMaster.Click += new System.EventHandler(this.btnDataMaster_Click);
             // 
             // labelWelcome
             // 
             this.labelWelcome.AutoSize = true;
             this.labelWelcome.Font = new System.Drawing.Font("Girlie", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWelcome.Location = new System.Drawing.Point(123, 59);
+            this.labelWelcome.Location = new System.Drawing.Point(480, 160);
             this.labelWelcome.Name = "labelWelcome";
             this.labelWelcome.Size = new System.Drawing.Size(370, 147);
             this.labelWelcome.TabIndex = 5;
@@ -94,7 +98,7 @@
             // 
             this.labelMainMenu.AutoSize = true;
             this.labelMainMenu.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMainMenu.Location = new System.Drawing.Point(214, 230);
+            this.labelMainMenu.Location = new System.Drawing.Point(571, 331);
             this.labelMainMenu.Name = "labelMainMenu";
             this.labelMainMenu.Size = new System.Drawing.Size(159, 22);
             this.labelMainMenu.TabIndex = 6;
@@ -105,7 +109,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(604, 516);
+            this.ClientSize = new System.Drawing.Size(1278, 894);
             this.ControlBox = false;
             this.Controls.Add(this.labelMainMenu);
             this.Controls.Add(this.labelWelcome);
@@ -115,7 +119,8 @@
             this.Controls.Add(this.btnPeminjaman);
             this.Name = "MainMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainMenuForm";
+            this.Text = "Menu";
+            this.Load += new System.EventHandler(this.MainMenuForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

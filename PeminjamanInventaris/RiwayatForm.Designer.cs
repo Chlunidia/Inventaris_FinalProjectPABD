@@ -39,6 +39,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(35, 146);
             this.dataGridView1.Name = "dataGridView1";
@@ -59,24 +60,26 @@
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(417, 707);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(120, 52);
             this.btnBack.TabIndex = 71;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(702, 648);
+            this.btnSearch.Location = new System.Drawing.Point(710, 648);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(120, 52);
             this.btnSearch.TabIndex = 70;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // labelIDPeminjam
             // 
@@ -84,15 +87,15 @@
             this.labelIDPeminjam.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIDPeminjam.Location = new System.Drawing.Point(118, 657);
             this.labelIDPeminjam.Name = "labelIDPeminjam";
-            this.labelIDPeminjam.Size = new System.Drawing.Size(215, 22);
+            this.labelIDPeminjam.Size = new System.Drawing.Size(223, 22);
             this.labelIDPeminjam.TabIndex = 69;
-            this.labelIDPeminjam.Text = "Masukkan ID Peminjaman";
+            this.labelIDPeminjam.Text = "Masukkan Nama Peminjam";
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(358, 654);
+            this.textBox1.Location = new System.Drawing.Point(366, 654);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(318, 38);
@@ -103,7 +106,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(956, 788);
+            this.ClientSize = new System.Drawing.Size(1278, 894);
+            this.ControlBox = false;
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.labelIDPeminjam);
@@ -111,8 +115,10 @@
             this.Controls.Add(this.labelRiwayat);
             this.Controls.Add(this.dataGridView1);
             this.Name = "RiwayatForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RiwayatForm";
+            this.Text = "Riwayat Peminjaman";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
