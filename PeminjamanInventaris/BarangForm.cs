@@ -15,9 +15,13 @@ namespace PeminjamanInventaris
     {
         private string stringConnection = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;Integrated Security=True;User=sa;Password=Chluni2350719";
         private SqlConnection connection;
+        private SqlCommand command;
+        private SqlDataAdapter adapter;
         public BarangForm()
         {
             InitializeComponent();
+            connection = new SqlConnection(stringConnection);
+            cbx_KategoriBarang();
         }
 
         private void txtIDBarang_TextChanged(object sender, EventArgs e)
@@ -39,6 +43,33 @@ namespace PeminjamanInventaris
             // TODO: This line of code loads data into the 'inventarisDataSet.Peminjam' table. You can move, or remove it, as needed.
             this.peminjamTableAdapter.Fill(this.inventarisDataSet.Peminjam);
 
+        }
+
+        private void cbx_KategoriBarang()
+        {
+            try
+            {
+                connection.Open();
+
+                string query = "SELECT nama_kategori FROM Kategori_Barang";
+                command = new SqlCommand(query, connection);
+                DataTable kat = new DataTable();
+
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(kat);
+                cbxKategori.DisplayMember = "nama_kategori";
+               
+
+                cbxKategori.DataSource = kat;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
