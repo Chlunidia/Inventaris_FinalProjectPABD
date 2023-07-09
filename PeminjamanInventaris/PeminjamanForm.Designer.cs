@@ -37,7 +37,6 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.labelIDPeminjaman = new System.Windows.Forms.Label();
             this.txtIDPeminjaman = new System.Windows.Forms.TextBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -54,6 +53,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.datePHarus = new System.Windows.Forms.DateTimePicker();
             this.labelTglP = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjaman)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -152,18 +152,6 @@
             this.txtIDPeminjaman.Name = "txtIDPeminjaman";
             this.txtIDPeminjaman.Size = new System.Drawing.Size(318, 38);
             this.txtIDPeminjaman.TabIndex = 88;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(947, 688);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 52);
-            this.btnDelete.TabIndex = 87;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -399,6 +387,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnClear);
@@ -406,7 +395,6 @@
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.labelIDPeminjaman);
             this.panel1.Controls.Add(this.txtIDPeminjaman);
-            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.dataGridViewPeminjaman);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.labelPeminjaman);
@@ -432,6 +420,18 @@
             this.labelTglP.Size = new System.Drawing.Size(239, 22);
             this.labelTglP.TabIndex = 101;
             this.labelTglP.Text = "Tanggal Pengembalian Harus";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(947, 688);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(120, 52);
+            this.btnDelete.TabIndex = 99;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // PeminjamanForm
             // 
@@ -466,7 +466,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label labelIDPeminjaman;
         private System.Windows.Forms.TextBox txtIDPeminjaman;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAdd;
@@ -483,5 +482,6 @@
         private System.Windows.Forms.ComboBox cbxStatus;
         private System.Windows.Forms.Label labelTglP;
         private System.Windows.Forms.DateTimePicker datePHarus;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

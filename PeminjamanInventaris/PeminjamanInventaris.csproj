@@ -110,12 +110,6 @@
     <Compile Include="PengelolaanForm.Designer.cs">
       <DependentUpon>PengelolaanForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PengembalianForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PengembalianForm.Designer.cs">
-      <DependentUpon>PengembalianForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="PetugasForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PengelolaanForm.resx">
       <DependentUpon>PengelolaanForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PengembalianForm.resx">
-      <DependentUpon>PengembalianForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PetugasForm.resx">
       <DependentUpon>PetugasForm.cs</DependentUpon>
