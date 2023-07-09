@@ -228,7 +228,44 @@ namespace PeminjamanInventaris
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            try
+            {
+                connection.Open();
 
+                // Retrieve the ID of the record to be deleted
+                string idPengelolaan = txtIDP.Text;
+
+                // Confirm with the user before deleting the record
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    // Perform the delete query
+                    string query = "DELETE FROM Pengelolaan WHERE id_pengelolaan = @id_pengelolaan";
+                    command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@id_pengelolaan", idPengelolaan);
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Record deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Record not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    // Refresh the DataGridView after deletion
+                    dataGridView();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }
