@@ -215,7 +215,34 @@ namespace PeminjamanInventaris
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(stringConnection))
+                {
+                    connection.Open();
+
+                    // Mengambil nilai ID dari kontrol input pengguna
+                    string idPetugas = txtIDP.Text;
+
+                    // Membuat perintah SQL untuk mencari data berdasarkan ID
+                    string query = "SELECT id_petugas, nama_petugas, no_tlp_petugas, jabatan, username, kata_sandi, alamat_petugas FROM dbo.Petugas WHERE id_petugas = @idPetugas";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Mengatur parameter untuk perintah SQL
+                        command.Parameters.AddWithValue("@idPetugas", idPetugas);
+
+                        SqlDataAdapter da = new SqlDataAdapter(command);
+                        DataSet ds = new DataSet();
+                        da.Fill(ds);
+                        dataGridViewPetugas.DataSource = ds.Tables[0];
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
