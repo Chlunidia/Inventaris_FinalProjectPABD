@@ -16,5 +16,15 @@ namespace PeminjamanInventaris
         {
             InitializeComponent();
         }
+
+        private void PengelolaanForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelNamaB_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

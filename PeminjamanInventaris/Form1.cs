@@ -25,17 +25,36 @@ namespace PeminjamanInventaris
             string username = txtUserID.Text;
             string password = txtPassword.Text;
 
-            string connectionString = $"Data Source={serverName};User ID={username};Password={password}";
+            string connectionString = "Data Source=" + serverName + ";Initial Catalog=inventaris;User ID=sa;Password=Chluni2350719";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-                    MessageBox.Show("Database connection successful!");
-                    MainMenuForm mainMenu = new MainMenuForm();
-                    mainMenu.Show(); 
-                    this.Hide();
+
+                    // Perform the login validation against the 'petugas' table
+                    string query = "SELECT COUNT(*) FROM petugas WHERE username = @username AND kata_sandi = @password";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@username", username);
+                        command.Parameters.AddWithValue("@password", password);
+
+                        int count = (int)command.ExecuteScalar();
+                        if (count > 0)
+                        {
+                            // Login successful
+                            MessageBox.Show("Login successful!");
+                            MainMenuForm mainMenu = new MainMenuForm();
+                            mainMenu.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            // Login failed
+                            MessageBox.Show("Invalid username or password.");
+                        }
+                    }
                 }
                 catch (SqlException ex)
                 {
@@ -43,11 +62,6 @@ namespace PeminjamanInventaris
                     foreach (SqlError error in ex.Errors)
                     {
                         errorMessage += "Message: " + error.Message + "\n";
-                        if
-                        (error.Number == 18456)
-                        {
-                            errorMessage += "Invalid username or password" ;
-                        }
                     }
                     MessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

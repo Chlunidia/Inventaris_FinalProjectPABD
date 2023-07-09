@@ -30,15 +30,11 @@
         {
             this.labelPengelolaan = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelNamaPetugas = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIDPetugas = new System.Windows.Forms.TextBox();
-            this.cbxNamaPetugas = new System.Windows.Forms.ComboBox();
-            this.labelNamaB = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtIDBarang = new System.Windows.Forms.TextBox();
-            this.cbxNamaBarang = new System.Windows.Forms.ComboBox();
             this.labelKet = new System.Windows.Forms.Label();
+            this.cbxNamaBarang = new System.Windows.Forms.ComboBox();
+            this.labelNamaB = new System.Windows.Forms.Label();
+            this.labelNamaPetugas = new System.Windows.Forms.Label();
+            this.cbxNamaPetugas = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -48,9 +44,11 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.labelIDP = new System.Windows.Forms.Label();
             this.txtIDP = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewPengelolaan = new System.Windows.Forms.DataGridView();
+            this.labelTgl = new System.Windows.Forms.Label();
+            this.datePengelolaan = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPengelolaan)).BeginInit();
             this.SuspendLayout();
             // 
             // labelPengelolaan
@@ -68,26 +66,53 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.18538F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.81462F));
-            this.tableLayoutPanel1.Controls.Add(this.labelKet, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.cbxNamaBarang, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.labelNamaB, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelTgl, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.labelNamaPetugas, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtIDPetugas, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbxNamaPetugas, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtIDBarang, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(23, 231);
+            this.tableLayoutPanel1.Controls.Add(this.labelNamaB, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbxNamaBarang, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelKet, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.datePengelolaan, 1, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(41, 231);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(521, 233);
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 197);
             this.tableLayoutPanel1.TabIndex = 75;
+            // 
+            // labelKet
+            // 
+            this.labelKet.AutoSize = true;
+            this.labelKet.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKet.Location = new System.Drawing.Point(3, 98);
+            this.labelKet.Name = "labelKet";
+            this.labelKet.Size = new System.Drawing.Size(99, 22);
+            this.labelKet.TabIndex = 65;
+            this.labelKet.Text = "Keterangan";
+            this.labelKet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbxNamaBarang
+            // 
+            this.cbxNamaBarang.FormattingEnabled = true;
+            this.cbxNamaBarang.Location = new System.Drawing.Point(183, 52);
+            this.cbxNamaBarang.Name = "cbxNamaBarang";
+            this.cbxNamaBarang.Size = new System.Drawing.Size(314, 28);
+            this.cbxNamaBarang.TabIndex = 64;
+            // 
+            // labelNamaB
+            // 
+            this.labelNamaB.AutoSize = true;
+            this.labelNamaB.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNamaB.Location = new System.Drawing.Point(3, 49);
+            this.labelNamaB.Name = "labelNamaB";
+            this.labelNamaB.Size = new System.Drawing.Size(117, 22);
+            this.labelNamaB.TabIndex = 61;
+            this.labelNamaB.Text = "Nama Barang";
+            this.labelNamaB.Click += new System.EventHandler(this.labelNamaB_Click);
             // 
             // labelNamaPetugas
             // 
@@ -99,92 +124,22 @@
             this.labelNamaPetugas.TabIndex = 49;
             this.labelNamaPetugas.Text = "Nama Petugas";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 22);
-            this.label1.TabIndex = 57;
-            this.label1.Text = "ID Petugas";
-            // 
-            // txtIDPetugas
-            // 
-            this.txtIDPetugas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDPetugas.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDPetugas.Location = new System.Drawing.Point(191, 49);
-            this.txtIDPetugas.Multiline = true;
-            this.txtIDPetugas.Name = "txtIDPetugas";
-            this.txtIDPetugas.Size = new System.Drawing.Size(318, 38);
-            this.txtIDPetugas.TabIndex = 58;
-            // 
             // cbxNamaPetugas
             // 
             this.cbxNamaPetugas.FormattingEnabled = true;
-            this.cbxNamaPetugas.Location = new System.Drawing.Point(191, 3);
+            this.cbxNamaPetugas.Location = new System.Drawing.Point(183, 3);
             this.cbxNamaPetugas.Name = "cbxNamaPetugas";
-            this.cbxNamaPetugas.Size = new System.Drawing.Size(318, 28);
+            this.cbxNamaPetugas.Size = new System.Drawing.Size(314, 28);
             this.cbxNamaPetugas.TabIndex = 60;
-            // 
-            // labelNamaB
-            // 
-            this.labelNamaB.AutoSize = true;
-            this.labelNamaB.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNamaB.Location = new System.Drawing.Point(3, 92);
-            this.labelNamaB.Name = "labelNamaB";
-            this.labelNamaB.Size = new System.Drawing.Size(117, 22);
-            this.labelNamaB.TabIndex = 61;
-            this.labelNamaB.Text = "Nama Barang";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 22);
-            this.label2.TabIndex = 62;
-            this.label2.Text = "ID Barang";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtIDBarang
-            // 
-            this.txtIDBarang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDBarang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDBarang.Location = new System.Drawing.Point(191, 141);
-            this.txtIDBarang.Multiline = true;
-            this.txtIDBarang.Name = "txtIDBarang";
-            this.txtIDBarang.Size = new System.Drawing.Size(318, 38);
-            this.txtIDBarang.TabIndex = 63;
-            // 
-            // cbxNamaBarang
-            // 
-            this.cbxNamaBarang.FormattingEnabled = true;
-            this.cbxNamaBarang.Location = new System.Drawing.Point(191, 95);
-            this.cbxNamaBarang.Name = "cbxNamaBarang";
-            this.cbxNamaBarang.Size = new System.Drawing.Size(318, 28);
-            this.cbxNamaBarang.TabIndex = 64;
-            // 
-            // labelKet
-            // 
-            this.labelKet.AutoSize = true;
-            this.labelKet.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKet.Location = new System.Drawing.Point(3, 184);
-            this.labelKet.Name = "labelKet";
-            this.labelKet.Size = new System.Drawing.Size(99, 22);
-            this.labelKet.TabIndex = 65;
-            this.labelKet.Text = "Keterangan";
-            this.labelKet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(191, 187);
+            this.textBox1.Location = new System.Drawing.Point(183, 101);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 38);
+            this.textBox1.Size = new System.Drawing.Size(314, 38);
             this.textBox1.TabIndex = 66;
             // 
             // btnUpdate
@@ -259,9 +214,9 @@
             this.labelIDP.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIDP.Location = new System.Drawing.Point(652, 674);
             this.labelIDP.Name = "labelIDP";
-            this.labelIDP.Size = new System.Drawing.Size(223, 22);
+            this.labelIDP.Size = new System.Drawing.Size(207, 22);
             this.labelIDP.TabIndex = 101;
-            this.labelIDP.Text = "Masukkan Nama Peminjam";
+            this.labelIDP.Text = "Maukkan ID Pengelolaan";
             // 
             // txtIDP
             // 
@@ -273,16 +228,34 @@
             this.txtIDP.Size = new System.Drawing.Size(318, 38);
             this.txtIDP.TabIndex = 100;
             // 
-            // dataGridView1
+            // dataGridViewPengelolaan
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(579, 150);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(658, 494);
-            this.dataGridView1.TabIndex = 102;
+            this.dataGridViewPengelolaan.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridViewPengelolaan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPengelolaan.Location = new System.Drawing.Point(579, 150);
+            this.dataGridViewPengelolaan.Name = "dataGridViewPengelolaan";
+            this.dataGridViewPengelolaan.RowHeadersWidth = 62;
+            this.dataGridViewPengelolaan.RowTemplate.Height = 28;
+            this.dataGridViewPengelolaan.Size = new System.Drawing.Size(658, 494);
+            this.dataGridViewPengelolaan.TabIndex = 102;
+            // 
+            // labelTgl
+            // 
+            this.labelTgl.AutoSize = true;
+            this.labelTgl.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTgl.Location = new System.Drawing.Point(3, 147);
+            this.labelTgl.Name = "labelTgl";
+            this.labelTgl.Size = new System.Drawing.Size(99, 22);
+            this.labelTgl.TabIndex = 67;
+            this.labelTgl.Text = "Keterangan";
+            this.labelTgl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // datePengelolaan
+            // 
+            this.datePengelolaan.Location = new System.Drawing.Point(183, 150);
+            this.datePengelolaan.Name = "datePengelolaan";
+            this.datePengelolaan.Size = new System.Drawing.Size(314, 26);
+            this.datePengelolaan.TabIndex = 68;
             // 
             // PengelolaanForm
             // 
@@ -290,7 +263,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1278, 894);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewPengelolaan);
             this.Controls.Add(this.labelIDP);
             this.Controls.Add(this.txtIDP);
             this.Controls.Add(this.btnUpdate);
@@ -304,9 +277,10 @@
             this.Name = "PengelolaanForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pengelolaan";
+            this.Load += new System.EventHandler(this.PengelolaanForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPengelolaan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,12 +293,8 @@
         private System.Windows.Forms.Label labelNamaPetugas;
         private System.Windows.Forms.Label labelKet;
         private System.Windows.Forms.ComboBox cbxNamaBarang;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelNamaB;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIDPetugas;
         private System.Windows.Forms.ComboBox cbxNamaPetugas;
-        private System.Windows.Forms.TextBox txtIDBarang;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
@@ -334,6 +304,8 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label labelIDP;
         private System.Windows.Forms.TextBox txtIDP;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewPengelolaan;
+        private System.Windows.Forms.Label labelTgl;
+        private System.Windows.Forms.DateTimePicker datePengelolaan;
     }
 }
