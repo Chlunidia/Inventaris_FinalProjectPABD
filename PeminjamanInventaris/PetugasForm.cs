@@ -247,7 +247,53 @@ namespace PeminjamanInventaris
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                if (dataGridViewPetugas.SelectedCells.Count > 0)
+                {
+                    DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        using (SqlConnection connection = new SqlConnection(stringConnection))
+                        {
+                            connection.Open();
+
+                            // Mengambil nilai ID dari sel yang terpilih
+                            string idPetugas = dataGridViewPetugas.SelectedCells[0].Value.ToString();
+
+                            // Membuat perintah SQL untuk menghapus data berdasarkan ID
+                            string query = "DELETE FROM dbo.Petugas WHERE id_petugas = @idPetugas";
+
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                // Mengatur parameter untuk perintah SQL
+                                command.Parameters.AddWithValue("@idPetugas", idPetugas);
+
+                                // Menjalankan perintah SQL untuk menghapus data
+                                int rowsAffected = command.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Data berhasil dihapus.");
+                                    refreshForm();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Gagal menghapus data.");
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pilih baris data yang ingin dihapus.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message);
+            }
         }
 
         private void PetugasForm_Load(object sender, EventArgs e)
