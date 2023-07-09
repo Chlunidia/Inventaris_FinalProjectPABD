@@ -148,6 +148,19 @@ namespace PeminjamanInventaris
             return idKatBarang;
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtNamaPetugas.Text = "";
+            txtAJalan.Text = "";
+            txtAKota.Text = "";
+            cbxProvinsi.SelectedIndex = -1;
+            txtKodePos.Text = "";
+            txtNoTlp.Text = "";
+            txtJabatan.Text = "";
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
