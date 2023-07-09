@@ -238,41 +238,63 @@ namespace PeminjamanInventaris
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string query = "DELETE FROM Kategori_Barang WHERE id_kat_barang = @id_kat_barang";
-            string idKatBarang = txtIDKat.Text;
-
-            using (SqlConnection conn = new SqlConnection(stringConnection))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id_kat_barang", idKatBarang);
+                string idKatBarang = txtIDKat.Text;
 
-                    try
+                if (string.IsNullOrEmpty(idKatBarang))
+                {
+                    MessageBox.Show("Silakan masukkan ID kategori barang yang akan dihapus.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    using (SqlConnection connection = new SqlConnection(stringConnection))
                     {
-                        conn.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
+                        connection.Open();
+
+                        // Mengecek apakah kategori barang dengan ID yang dimasukkan ada
+                        string checkQuery = "SELECT COUNT(*) FROM Kategori_Barang WHERE id_kat_barang = @id_kat_barang";
+                        using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
                         {
-                            MessageBox.Show("Data berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            txtIDKat.Text = "";
-                            dataGridView();
+                            checkCmd.Parameters.AddWithValue("@id_kat_barang", idKatBarang);
+                            int count = (int)checkCmd.ExecuteScalar();
+                            if (count == 0)
+                            {
+                                MessageBox.Show("Kategori barang dengan ID tersebut tidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
                         }
-                        else
+
+                        // Menghapus data kategori barang berdasarkan ID
+                        string deleteQuery = "DELETE FROM Kategori_Barang WHERE id_kat_barang = @id_kat_barang";
+                        using (SqlCommand deleteCmd = new SqlCommand(deleteQuery, connection))
                         {
-                            MessageBox.Show("Data tidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            deleteCmd.Parameters.AddWithValue("@id_kat_barang", idKatBarang);
+                            int rowsAffected = deleteCmd.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Data berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                refreshForm();
+                                dataGridView();
+                                txtIDKat.Text = "";
+                            }
+                            else
+                            {
+                                MessageBox.Show("Gagal menghapus data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("An error occurred: " + ex.Message);
+
+                        connection.Close();
                     }
                 }
             }
-            txtIDKat.Text = "";
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message);
+            }
         }
     }
 }

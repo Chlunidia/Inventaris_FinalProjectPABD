@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridViewPeminjam = new System.Windows.Forms.DataGridView();
+            this.dataGridViewPetugas = new System.Windows.Forms.DataGridView();
             this.txtJabatan = new System.Windows.Forms.TextBox();
             this.txtNoTlp = new System.Windows.Forms.TextBox();
             this.txtKodePos = new System.Windows.Forms.TextBox();
@@ -53,24 +53,24 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.cbxProvinsi = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelUsername = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjam)).BeginInit();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.labelUsername = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPetugas)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridViewPeminjam
+            // dataGridViewPetugas
             // 
-            this.dataGridViewPeminjam.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridViewPeminjam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPeminjam.Location = new System.Drawing.Point(543, 137);
-            this.dataGridViewPeminjam.Name = "dataGridViewPeminjam";
-            this.dataGridViewPeminjam.RowHeadersWidth = 62;
-            this.dataGridViewPeminjam.RowTemplate.Height = 28;
-            this.dataGridViewPeminjam.Size = new System.Drawing.Size(627, 287);
-            this.dataGridViewPeminjam.TabIndex = 45;
+            this.dataGridViewPetugas.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridViewPetugas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPetugas.Location = new System.Drawing.Point(543, 137);
+            this.dataGridViewPetugas.Name = "dataGridViewPetugas";
+            this.dataGridViewPetugas.RowHeadersWidth = 62;
+            this.dataGridViewPetugas.RowTemplate.Height = 28;
+            this.dataGridViewPetugas.Size = new System.Drawing.Size(627, 287);
+            this.dataGridViewPetugas.TabIndex = 45;
             // 
             // txtJabatan
             // 
@@ -310,7 +310,7 @@
             this.cbxProvinsi.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxProvinsi.FormattingEnabled = true;
             this.cbxProvinsi.Items.AddRange(new object[] {
-            "Nanggroe Aceh Darussalam",
+            "Aceh",
             "Sumatera Utara",
             "Sumatera Selatan",
             "Sumatera Barat",
@@ -326,10 +326,10 @@
             "Kalimantan Tengah",
             "Kalimantan Utara",
             "Banten",
-            "DKI Jakarta",
+            "Jakarta",
             "Jawa Barat",
             "Jawa Tengah",
-            "Daerah Istimewa Yogyakarta",
+            "Yogyakarta",
             "Jawa Timur",
             "Bali",
             "Nusa Tenggara Timur",
@@ -392,26 +392,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(491, 355);
             this.tableLayoutPanel1.TabIndex = 64;
             // 
-            // labelUsername
-            // 
-            this.labelUsername.AutoSize = true;
-            this.labelUsername.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(3, 195);
-            this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(88, 22);
-            this.labelUsername.TabIndex = 65;
-            this.labelUsername.Text = "Username";
-            // 
-            // labelPassword
-            // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(3, 234);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(88, 22);
-            this.labelPassword.TabIndex = 65;
-            this.labelPassword.Text = "Password";
-            // 
             // txtUsername
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -432,6 +412,26 @@
             this.txtPassword.Size = new System.Drawing.Size(311, 33);
             this.txtPassword.TabIndex = 66;
             // 
+            // labelPassword
+            // 
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Location = new System.Drawing.Point(3, 234);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(88, 22);
+            this.labelPassword.TabIndex = 65;
+            this.labelPassword.Text = "Password";
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Location = new System.Drawing.Point(3, 195);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(88, 22);
+            this.labelUsername.TabIndex = 65;
+            this.labelUsername.Text = "Username";
+            // 
             // PetugasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -445,7 +445,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.labelIDP);
             this.Controls.Add(this.txtIDP);
-            this.Controls.Add(this.dataGridViewPeminjam);
+            this.Controls.Add(this.dataGridViewPetugas);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
@@ -454,7 +454,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Petugas";
             this.Load += new System.EventHandler(this.PetugasForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPetugas)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -464,7 +464,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridViewPeminjam;
+        private System.Windows.Forms.DataGridView dataGridViewPetugas;
         private System.Windows.Forms.TextBox txtJabatan;
         private System.Windows.Forms.TextBox txtNoTlp;
         private System.Windows.Forms.TextBox txtKodePos;
