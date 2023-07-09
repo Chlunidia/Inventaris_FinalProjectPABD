@@ -279,29 +279,13 @@ namespace PeminjamanInventaris
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            ClearFields();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-        private void btnDelete_Click_1(object sender, EventArgs e)
-        {
             string idPeminjaman = txtIDPeminjaman.Text.Trim();
 
             try
             {
                 connection.Open();
 
-                // Cek apakah ID Peminjaman yang akan dihapus ada dalam database
+                // Cek apakah ID Peminjaman yang akan diupdate ada dalam database
                 string checkQuery = "SELECT COUNT(*) FROM Peminjaman WHERE id_peminjaman = @idPeminjaman";
                 using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
                 {
@@ -314,27 +298,43 @@ namespace PeminjamanInventaris
                     }
                 }
 
-                // Konfirmasi penghapusan
-                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data peminjaman ini?", "Konfirmasi", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                // Tampung nilai-nilai baru dari kontrol input
+                string idPeminjam = cbxNamaPeminjam.SelectedValue.ToString();
+                string idBarang = cbxBarang.SelectedValue.ToString();
+                string idPetugas = cbxPetugas.SelectedValue.ToString();
+                DateTime tanggalPeminjaman = datePeminjaman.Value;
+                DateTime tanggalPHarus = datePHarus.Value;
+                DateTime tanggalPengembalian = datePengembalian.Value;
+
+                // Update data peminjaman
+                string query = @"UPDATE Peminjaman 
+                         SET id_peminjam = @idPeminjam, id_barang = @idBarang, id_petugas = @idPetugas, 
+                             status_peminjaman = @statusPeminjaman, tanggal_peminjaman = @tanggalPeminjaman, 
+                             tanggal_pengembalian_harus = @tanggalPHarus, tanggal_pengembalian = @tanggalPengembalian
+                         WHERE id_peminjaman = @idPeminjaman";
+
+                command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@idPeminjaman", idPeminjaman);
+                command.Parameters.AddWithValue("@idPeminjam", idPeminjam);
+                command.Parameters.AddWithValue("@idBarang", idBarang);
+                command.Parameters.AddWithValue("@idPetugas", idPetugas);
+                command.Parameters.AddWithValue("@statusPeminjaman", cbxStatus.SelectedItem.ToString());
+                command.Parameters.AddWithValue("@tanggalPeminjaman", tanggalPeminjaman);
+                command.Parameters.AddWithValue("@tanggalPHarus", tanggalPHarus);
+                command.Parameters.AddWithValue("@tanggalPengembalian", tanggalPengembalian);
+
+                int rowsAffected = command.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
                 {
-                    // Hapus data peminjaman dari database
-                    string query = "DELETE FROM Peminjaman WHERE id_peminjaman = @idPeminjaman";
-                    command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@idPeminjaman", idPeminjaman);
-                    int rowsAffected = command.ExecuteNonQuery();
+                    MessageBox.Show("Data peminjaman berhasil diupdate.");
 
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Data peminjaman berhasil dihapus.");
-
-                        // Refresh data grid view
-                        dataGridView();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Gagal menghapus data peminjaman.");
-                    }
+                    // Refresh data grid view
+                    dataGridView();
+                }
+                else
+                {
+                    MessageBox.Show("Gagal mengupdate data peminjaman.");
                 }
             }
             catch (Exception ex)
@@ -345,6 +345,21 @@ namespace PeminjamanInventaris
             {
                 connection.Close();
             }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

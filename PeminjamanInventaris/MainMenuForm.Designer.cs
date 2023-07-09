@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnPeminjaman = new System.Windows.Forms.Button();
-            this.btnPengembalian = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnDataMaster = new System.Windows.Forms.Button();
             this.labelWelcome = new System.Windows.Forms.Label();
@@ -47,18 +46,6 @@
             this.btnPeminjaman.Text = "Peminjaman";
             this.btnPeminjaman.UseVisualStyleBackColor = false;
             this.btnPeminjaman.Click += new System.EventHandler(this.btnPeminjaman_Click);
-            // 
-            // btnPengembalian
-            // 
-            this.btnPengembalian.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnPengembalian.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPengembalian.Location = new System.Drawing.Point(655, 491);
-            this.btnPengembalian.Name = "btnPengembalian";
-            this.btnPengembalian.Size = new System.Drawing.Size(236, 84);
-            this.btnPengembalian.TabIndex = 2;
-            this.btnPengembalian.Text = "Pengembalian";
-            this.btnPengembalian.UseVisualStyleBackColor = false;
-            this.btnPengembalian.Click += new System.EventHandler(this.btnPengembalian_Click);
             // 
             // btnLogout
             // 
@@ -115,7 +102,6 @@
             this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.btnDataMaster);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnPengembalian);
             this.Controls.Add(this.btnPeminjaman);
             this.Name = "MainMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -128,7 +114,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnPeminjaman;
-        private System.Windows.Forms.Button btnPengembalian;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnDataMaster;
         private System.Windows.Forms.Label labelWelcome;

@@ -17,12 +17,6 @@ namespace PeminjamanInventaris
             InitializeComponent();
         }
 
-        private void btnPengembalian_Click(object sender, EventArgs e)
-        {
-            PengembalianForm pengembalian = new PengembalianForm();
-            pengembalian.Show();
-        }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
