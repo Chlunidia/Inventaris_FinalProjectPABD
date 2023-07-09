@@ -124,18 +124,18 @@ namespace PeminjamanInventaris
 
         private string GenerateUniqueID(SqlConnection connection)
         {
-            string idPetugas = "";
+            string idPeminjam = "";
             int count = 1;
 
             while (true)
             {
-                idPetugas = "PJ" + count.ToString().PadLeft(4, '0');
+                idPeminjam = "PJ" + count.ToString().PadLeft(4, '0');
 
                 // Mengecek apakah ID kategori barang sudah digunakan sebelumnya
                 string checkQuery = "SELECT COUNT(*) FROM Peminjam WHERE id_peminjam = @id_peminjam";
                 using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
                 {
-                    checkCmd.Parameters.AddWithValue("@id_peminjam", idPetugas);
+                    checkCmd.Parameters.AddWithValue("@id_peminjam", idPeminjam);
                     int existingCount = (int)checkCmd.ExecuteScalar();
                     if (existingCount == 0)
                     {
@@ -147,7 +147,7 @@ namespace PeminjamanInventaris
                 count++;
             }
 
-            return idPetugas;
+            return idPeminjam;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
