@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.labelPeminjaman = new System.Windows.Forms.Label();
-            this.cbxProvinsi = new System.Windows.Forms.ComboBox();
+            this.cbxPetugas = new System.Windows.Forms.ComboBox();
             this.labelPetugas = new System.Windows.Forms.Label();
             this.labelStatus = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
@@ -67,14 +67,14 @@
             this.labelPeminjaman.TabIndex = 46;
             this.labelPeminjaman.Text = "Peminjaman";
             // 
-            // cbxProvinsi
+            // cbxPetugas
             // 
-            this.cbxProvinsi.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxProvinsi.FormattingEnabled = true;
-            this.cbxProvinsi.Location = new System.Drawing.Point(223, 51);
-            this.cbxProvinsi.Name = "cbxProvinsi";
-            this.cbxProvinsi.Size = new System.Drawing.Size(318, 30);
-            this.cbxProvinsi.TabIndex = 73;
+            this.cbxPetugas.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxPetugas.FormattingEnabled = true;
+            this.cbxPetugas.Location = new System.Drawing.Point(223, 99);
+            this.cbxPetugas.Name = "cbxPetugas";
+            this.cbxPetugas.Size = new System.Drawing.Size(318, 30);
+            this.cbxPetugas.TabIndex = 73;
             // 
             // labelPetugas
             // 
@@ -242,15 +242,15 @@
             this.tableLayoutPanel1.Controls.Add(this.labelNamaPeminjam, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelBarang, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelPetugas, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cbxBarang, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cbxProvinsi, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelStatus, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.cbxPetugas, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelTglPeminjaman, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.labelTglPengembalian, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.datePeminjaman, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.datePengembalian, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.cbxNamaPeminjam, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.cbxStatus, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.cbxBarang, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 148);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -326,7 +326,7 @@
             "Papua Pegunungan",
             "Papua Selatan",
             "Papua Barat Daya"});
-            this.cbxBarang.Location = new System.Drawing.Point(223, 99);
+            this.cbxBarang.Location = new System.Drawing.Point(223, 51);
             this.cbxBarang.Name = "cbxBarang";
             this.cbxBarang.Size = new System.Drawing.Size(318, 30);
             this.cbxBarang.TabIndex = 98;
@@ -384,44 +384,8 @@
             this.cbxStatus.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxStatus.FormattingEnabled = true;
             this.cbxStatus.Items.AddRange(new object[] {
-            "Nanggroe Aceh Darussalam",
-            "Sumatera Utara",
-            "Sumatera Selatan",
-            "Sumatera Barat",
-            "Bengkulu",
-            "Riau",
-            "Kepulauan Riau",
-            "Jambi",
-            "Lampung",
-            "Bangka Belitung",
-            "Kalimantan Barat",
-            "Kalimantan Timur",
-            "Kalimantan Selatan",
-            "Kalimantan Tengah",
-            "Kalimantan Utara",
-            "Banten",
-            "DKI Jakarta",
-            "Jawa Barat",
-            "Jawa Tengah",
-            "Daerah Istimewa Yogyakarta",
-            "Jawa Timur",
-            "Bali",
-            "Nusa Tenggara Timur",
-            "Nusa Tenggara Barat",
-            "Gorontalo",
-            "Sulawesi Barat",
-            "Sulawesi Tengah",
-            "Sulawesi Utara",
-            "Sulawesi Tenggara",
-            "Sulawesi Selatan",
-            "Maluku Utara",
-            "Maluku",
-            "Papua Barat",
-            "Papua",
-            "Papua Tengah",
-            "Papua Pegunungan",
-            "Papua Selatan",
-            "Papua Barat Daya"});
+            "Dipinjam",
+            "Dikembalikan"});
             this.cbxStatus.Location = new System.Drawing.Point(223, 147);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(318, 30);
@@ -471,7 +435,7 @@
 
         #endregion
         private System.Windows.Forms.Label labelPeminjaman;
-        private System.Windows.Forms.ComboBox cbxProvinsi;
+        private System.Windows.Forms.ComboBox cbxPetugas;
         private System.Windows.Forms.Label labelPetugas;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Button btnBack;

@@ -15,11 +15,16 @@ namespace PeminjamanInventaris
     {
         private string stringConnection = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;Integrated Security=True;User=sa;Password=Chluni2350719";
         private SqlConnection connection;
+        private SqlCommand command;
+        private SqlDataAdapter adapter;
         public PeminjamanForm()
         {
             InitializeComponent();
             connection = new SqlConnection(stringConnection);
             dataGridView();
+            LoadBarangData();
+            LoadPeminjamData();
+            LoadPetugasData();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -48,6 +53,90 @@ namespace PeminjamanInventaris
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 dataGridViewPeminjaman.DataSource = ds.Tables[0];
+            }
+        }
+
+        private void LoadPeminjamData()
+        {
+            try
+            {
+                connection.Open();
+
+                string query = "SELECT id_peminjam, nama_peminjam FROM Peminjam";
+                command = new SqlCommand(query, connection);
+                DataTable peminjam = new DataTable();
+
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(peminjam);
+
+                cbxNamaPeminjam.DisplayMember = "nama_peminjam";
+                cbxNamaPeminjam.ValueMember = "id_peminjam";
+
+                cbxNamaPeminjam.DataSource = peminjam;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void LoadBarangData()
+        {
+            try
+            {
+                connection.Open();
+
+                string query = "SELECT id_barang, nama_barang FROM Barang";
+                command = new SqlCommand(query, connection);
+                DataTable barang = new DataTable();
+
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(barang);
+
+                cbxBarang.DisplayMember = "nama_barang";
+                cbxBarang.ValueMember = "id_barang";
+
+                cbxBarang.DataSource = barang;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void LoadPetugasData()
+        {
+            try
+            {
+                connection.Open();
+
+                string query = "SELECT id_petugas, nama_petugas FROM Petugas";
+                command = new SqlCommand(query, connection);
+                DataTable petugas = new DataTable();
+
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(petugas);
+
+                cbxPetugas.DisplayMember = "nama_petugas";
+                cbxPetugas.ValueMember = "id_petugas";
+
+                cbxPetugas.DataSource = petugas;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
