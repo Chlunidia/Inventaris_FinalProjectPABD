@@ -359,7 +359,57 @@ namespace PeminjamanInventaris
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-            
+            string idPeminjaman = txtIDPeminjaman.Text.Trim();
+
+            try
+            {
+                connection.Open();
+
+                // Cek apakah ID Peminjaman yang akan dihapus ada dalam database
+                string checkQuery = "SELECT COUNT(*) FROM Peminjaman WHERE id_peminjaman = @idPeminjaman";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@idPeminjaman", idPeminjaman);
+                    int existingCount = (int)checkCmd.ExecuteScalar();
+                    if (existingCount == 0)
+                    {
+                        MessageBox.Show("ID Peminjaman tidak ditemukan.");
+                        return;
+                    }
+                }
+
+                // Konfirmasi penghapusan data
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data peminjaman?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    // Hapus data peminjaman
+                    string query = "DELETE FROM Peminjaman WHERE id_peminjaman = @idPeminjaman";
+                    command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@idPeminjaman", idPeminjaman);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data peminjaman berhasil dihapus.");
+
+                        // Refresh data grid view
+                        dataGridView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Gagal menghapus data peminjaman.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }
