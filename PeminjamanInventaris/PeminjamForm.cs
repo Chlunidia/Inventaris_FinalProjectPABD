@@ -157,7 +157,63 @@ namespace PeminjamanInventaris
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (dataGridViewPeminjam.SelectedCells.Count > 0)
+                {
+                    using (SqlConnection connection = new SqlConnection(stringConnection))
+                    {
+                        connection.Open();
 
+                        // Mengambil nilai dari sel yang terpilih
+                        string idPeminjam = dataGridViewPeminjam.SelectedCells[0].Value.ToString();
+                        string namaPeminjam = txtPeminjam.Text;
+                        string jalan = txtJalan.Text;
+                        string kota = txtKota.Text;
+                        string provinsi = cbxProvinsi.SelectedItem.ToString();
+                        string kodePos = txtKodePos.Text;
+                        string noTlp = txtNoTlp.Text;
+                        string organisasi = txtOrganisasi.Text;
+
+                        // Membuat perintah SQL untuk memperbarui data dalam tabel
+                        string query = "UPDATE dbo.Peminjam SET nama_peminjam = @namaPeminjam, jalan = @jalan, kota = @kota, provinsi = @provinsi, kode_pos = @kodePos, no_tlp_peminjam = @noTlp, organisasi_asal = @organisasi WHERE id_peminjam = @idPeminjam";
+
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            // Mengatur parameter untuk perintah SQL
+                            command.Parameters.AddWithValue("@idPeminjam", idPeminjam);
+                            command.Parameters.AddWithValue("@namaPeminjam", namaPeminjam);
+                            command.Parameters.AddWithValue("@jalan", jalan);
+                            command.Parameters.AddWithValue("@kota", kota);
+                            command.Parameters.AddWithValue("@provinsi", provinsi);
+                            command.Parameters.AddWithValue("@kodePos", kodePos);
+                            command.Parameters.AddWithValue("@noTlp", noTlp);
+                            command.Parameters.AddWithValue("@organisasi", organisasi);
+
+                            // Menjalankan perintah SQL untuk memperbarui data dalam tabel
+                            int rowsAffected = command.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Data berhasil diperbarui.");
+                                dataGridView();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Gagal memperbarui data.");
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pilih baris data yang ingin diperbarui.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message);
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
