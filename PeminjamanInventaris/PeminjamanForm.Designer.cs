@@ -36,7 +36,7 @@
             this.dataGridViewPeminjaman = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.labelIDPeminjaman = new System.Windows.Forms.Label();
-            this.txtNmP = new System.Windows.Forms.TextBox();
+            this.txtIDPeminjaman = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -143,15 +143,15 @@
             this.labelIDPeminjaman.TabIndex = 89;
             this.labelIDPeminjaman.Text = "Masukkan ID Peminjaman";
             // 
-            // txtNmP
+            // txtIDPeminjaman
             // 
-            this.txtNmP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNmP.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNmP.Location = new System.Drawing.Point(898, 637);
-            this.txtNmP.Multiline = true;
-            this.txtNmP.Name = "txtNmP";
-            this.txtNmP.Size = new System.Drawing.Size(318, 38);
-            this.txtNmP.TabIndex = 88;
+            this.txtIDPeminjaman.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIDPeminjaman.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDPeminjaman.Location = new System.Drawing.Point(898, 637);
+            this.txtIDPeminjaman.Multiline = true;
+            this.txtIDPeminjaman.Name = "txtIDPeminjaman";
+            this.txtIDPeminjaman.Size = new System.Drawing.Size(318, 38);
+            this.txtIDPeminjaman.TabIndex = 88;
             // 
             // btnDelete
             // 
@@ -405,7 +405,7 @@
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.labelIDPeminjaman);
-            this.panel1.Controls.Add(this.txtNmP);
+            this.panel1.Controls.Add(this.txtIDPeminjaman);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.dataGridViewPeminjaman);
             this.panel1.Controls.Add(this.btnBack);
@@ -465,7 +465,7 @@
         private System.Windows.Forms.DataGridView dataGridViewPeminjaman;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label labelIDPeminjaman;
-        private System.Windows.Forms.TextBox txtNmP;
+        private System.Windows.Forms.TextBox txtIDPeminjaman;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
