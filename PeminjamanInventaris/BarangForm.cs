@@ -28,7 +28,7 @@ namespace PeminjamanInventaris
         private void refreshForm()
         {
             txtNamaBarang.Enabled = true;
-            txtNmB.Enabled = true;
+            txtIB.Enabled = true;
             txtJumlah.Enabled = true;
             btnClear.Enabled = true;
             btnSearch.Enabled = true;
@@ -58,7 +58,7 @@ namespace PeminjamanInventaris
         private void ClearInputFields()
         {
             txtNamaBarang.Text = "";
-            txtNmB.Text = "";
+            txtIB.Text = "";
             txtJumlah.Text = "";
             cbxKategori.SelectedIndex = -1;
         }
@@ -223,7 +223,37 @@ namespace PeminjamanInventaris
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(stringConnection))
+                {
+                    connection.Open();
 
+                    // Get the value of the ID from the input control
+                    string idBarang = txtIB.Text;
+
+                    // Create the SQL query to search for data based on the ID
+                    string query = "SELECT id_barang, nama_barang, jumlah, id_kat_barang FROM Barang WHERE id_barang = @idBarang";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Set the parameter for the SQL query
+                        command.Parameters.AddWithValue("@idBarang", idBarang);
+
+                        // Execute the query and retrieve the result in a DataSet
+                        SqlDataAdapter da = new SqlDataAdapter(command);
+                        DataSet ds = new DataSet();
+                        da.Fill(ds);
+
+                        // Bind the result to the DataGridView
+                        dataGridViewBarang.DataSource = ds.Tables[0];
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

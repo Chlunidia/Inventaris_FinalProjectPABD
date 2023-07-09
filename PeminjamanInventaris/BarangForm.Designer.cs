@@ -34,7 +34,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.dataGridViewBarang = new System.Windows.Forms.DataGridView();
             this.labelIDB = new System.Windows.Forms.Label();
-            this.txtNmB = new System.Windows.Forms.TextBox();
+            this.txtIB = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -110,19 +110,19 @@
             this.labelIDB.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIDB.Location = new System.Drawing.Point(658, 681);
             this.labelIDB.Name = "labelIDB";
-            this.labelIDB.Size = new System.Drawing.Size(201, 22);
+            this.labelIDB.Size = new System.Drawing.Size(175, 22);
             this.labelIDB.TabIndex = 88;
-            this.labelIDB.Text = "Masukkan Nama Barang";
+            this.labelIDB.Text = "Masukkan ID Barang";
             // 
-            // txtNmB
+            // txtIB
             // 
-            this.txtNmB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNmB.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNmB.Location = new System.Drawing.Point(906, 679);
-            this.txtNmB.Multiline = true;
-            this.txtNmB.Name = "txtNmB";
-            this.txtNmB.Size = new System.Drawing.Size(318, 38);
-            this.txtNmB.TabIndex = 87;
+            this.txtIB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIB.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIB.Location = new System.Drawing.Point(906, 679);
+            this.txtIB.Multiline = true;
+            this.txtIB.Name = "txtIB";
+            this.txtIB.Size = new System.Drawing.Size(318, 38);
+            this.txtIB.TabIndex = 87;
             // 
             // btnDelete
             // 
@@ -231,7 +231,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dataGridViewBarang);
             this.Controls.Add(this.labelIDB);
-            this.Controls.Add(this.txtNmB);
+            this.Controls.Add(this.txtIB);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
@@ -258,7 +258,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dataGridViewBarang;
         private System.Windows.Forms.Label labelIDB;
-        private System.Windows.Forms.TextBox txtNmB;
+        private System.Windows.Forms.TextBox txtIB;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAdd;
