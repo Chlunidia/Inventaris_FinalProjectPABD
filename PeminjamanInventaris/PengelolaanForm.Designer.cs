@@ -35,7 +35,7 @@
             this.cbxNamaPetugas = new System.Windows.Forms.ComboBox();
             this.labelNamaB = new System.Windows.Forms.Label();
             this.cbxNamaBarang = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtKeterangan = new System.Windows.Forms.TextBox();
             this.labelKet = new System.Windows.Forms.Label();
             this.datePengelolaan = new System.Windows.Forms.DateTimePicker();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -71,7 +71,7 @@
             this.tableLayoutPanel1.Controls.Add(this.cbxNamaPetugas, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelNamaB, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbxNamaBarang, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtKeterangan, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelKet, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.datePengelolaan, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(41, 231);
@@ -90,9 +90,9 @@
             this.labelTgl.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTgl.Location = new System.Drawing.Point(3, 147);
             this.labelTgl.Name = "labelTgl";
-            this.labelTgl.Size = new System.Drawing.Size(99, 22);
+            this.labelTgl.Size = new System.Drawing.Size(72, 22);
             this.labelTgl.TabIndex = 67;
-            this.labelTgl.Text = "Keterangan";
+            this.labelTgl.Text = "Tanggal";
             this.labelTgl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelNamaPetugas
@@ -132,15 +132,15 @@
             this.cbxNamaBarang.Size = new System.Drawing.Size(314, 28);
             this.cbxNamaBarang.TabIndex = 64;
             // 
-            // textBox1
+            // txtKeterangan
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(183, 101);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(314, 38);
-            this.textBox1.TabIndex = 66;
+            this.txtKeterangan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKeterangan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKeterangan.Location = new System.Drawing.Point(183, 101);
+            this.txtKeterangan.Multiline = true;
+            this.txtKeterangan.Name = "txtKeterangan";
+            this.txtKeterangan.Size = new System.Drawing.Size(314, 38);
+            this.txtKeterangan.TabIndex = 66;
             // 
             // labelKet
             // 
@@ -300,7 +300,7 @@
         private System.Windows.Forms.ComboBox cbxNamaBarang;
         private System.Windows.Forms.Label labelNamaB;
         private System.Windows.Forms.ComboBox cbxNamaPetugas;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtKeterangan;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAdd;

@@ -133,9 +133,7 @@ namespace PeminjamanInventaris
             MessageBox.Show("Data berhasil disimpan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             refreshForm();
             dataGridView();
-            txtNamaBarang.Text = "";
-            txtJumlah.Text = "";
-            cbxKategori.SelectedIndex = -1;
+            ClearInputFields();
         }
 
         private string GenerateUniqueID(SqlConnection connection, string namaBarang)

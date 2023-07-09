@@ -107,7 +107,73 @@ namespace PeminjamanInventaris
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            string keterangan = txtKeterangan.Text;
 
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+
+                // Mengecek apakah kategori barang dengan nama yang sama sudah ada
+                string checkQuery = "SELECT COUNT(*) FROM Pengelolaan WHERE keterangan = @keterangan";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@keterangan", keterangan);
+                    int count = (int)checkCmd.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Barang dengan nama tersebut sudah ada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                // Membangkitkan ID kategori barang otomatis hanya jika tidak ada kategori dengan nama yang sama
+                string idPengelolaan = GenerateUniqueID(connection, keterangan);
+
+                // Menyimpan data barang ke dalam tabel
+                string insertQuery = "INSERT INTO Pengelolaan (id_pengelolaan, id_petugas, id_barang, keterangan, tanggal_pengelolaan) VALUES (@id_pengelolaan, @id_petugas, @id_barang, @keterangan, @tanggal_pengelolaan)";
+                using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
+                {
+                    insertCmd.Parameters.AddWithValue("@id_pengelolaan", idPengelolaan);
+                    insertCmd.Parameters.AddWithValue("@id_petugas", cbxNamaPetugas.SelectedValue);
+                    insertCmd.Parameters.AddWithValue("@id_barang", cbxNamaBarang.SelectedValue);
+                    insertCmd.Parameters.AddWithValue("@keterangan", keterangan);
+                    insertCmd.Parameters.AddWithValue("@tanggal_pengelolaan", datePengelolaan.Value);
+                    insertCmd.ExecuteNonQuery();
+                }
+
+                connection.Close();
+            }
+
+            MessageBox.Show("Data berhasil disimpan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGridView();
+        }
+
+        private string GenerateUniqueID(SqlConnection connection, string namaPengelolaan)
+        {
+            string idPengelolaan = "";
+            int count = 1;
+
+            while (true)
+            {
+                idPengelolaan = "IP" + count.ToString().PadLeft(4, '0');
+
+                // Mengecek apakah ID kategori barang sudah digunakan sebelumnya
+                string checkQuery = "SELECT COUNT(*) FROM Pengelolaan WHERE id_pengelolaan = @id_pengelolaan";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@id_pengelolaan", idPengelolaan);
+                    int existingCount = (int)checkCmd.ExecuteScalar();
+                    if (existingCount == 0)
+                    {
+                        // ID unik ditemukan
+                        break;
+                    }
+                }
+
+                count++;
+            }
+
+            return idPengelolaan;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
