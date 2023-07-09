@@ -15,14 +15,46 @@ namespace PeminjamanInventaris
     {
         private string stringConnection = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;Integrated Security=True;User=sa;Password=Chluni2350719";
         private SqlConnection connection;
+        private SqlCommand command;
+        private SqlDataAdapter adapter;
         public BarangForm()
         {
             InitializeComponent();
+            connection = new SqlConnection(stringConnection);
+            LoadKategoriData();
         }
 
         private void BarangForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoadKategoriData()
+        {
+            try
+            {
+                connection.Open();
+
+                string query = "SELECT id_kat_barang, nama_kategori FROM Kategori_Barang";
+                command = new SqlCommand(query, connection);
+                DataTable kat = new DataTable();
+
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(kat);
+
+                cbxKategori.DisplayMember = "nama_kategori";
+                cbxKategori.ValueMember = "id_kat_barang";
+
+                cbxKategori.DataSource = kat;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
