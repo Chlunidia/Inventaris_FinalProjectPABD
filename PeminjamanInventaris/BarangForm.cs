@@ -258,7 +258,54 @@ namespace PeminjamanInventaris
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (dataGridViewBarang.SelectedCells.Count > 0)
+                {
+                    DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        using (SqlConnection connection = new SqlConnection(stringConnection))
+                        {
+                            connection.Open();
 
+                            // Get the value of the ID from the selected cell
+                            string idBarang = dataGridViewBarang.SelectedCells[0].Value.ToString();
+
+                            // Create the SQL query to delete the record based on the ID
+                            string deleteQuery = "DELETE FROM Barang WHERE id_barang = @idBarang";
+
+                            using (SqlCommand command = new SqlCommand(deleteQuery, connection))
+                            {
+                                // Set the parameter for the SQL query
+                                command.Parameters.AddWithValue("@idBarang", idBarang);
+
+                                // Execute the query to delete the record
+                                int rowsAffected = command.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Data berhasil dihapus.");
+                                    refreshForm();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Gagal menghapus data.");
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pilih baris data yang ingin dihapus.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            dataGridView();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
