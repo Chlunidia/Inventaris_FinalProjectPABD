@@ -197,7 +197,33 @@ namespace PeminjamanInventaris
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            try
+            {
+                connection.Open();
 
+                // Retrieve the search keyword from a TextBox or any other input control
+                string idPengelolaan = txtIDP.Text;
+
+                // Perform the search query
+                string query = "SELECT * FROM Pengelolaan WHERE id_pengelolaan = @id_pengelolaan";
+                command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id_pengelolaan", idPengelolaan);
+
+                DataTable searchResults = new DataTable();
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(searchResults);
+
+                // Bind the search results to the DataGridView
+                dataGridViewPengelolaan.DataSource = searchResults;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
