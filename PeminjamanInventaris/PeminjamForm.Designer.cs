@@ -36,18 +36,18 @@
             this.dataGridViewPeminjam = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtOrganisasi = new System.Windows.Forms.TextBox();
+            this.txtNoTlp = new System.Windows.Forms.TextBox();
+            this.txtKodePos = new System.Windows.Forms.TextBox();
+            this.txtKota = new System.Windows.Forms.TextBox();
+            this.txtJalan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtPeminjam = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtPeminjam = new System.Windows.Forms.TextBox();
-            this.txtJalan = new System.Windows.Forms.TextBox();
-            this.txtKota = new System.Windows.Forms.TextBox();
-            this.txtKodePos = new System.Windows.Forms.TextBox();
-            this.txtNoTlp = new System.Windows.Forms.TextBox();
-            this.txtOrganisasi = new System.Windows.Forms.TextBox();
             this.cbxProvinsi = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -162,6 +162,48 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(543, 379);
             this.tableLayoutPanel1.TabIndex = 79;
             // 
+            // txtOrganisasi
+            // 
+            this.txtOrganisasi.Location = new System.Drawing.Point(212, 327);
+            this.txtOrganisasi.Multiline = true;
+            this.txtOrganisasi.Name = "txtOrganisasi";
+            this.txtOrganisasi.Size = new System.Drawing.Size(318, 38);
+            this.txtOrganisasi.TabIndex = 91;
+            this.txtOrganisasi.TextChanged += new System.EventHandler(this.txtOrganisasi_TextChanged);
+            // 
+            // txtNoTlp
+            // 
+            this.txtNoTlp.Location = new System.Drawing.Point(212, 273);
+            this.txtNoTlp.Multiline = true;
+            this.txtNoTlp.Name = "txtNoTlp";
+            this.txtNoTlp.Size = new System.Drawing.Size(318, 38);
+            this.txtNoTlp.TabIndex = 90;
+            // 
+            // txtKodePos
+            // 
+            this.txtKodePos.Location = new System.Drawing.Point(212, 219);
+            this.txtKodePos.Multiline = true;
+            this.txtKodePos.Name = "txtKodePos";
+            this.txtKodePos.Size = new System.Drawing.Size(318, 38);
+            this.txtKodePos.TabIndex = 89;
+            // 
+            // txtKota
+            // 
+            this.txtKota.Location = new System.Drawing.Point(212, 111);
+            this.txtKota.Multiline = true;
+            this.txtKota.Name = "txtKota";
+            this.txtKota.Size = new System.Drawing.Size(318, 38);
+            this.txtKota.TabIndex = 87;
+            this.txtKota.TextChanged += new System.EventHandler(this.txtKota_TextChanged);
+            // 
+            // txtJalan
+            // 
+            this.txtJalan.Location = new System.Drawing.Point(212, 57);
+            this.txtJalan.Multiline = true;
+            this.txtJalan.Name = "txtJalan";
+            this.txtJalan.Size = new System.Drawing.Size(318, 38);
+            this.txtJalan.TabIndex = 86;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -170,6 +212,14 @@
             this.label2.Size = new System.Drawing.Size(101, 20);
             this.label2.TabIndex = 79;
             this.label2.Text = "Alamat Jalan";
+            // 
+            // txtPeminjam
+            // 
+            this.txtPeminjam.Location = new System.Drawing.Point(212, 3);
+            this.txtPeminjam.Multiline = true;
+            this.txtPeminjam.Name = "txtPeminjam";
+            this.txtPeminjam.Size = new System.Drawing.Size(318, 38);
+            this.txtPeminjam.TabIndex = 85;
             // 
             // label3
             // 
@@ -215,56 +265,6 @@
             this.label7.Size = new System.Drawing.Size(119, 20);
             this.label7.TabIndex = 84;
             this.label7.Text = "Organisasi Asal";
-            // 
-            // txtPeminjam
-            // 
-            this.txtPeminjam.Location = new System.Drawing.Point(212, 3);
-            this.txtPeminjam.Multiline = true;
-            this.txtPeminjam.Name = "txtPeminjam";
-            this.txtPeminjam.Size = new System.Drawing.Size(318, 38);
-            this.txtPeminjam.TabIndex = 85;
-            // 
-            // txtJalan
-            // 
-            this.txtJalan.Location = new System.Drawing.Point(212, 57);
-            this.txtJalan.Multiline = true;
-            this.txtJalan.Name = "txtJalan";
-            this.txtJalan.Size = new System.Drawing.Size(318, 38);
-            this.txtJalan.TabIndex = 86;
-            // 
-            // txtKota
-            // 
-            this.txtKota.Location = new System.Drawing.Point(212, 111);
-            this.txtKota.Multiline = true;
-            this.txtKota.Name = "txtKota";
-            this.txtKota.Size = new System.Drawing.Size(318, 38);
-            this.txtKota.TabIndex = 87;
-            this.txtKota.TextChanged += new System.EventHandler(this.txtKota_TextChanged);
-            // 
-            // txtKodePos
-            // 
-            this.txtKodePos.Location = new System.Drawing.Point(212, 219);
-            this.txtKodePos.Multiline = true;
-            this.txtKodePos.Name = "txtKodePos";
-            this.txtKodePos.Size = new System.Drawing.Size(318, 38);
-            this.txtKodePos.TabIndex = 89;
-            // 
-            // txtNoTlp
-            // 
-            this.txtNoTlp.Location = new System.Drawing.Point(212, 273);
-            this.txtNoTlp.Multiline = true;
-            this.txtNoTlp.Name = "txtNoTlp";
-            this.txtNoTlp.Size = new System.Drawing.Size(318, 38);
-            this.txtNoTlp.TabIndex = 90;
-            // 
-            // txtOrganisasi
-            // 
-            this.txtOrganisasi.Location = new System.Drawing.Point(212, 327);
-            this.txtOrganisasi.Multiline = true;
-            this.txtOrganisasi.Name = "txtOrganisasi";
-            this.txtOrganisasi.Size = new System.Drawing.Size(318, 38);
-            this.txtOrganisasi.TabIndex = 91;
-            this.txtOrganisasi.TextChanged += new System.EventHandler(this.txtOrganisasi_TextChanged);
             // 
             // cbxProvinsi
             // 
@@ -384,6 +384,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Peminjam";
+            this.Load += new System.EventHandler(this.PeminjamForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjam)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

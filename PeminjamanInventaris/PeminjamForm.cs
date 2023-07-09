@@ -194,6 +194,57 @@ namespace PeminjamanInventaris
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (dataGridViewPeminjam.SelectedCells.Count > 0)
+                {
+                    DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        using (SqlConnection connection = new SqlConnection(stringConnection))
+                        {
+                            connection.Open();
+
+                            // Mengambil nilai ID dari sel yang terpilih
+                            string idPeminjam = dataGridViewPeminjam.SelectedCells[0].Value.ToString();
+
+                            // Membuat perintah SQL untuk menghapus data berdasarkan ID
+                            string query = "DELETE FROM dbo.Peminjam WHERE id_peminjam = @idPeminjam";
+
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                // Mengatur parameter untuk perintah SQL
+                                command.Parameters.AddWithValue("@idPeminjam", idPeminjam);
+
+                                // Menjalankan perintah SQL untuk menghapus data
+                                int rowsAffected = command.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Data berhasil dihapus.");
+                                    dataGridView();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Gagal menghapus data.");
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pilih baris data yang ingin dihapus.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message);
+            }
+        }
+
+        private void PeminjamForm_Load(object sender, EventArgs e)
+        {
 
         }
     }
