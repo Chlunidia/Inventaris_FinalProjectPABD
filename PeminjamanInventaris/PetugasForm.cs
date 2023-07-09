@@ -80,72 +80,93 @@ namespace PeminjamanInventaris
         {
             try
             {
+                string namaPetugas = txtNamaPetugas.Text;
+                string jalan = txtAJalan.Text;
+                string kota = txtAKota.Text;
+                string provinsi = cbxProvinsi.SelectedItem?.ToString();
+                string kodePos = txtKodePos.Text;
+                string noTlp = txtNoTlp.Text;
+                string jabatan = txtJabatan.Text;
+                string username = txtUsername.Text;
+                string password = txtPassword.Text;
+
                 using (SqlConnection connection = new SqlConnection(stringConnection))
                 {
                     connection.Open();
 
-                    // Mengambil nilai dari kontrol input pengguna
-                    string idPeminjam = GenerateUniqueID(connection);
-                    string namaPetugas = txtNamaPetugas.Text;
-                    string jalan = txtAJalan.Text;
-                    string kota = txtAKota.Text;
-                    string provinsi = cbxProvinsi.SelectedItem.ToString();
-                    string kodePos = txtKodePos.Text;
-                    string noTlp = txtNoTlp.Text;
-                    string jabatan = txtJabatan.Text;
-                    string username = txtUsername.Text;
-                    string password = txtPassword.Text;
-
-                    // Membuat perintah SQL untuk memasukkan data ke tabel
-                    string query = "INSERT INTO dbo.Petugas (id_petugas, nama_petugas, jalan_p, kota_p, provinsi_p, kodepos, no_tlp_petugas, jabatan, username, kata_sandi) " +
-                        "VALUES (@idPeminjam, @namaPetugas, @jalan, @kota, @provinsi, @kodePos, @noTlp, @jabatan, @username, @password)";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    // Mengecek apakah petugas dengan nama yang sama sudah ada
+                    string checkQuery = "SELECT COUNT(*) FROM Petugas WHERE nama_petugas = @nama_petugas";
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
                     {
-                        // Mengatur parameter untuk perintah SQL
-                        command.Parameters.AddWithValue("@idPeminjam", idPeminjam);
-                        command.Parameters.AddWithValue("@namaPetugas", namaPetugas);
-                        command.Parameters.AddWithValue("@jalan", jalan);
-                        command.Parameters.AddWithValue("@kota", kota);
-                        command.Parameters.AddWithValue("@provinsi", provinsi);
-                        command.Parameters.AddWithValue("@kodePos", kodePos);
-                        command.Parameters.AddWithValue("@noTlp", noTlp);
-                        command.Parameters.AddWithValue("@jabatan", jabatan);
-                        command.Parameters.AddWithValue("@username", username);
-                        command.Parameters.AddWithValue("@password", password);
-
-                        // Menjalankan perintah SQL untuk memasukkan data ke tabel
-                        int rowsAffected = command.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
+                        checkCmd.Parameters.AddWithValue("@nama_petugas", namaPetugas);
+                        int count = (int)checkCmd.ExecuteScalar();
+                        if (count > 0)
                         {
-                            MessageBox.Show("Data berhasil ditambahkan ke tabel.");
-                            refreshForm();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Gagal menambahkan data ke tabel.");
+                            MessageBox.Show("Petugas dengan nama tersebut sudah ada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
                         }
                     }
+
+                    // Membangkitkan ID petugas otomatis hanya jika tidak ada petugas dengan nama yang sama
+                    string idPetugas = GenerateUniqueID(connection);
+
+                    // Menyimpan data petugas ke dalam tabel
+                    string insertQuery = "INSERT INTO Petugas (id_petugas, nama_petugas, jalan_p, kota_p, provinsi_p, kodepos, no_tlp_petugas, jabatan, username, kata_sandi) VALUES (@id_petugas, @nama_petugas, @jalan, @kota, @provinsi, @kodePos, @noTlp, @jabatan, @username, @password)";
+                    using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
+                    {
+                        insertCmd.Parameters.AddWithValue("@id_petugas", idPetugas);
+                        insertCmd.Parameters.AddWithValue("@nama_petugas", namaPetugas);
+                        insertCmd.Parameters.AddWithValue("@jalan", jalan);
+                        insertCmd.Parameters.AddWithValue("@kota", kota);
+                        insertCmd.Parameters.AddWithValue("@provinsi", provinsi);
+                        insertCmd.Parameters.AddWithValue("@kodePos", kodePos);
+                        insertCmd.Parameters.AddWithValue("@noTlp", noTlp);
+                        insertCmd.Parameters.AddWithValue("@jabatan", jabatan);
+                        insertCmd.Parameters.AddWithValue("@username", username);
+                        insertCmd.Parameters.AddWithValue("@password", password);
+                        insertCmd.ExecuteNonQuery();
+                    }
+
+                    connection.Close();
                 }
+
+                MessageBox.Show("Data berhasil disimpan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refreshForm();
+                dataGridView();
+                ClearInputFields();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Terjadi kesalahan: " + ex.Message);
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private string GenerateUniqueID(SqlConnection connection)
         {
-            string idKatBarang = "";
-            string countQuery = "SELECT COUNT(*) FROM Petugas";
-            using (SqlCommand countCmd = new SqlCommand(countQuery, connection))
+            string idPetugas = "";
+            int count = 1;
+
+            while (true)
             {
-                int count = (int)countCmd.ExecuteScalar();
-                idKatBarang = "PT" + (count + 1).ToString().PadLeft(4, '0');
+                idPetugas = "PT" + count.ToString().PadLeft(4, '0');
+
+                // Mengecek apakah ID kategori barang sudah digunakan sebelumnya
+                string checkQuery = "SELECT COUNT(*) FROM Petugas WHERE id_petugas = @id_petugas";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@id_petugas", idPetugas);
+                    int existingCount = (int)checkCmd.ExecuteScalar();
+                    if (existingCount == 0)
+                    {
+                        // ID unik ditemukan
+                        break;
+                    }
+                }
+
+                count++;
             }
 
-            return idKatBarang;
+            return idPetugas;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
