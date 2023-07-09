@@ -31,7 +31,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.labelIDB = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIDPeminjam = new System.Windows.Forms.TextBox();
             this.labelPeminjam = new System.Windows.Forms.Label();
             this.dataGridViewPeminjam = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,6 +52,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjam)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +79,7 @@
             this.btnSearch.TabIndex = 76;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // labelIDB
             // 
@@ -89,15 +91,15 @@
             this.labelIDB.TabIndex = 75;
             this.labelIDB.Text = "Masukkan Nama Peminjam";
             // 
-            // textBox1
+            // txtIDPeminjam
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(531, 744);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 38);
-            this.textBox1.TabIndex = 74;
+            this.txtIDPeminjam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIDPeminjam.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDPeminjam.Location = new System.Drawing.Point(531, 744);
+            this.txtIDPeminjam.Multiline = true;
+            this.txtIDPeminjam.Name = "txtIDPeminjam";
+            this.txtIDPeminjam.Size = new System.Drawing.Size(318, 38);
+            this.txtIDPeminjam.TabIndex = 74;
             // 
             // labelPeminjam
             // 
@@ -321,6 +323,7 @@
             this.btnUpdate.TabIndex = 82;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
@@ -346,6 +349,18 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(1015, 738);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(120, 52);
+            this.btnDelete.TabIndex = 83;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // PeminjamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -353,6 +368,7 @@
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1278, 894);
             this.ControlBox = false;
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
@@ -360,7 +376,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.labelIDB);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIDPeminjam);
             this.Controls.Add(this.labelPeminjam);
             this.Controls.Add(this.dataGridViewPeminjam);
             this.Name = "PeminjamForm";
@@ -381,7 +397,7 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label labelIDB;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIDPeminjam;
         private System.Windows.Forms.Label labelPeminjam;
         private System.Windows.Forms.DataGridView dataGridViewPeminjam;
         private System.Windows.Forms.Label label1;
@@ -402,5 +418,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

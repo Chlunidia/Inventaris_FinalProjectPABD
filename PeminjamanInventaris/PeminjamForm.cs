@@ -154,5 +154,47 @@ namespace PeminjamanInventaris
         {
             ClearInputFields();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(stringConnection))
+                {
+                    connection.Open();
+
+                    // Mengambil nilai ID dari kontrol input pengguna
+                    string idPeminjam = txtIDPeminjam.Text;
+
+                    // Membuat perintah SQL untuk mencari data berdasarkan ID
+                    string query = "SELECT id_peminjam, nama_peminjam, no_tlp_peminjam, organisasi_asal, alamat_peminjam FROM dbo.Peminjam WHERE id_peminjam = @idPeminjam";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Mengatur parameter untuk perintah SQL
+                        command.Parameters.AddWithValue("@idPeminjam", idPeminjam);
+
+                        SqlDataAdapter da = new SqlDataAdapter(command);
+                        DataSet ds = new DataSet();
+                        da.Fill(ds);
+                        dataGridViewPeminjam.DataSource = ds.Tables[0];
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
