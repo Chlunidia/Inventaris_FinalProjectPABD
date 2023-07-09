@@ -36,7 +36,10 @@ namespace PeminjamanInventaris
 
         private void PeminjamanForm_Load(object sender, EventArgs e)
         {
-
+            cbxStatus.Items.Add("Dipinjam");
+            cbxStatus.Items.Add("Dikembalikan");
+            cbxStatus.Items.Add("Terlambat");
+            cbxStatus.SelectedIndex = 0;
         }
 
         private void dataGridView()
@@ -140,11 +143,99 @@ namespace PeminjamanInventaris
             }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void ClearFields()
         {
-
+            cbxNamaPeminjam.SelectedIndex = -1;
+            cbxBarang.SelectedIndex = -1;
+            cbxPetugas.SelectedIndex = -1;
+            cbxStatus.SelectedIndex = -1;
+            datePeminjaman.Value = DateTime.Now;
+            datePHarus.Value = DateTime.Now;
+            datePengembalian.Value = DateTime.Now;
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string idPeminjam = cbxNamaPeminjam.SelectedValue.ToString();
+            string idBarang = cbxBarang.SelectedValue.ToString();
+            string idPetugas = cbxPetugas.SelectedValue.ToString();
+            DateTime tanggalPeminjaman = datePeminjaman.Value;
+            DateTime tanggalPHarus = datePHarus.Value;
+            DateTime tanggalPengembalian = datePengembalian.Value;
+
+            try
+            {
+                connection.Open();
+
+                // Generate unique ID for peminjaman
+                string idPeminjaman = GenerateUniqueID(connection, idPeminjam);
+
+                string query = "INSERT INTO Peminjaman (id_peminjaman, id_peminjam, id_barang, id_petugas, status_peminjaman, tanggal_peminjaman, tanggal_pengembalian_harus, tanggal_pengembalian) " +
+                               "VALUES (@id_peminjaman, @idPeminjam, @idBarang, @idPetugas, @statusPeminjaman, @tanggalPeminjaman, @tanggalPHarus, @tanggalPengembalian)";
+                command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id_peminjaman", idPeminjaman);
+                command.Parameters.AddWithValue("@idPeminjam", idPeminjam);
+                command.Parameters.AddWithValue("@idBarang", idBarang);
+                command.Parameters.AddWithValue("@idPetugas", idPetugas);
+                command.Parameters.AddWithValue("@statusPeminjaman", cbxStatus.SelectedItem.ToString());
+                command.Parameters.AddWithValue("@tanggalPeminjaman", tanggalPeminjaman);
+                command.Parameters.AddWithValue("@tanggalPHarus", tanggalPHarus);
+                command.Parameters.AddWithValue("@tanggalPengembalian", tanggalPengembalian);
+
+                int rowsAffected = command.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Data peminjaman berhasil ditambahkan.");
+
+                    // Refresh data grid view
+                    dataGridView();
+
+                    // Clear input fields
+                    ClearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Gagal menambahkan data peminjaman.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private string GenerateUniqueID(SqlConnection connection, string nama)
+        {
+            string idPeminjaman = "";
+            int count = 1;
+
+            while (true)
+            {
+                idPeminjaman = "PM" + count.ToString().PadLeft(4, '0');
+
+                // Mengecek apakah ID kategori barang sudah digunakan sebelumnya
+                string checkQuery = "SELECT COUNT(*) FROM Peminjaman WHERE id_peminjaman = @id_peminjaman";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@id_peminjaman", idPeminjaman);
+                    int existingCount = (int)checkCmd.ExecuteScalar();
+                    if (existingCount == 0)
+                    {
+                        // ID unik ditemukan
+                        break;
+                    }
+                }
+
+                count++;
+            }
+
+            return idPeminjaman;
+        }
         private void btnSearch_Click(object sender, EventArgs e)
         {
             

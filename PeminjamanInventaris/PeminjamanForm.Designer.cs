@@ -52,6 +52,8 @@
             this.cbxNamaPeminjam = new System.Windows.Forms.ComboBox();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.datePHarus = new System.Windows.Forms.DateTimePicker();
+            this.labelTglP = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjaman)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -71,7 +73,7 @@
             // 
             this.cbxPetugas.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPetugas.FormattingEnabled = true;
-            this.cbxPetugas.Location = new System.Drawing.Point(223, 99);
+            this.cbxPetugas.Location = new System.Drawing.Point(265, 85);
             this.cbxPetugas.Name = "cbxPetugas";
             this.cbxPetugas.Size = new System.Drawing.Size(318, 30);
             this.cbxPetugas.TabIndex = 73;
@@ -80,7 +82,7 @@
             // 
             this.labelPetugas.AutoSize = true;
             this.labelPetugas.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPetugas.Location = new System.Drawing.Point(3, 96);
+            this.labelPetugas.Location = new System.Drawing.Point(3, 82);
             this.labelPetugas.Name = "labelPetugas";
             this.labelPetugas.Size = new System.Drawing.Size(70, 22);
             this.labelPetugas.TabIndex = 65;
@@ -90,7 +92,7 @@
             // 
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatus.Location = new System.Drawing.Point(3, 144);
+            this.labelStatus.Location = new System.Drawing.Point(3, 123);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(158, 22);
             this.labelStatus.TabIndex = 79;
@@ -112,11 +114,11 @@
             // 
             this.dataGridViewPeminjaman.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridViewPeminjaman.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPeminjaman.Location = new System.Drawing.Point(600, 148);
+            this.dataGridViewPeminjaman.Location = new System.Drawing.Point(667, 148);
             this.dataGridViewPeminjaman.Name = "dataGridViewPeminjaman";
             this.dataGridViewPeminjaman.RowHeadersWidth = 62;
             this.dataGridViewPeminjaman.RowTemplate.Height = 28;
-            this.dataGridViewPeminjaman.Size = new System.Drawing.Size(658, 469);
+            this.dataGridViewPeminjaman.Size = new System.Drawing.Size(591, 469);
             this.dataGridViewPeminjaman.TabIndex = 86;
             // 
             // btnSearch
@@ -203,7 +205,7 @@
             // 
             this.labelTglPeminjaman.AutoSize = true;
             this.labelTglPeminjaman.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTglPeminjaman.Location = new System.Drawing.Point(3, 192);
+            this.labelTglPeminjaman.Location = new System.Drawing.Point(3, 164);
             this.labelTglPeminjaman.Name = "labelTglPeminjaman";
             this.labelTglPeminjaman.Size = new System.Drawing.Size(173, 22);
             this.labelTglPeminjaman.TabIndex = 94;
@@ -211,14 +213,14 @@
             // 
             // datePeminjaman
             // 
-            this.datePeminjaman.Location = new System.Drawing.Point(223, 195);
+            this.datePeminjaman.Location = new System.Drawing.Point(265, 167);
             this.datePeminjaman.Name = "datePeminjaman";
             this.datePeminjaman.Size = new System.Drawing.Size(318, 26);
             this.datePeminjaman.TabIndex = 95;
             // 
             // datePengembalian
             // 
-            this.datePengembalian.Location = new System.Drawing.Point(223, 243);
+            this.datePengembalian.Location = new System.Drawing.Point(265, 249);
             this.datePengembalian.Name = "datePengembalian";
             this.datePengembalian.Size = new System.Drawing.Size(318, 26);
             this.datePengembalian.TabIndex = 97;
@@ -227,7 +229,7 @@
             // 
             this.labelTglPengembalian.AutoSize = true;
             this.labelTglPengembalian.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTglPengembalian.Location = new System.Drawing.Point(3, 240);
+            this.labelTglPengembalian.Location = new System.Drawing.Point(3, 246);
             this.labelTglPengembalian.Name = "labelTglPengembalian";
             this.labelTglPengembalian.Size = new System.Drawing.Size(187, 22);
             this.labelTglPengembalian.TabIndex = 96;
@@ -237,30 +239,34 @@
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.AliceBlue;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.11407F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.88593F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.48217F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.51783F));
+            this.tableLayoutPanel1.Controls.Add(this.labelTglP, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.datePHarus, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.labelNamaPeminjam, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelBarang, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelPetugas, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelStatus, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.cbxPetugas, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelTglPeminjaman, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.labelTglPengembalian, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.datePeminjaman, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.datePengembalian, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.cbxNamaPeminjam, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.cbxStatus, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.cbxBarang, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 148);
+            this.tableLayoutPanel1.Controls.Add(this.labelTglPengembalian, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.datePengembalian, 1, 6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 163);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(550, 291);
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(589, 291);
             this.tableLayoutPanel1.TabIndex = 98;
             // 
             // labelNamaPeminjam
@@ -277,7 +283,7 @@
             // 
             this.labelBarang.AutoSize = true;
             this.labelBarang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBarang.Location = new System.Drawing.Point(3, 48);
+            this.labelBarang.Location = new System.Drawing.Point(3, 41);
             this.labelBarang.Name = "labelBarang";
             this.labelBarang.Size = new System.Drawing.Size(117, 22);
             this.labelBarang.TabIndex = 64;
@@ -326,7 +332,7 @@
             "Papua Pegunungan",
             "Papua Selatan",
             "Papua Barat Daya"});
-            this.cbxBarang.Location = new System.Drawing.Point(223, 51);
+            this.cbxBarang.Location = new System.Drawing.Point(265, 44);
             this.cbxBarang.Name = "cbxBarang";
             this.cbxBarang.Size = new System.Drawing.Size(318, 30);
             this.cbxBarang.TabIndex = 98;
@@ -374,7 +380,7 @@
             "Papua Pegunungan",
             "Papua Selatan",
             "Papua Barat Daya"});
-            this.cbxNamaPeminjam.Location = new System.Drawing.Point(223, 3);
+            this.cbxNamaPeminjam.Location = new System.Drawing.Point(265, 3);
             this.cbxNamaPeminjam.Name = "cbxNamaPeminjam";
             this.cbxNamaPeminjam.Size = new System.Drawing.Size(318, 30);
             this.cbxNamaPeminjam.TabIndex = 100;
@@ -386,7 +392,7 @@
             this.cbxStatus.Items.AddRange(new object[] {
             "Dipinjam",
             "Dikembalikan"});
-            this.cbxStatus.Location = new System.Drawing.Point(223, 147);
+            this.cbxStatus.Location = new System.Drawing.Point(265, 126);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(318, 30);
             this.cbxStatus.TabIndex = 99;
@@ -409,6 +415,23 @@
             this.panel1.Size = new System.Drawing.Size(1270, 880);
             this.panel1.TabIndex = 99;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // datePHarus
+            // 
+            this.datePHarus.Location = new System.Drawing.Point(265, 208);
+            this.datePHarus.Name = "datePHarus";
+            this.datePHarus.Size = new System.Drawing.Size(318, 26);
+            this.datePHarus.TabIndex = 99;
+            // 
+            // labelTglP
+            // 
+            this.labelTglP.AutoSize = true;
+            this.labelTglP.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTglP.Location = new System.Drawing.Point(3, 205);
+            this.labelTglP.Name = "labelTglP";
+            this.labelTglP.Size = new System.Drawing.Size(239, 22);
+            this.labelTglP.TabIndex = 101;
+            this.labelTglP.Text = "Tanggal Pengembalian Harus";
             // 
             // PeminjamanForm
             // 
@@ -458,5 +481,7 @@
         private System.Windows.Forms.Label labelBarang;
         private System.Windows.Forms.ComboBox cbxNamaPeminjam;
         private System.Windows.Forms.ComboBox cbxStatus;
+        private System.Windows.Forms.Label labelTglP;
+        private System.Windows.Forms.DateTimePicker datePHarus;
     }
 }
