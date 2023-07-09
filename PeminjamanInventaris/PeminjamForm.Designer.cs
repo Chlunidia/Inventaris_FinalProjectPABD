@@ -43,12 +43,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPeminjam = new System.Windows.Forms.TextBox();
-            this.txtAJalan = new System.Windows.Forms.TextBox();
+            this.txtJalan = new System.Windows.Forms.TextBox();
             this.txtKota = new System.Windows.Forms.TextBox();
             this.txtKodePos = new System.Windows.Forms.TextBox();
             this.txtNoTlp = new System.Windows.Forms.TextBox();
             this.txtOrganisasi = new System.Windows.Forms.TextBox();
             this.cbxProvinsi = new System.Windows.Forms.ComboBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjam)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -134,7 +137,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtNoTlp, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.txtKodePos, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtKota, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtAJalan, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtJalan, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtPeminjam, 1, 0);
@@ -219,13 +222,13 @@
             this.txtPeminjam.Size = new System.Drawing.Size(318, 38);
             this.txtPeminjam.TabIndex = 85;
             // 
-            // txtAJalan
+            // txtJalan
             // 
-            this.txtAJalan.Location = new System.Drawing.Point(212, 57);
-            this.txtAJalan.Multiline = true;
-            this.txtAJalan.Name = "txtAJalan";
-            this.txtAJalan.Size = new System.Drawing.Size(318, 38);
-            this.txtAJalan.TabIndex = 86;
+            this.txtJalan.Location = new System.Drawing.Point(212, 57);
+            this.txtJalan.Multiline = true;
+            this.txtJalan.Name = "txtJalan";
+            this.txtJalan.Size = new System.Drawing.Size(318, 38);
+            this.txtJalan.TabIndex = 86;
             // 
             // txtKota
             // 
@@ -269,6 +272,41 @@
             this.cbxProvinsi.Size = new System.Drawing.Size(318, 28);
             this.cbxProvinsi.TabIndex = 92;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(406, 631);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(120, 52);
+            this.btnUpdate.TabIndex = 82;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnClear.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(280, 631);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(120, 52);
+            this.btnClear.TabIndex = 81;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(154, 631);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(120, 52);
+            this.btnAdd.TabIndex = 80;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // PeminjamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -276,6 +314,9 @@
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1278, 894);
             this.ControlBox = false;
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSearch);
@@ -317,7 +358,10 @@
         private System.Windows.Forms.TextBox txtNoTlp;
         private System.Windows.Forms.TextBox txtKodePos;
         private System.Windows.Forms.TextBox txtKota;
-        private System.Windows.Forms.TextBox txtAJalan;
+        private System.Windows.Forms.TextBox txtJalan;
         private System.Windows.Forms.ComboBox cbxProvinsi;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

@@ -41,6 +41,16 @@ namespace PeminjamanInventaris
             }
         }
 
+        private void ClearInputFields()
+        {
+            txtPeminjam.Text = "";
+            txtJalan.Text = "";
+            txtKota.Text = "";
+            cbxProvinsi.SelectedIndex = -1;
+            txtKodePos.Text = "";
+            txtNoTlp.Text = "";
+            txtOrganisasi.Text = "";
+        }
         private void txtOrganisasi_TextChanged(object sender, EventArgs e)
         {
 
@@ -49,6 +59,16 @@ namespace PeminjamanInventaris
         private void txtKota_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearInputFields();
         }
     }
 }
