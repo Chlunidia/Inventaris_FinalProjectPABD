@@ -22,11 +22,25 @@ namespace PeminjamanInventaris
             InitializeComponent();
             connection = new SqlConnection(stringConnection);
             LoadKategoriData();
+            dataGridView();
         }
 
         private void BarangForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView()
+        {
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+                string query = "SELECT * FROM dbo.Barang;";
+                SqlDataAdapter da = new SqlDataAdapter(query, connection);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dataGridViewBarang.DataSource = ds.Tables[0];
+            }
         }
 
         private void LoadKategoriData()
