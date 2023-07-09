@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,16 @@ namespace PeminjamanInventaris
 {
     public partial class PengelolaanForm : Form
     {
+        private string stringConnection = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;Integrated Security=True;User=sa;Password=Chluni2350719";
+        private SqlConnection connection;
+        private SqlCommand command;
+        private SqlDataAdapter adapter;
         public PengelolaanForm()
         {
             InitializeComponent();
+            connection = new SqlConnection(stringConnection);
+            LoadPetugasData();
+            LoadBarangData();
         }
 
         private void PengelolaanForm_Load(object sender, EventArgs e)
@@ -22,7 +30,88 @@ namespace PeminjamanInventaris
 
         }
 
+        private void LoadPetugasData()
+        {
+            try
+            {
+                connection.Open();
+
+                string query = "SELECT id_petugas, nama_petugas FROM Petugas";
+                command = new SqlCommand(query, connection);
+                DataTable petugas = new DataTable();
+
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(petugas);
+
+                cbxNamaPetugas.DisplayMember = "nama_petugas";
+                cbxNamaPetugas.ValueMember = "id_petugas";
+
+                cbxNamaPetugas.DataSource = petugas;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void LoadBarangData()
+        {
+            try
+            {
+                connection.Open();
+
+                string query = "SELECT id_barang, nama_barang FROM Barang";
+                command = new SqlCommand(query, connection);
+                DataTable barang = new DataTable();
+
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(barang);
+
+                cbxNamaBarang.DisplayMember = "nama_barang";
+                cbxNamaBarang.ValueMember = "id_barang";
+
+                cbxNamaBarang.DataSource = barang;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         private void labelNamaB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
         {
 
         }

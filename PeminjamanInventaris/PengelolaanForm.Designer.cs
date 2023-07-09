@@ -30,12 +30,14 @@
         {
             this.labelPengelolaan = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelKet = new System.Windows.Forms.Label();
-            this.cbxNamaBarang = new System.Windows.Forms.ComboBox();
-            this.labelNamaB = new System.Windows.Forms.Label();
+            this.labelTgl = new System.Windows.Forms.Label();
             this.labelNamaPetugas = new System.Windows.Forms.Label();
             this.cbxNamaPetugas = new System.Windows.Forms.ComboBox();
+            this.labelNamaB = new System.Windows.Forms.Label();
+            this.cbxNamaBarang = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labelKet = new System.Windows.Forms.Label();
+            this.datePengelolaan = new System.Windows.Forms.DateTimePicker();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -45,8 +47,6 @@
             this.labelIDP = new System.Windows.Forms.Label();
             this.txtIDP = new System.Windows.Forms.TextBox();
             this.dataGridViewPengelolaan = new System.Windows.Forms.DataGridView();
-            this.labelTgl = new System.Windows.Forms.Label();
-            this.datePengelolaan = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPengelolaan)).BeginInit();
             this.SuspendLayout();
@@ -84,35 +84,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 197);
             this.tableLayoutPanel1.TabIndex = 75;
             // 
-            // labelKet
+            // labelTgl
             // 
-            this.labelKet.AutoSize = true;
-            this.labelKet.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKet.Location = new System.Drawing.Point(3, 98);
-            this.labelKet.Name = "labelKet";
-            this.labelKet.Size = new System.Drawing.Size(99, 22);
-            this.labelKet.TabIndex = 65;
-            this.labelKet.Text = "Keterangan";
-            this.labelKet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cbxNamaBarang
-            // 
-            this.cbxNamaBarang.FormattingEnabled = true;
-            this.cbxNamaBarang.Location = new System.Drawing.Point(183, 52);
-            this.cbxNamaBarang.Name = "cbxNamaBarang";
-            this.cbxNamaBarang.Size = new System.Drawing.Size(314, 28);
-            this.cbxNamaBarang.TabIndex = 64;
-            // 
-            // labelNamaB
-            // 
-            this.labelNamaB.AutoSize = true;
-            this.labelNamaB.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNamaB.Location = new System.Drawing.Point(3, 49);
-            this.labelNamaB.Name = "labelNamaB";
-            this.labelNamaB.Size = new System.Drawing.Size(117, 22);
-            this.labelNamaB.TabIndex = 61;
-            this.labelNamaB.Text = "Nama Barang";
-            this.labelNamaB.Click += new System.EventHandler(this.labelNamaB_Click);
+            this.labelTgl.AutoSize = true;
+            this.labelTgl.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTgl.Location = new System.Drawing.Point(3, 147);
+            this.labelTgl.Name = "labelTgl";
+            this.labelTgl.Size = new System.Drawing.Size(99, 22);
+            this.labelTgl.TabIndex = 67;
+            this.labelTgl.Text = "Keterangan";
+            this.labelTgl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelNamaPetugas
             // 
@@ -132,6 +113,25 @@
             this.cbxNamaPetugas.Size = new System.Drawing.Size(314, 28);
             this.cbxNamaPetugas.TabIndex = 60;
             // 
+            // labelNamaB
+            // 
+            this.labelNamaB.AutoSize = true;
+            this.labelNamaB.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNamaB.Location = new System.Drawing.Point(3, 49);
+            this.labelNamaB.Name = "labelNamaB";
+            this.labelNamaB.Size = new System.Drawing.Size(117, 22);
+            this.labelNamaB.TabIndex = 61;
+            this.labelNamaB.Text = "Nama Barang";
+            this.labelNamaB.Click += new System.EventHandler(this.labelNamaB_Click);
+            // 
+            // cbxNamaBarang
+            // 
+            this.cbxNamaBarang.FormattingEnabled = true;
+            this.cbxNamaBarang.Location = new System.Drawing.Point(183, 52);
+            this.cbxNamaBarang.Name = "cbxNamaBarang";
+            this.cbxNamaBarang.Size = new System.Drawing.Size(314, 28);
+            this.cbxNamaBarang.TabIndex = 64;
+            // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -141,6 +141,24 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(314, 38);
             this.textBox1.TabIndex = 66;
+            // 
+            // labelKet
+            // 
+            this.labelKet.AutoSize = true;
+            this.labelKet.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKet.Location = new System.Drawing.Point(3, 98);
+            this.labelKet.Name = "labelKet";
+            this.labelKet.Size = new System.Drawing.Size(99, 22);
+            this.labelKet.TabIndex = 65;
+            this.labelKet.Text = "Keterangan";
+            this.labelKet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // datePengelolaan
+            // 
+            this.datePengelolaan.Location = new System.Drawing.Point(183, 150);
+            this.datePengelolaan.Name = "datePengelolaan";
+            this.datePengelolaan.Size = new System.Drawing.Size(314, 26);
+            this.datePengelolaan.TabIndex = 68;
             // 
             // btnUpdate
             // 
@@ -152,6 +170,7 @@
             this.btnUpdate.TabIndex = 99;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
@@ -163,6 +182,7 @@
             this.btnClear.TabIndex = 98;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnAdd
             // 
@@ -174,6 +194,7 @@
             this.btnAdd.TabIndex = 97;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSearch
             // 
@@ -185,6 +206,7 @@
             this.btnSearch.TabIndex = 96;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnDelete
             // 
@@ -196,6 +218,7 @@
             this.btnDelete.TabIndex = 95;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnBack
             // 
@@ -238,24 +261,6 @@
             this.dataGridViewPengelolaan.RowTemplate.Height = 28;
             this.dataGridViewPengelolaan.Size = new System.Drawing.Size(658, 494);
             this.dataGridViewPengelolaan.TabIndex = 102;
-            // 
-            // labelTgl
-            // 
-            this.labelTgl.AutoSize = true;
-            this.labelTgl.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTgl.Location = new System.Drawing.Point(3, 147);
-            this.labelTgl.Name = "labelTgl";
-            this.labelTgl.Size = new System.Drawing.Size(99, 22);
-            this.labelTgl.TabIndex = 67;
-            this.labelTgl.Text = "Keterangan";
-            this.labelTgl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // datePengelolaan
-            // 
-            this.datePengelolaan.Location = new System.Drawing.Point(183, 150);
-            this.datePengelolaan.Name = "datePengelolaan";
-            this.datePengelolaan.Size = new System.Drawing.Size(314, 26);
-            this.datePengelolaan.TabIndex = 68;
             // 
             // PengelolaanForm
             // 

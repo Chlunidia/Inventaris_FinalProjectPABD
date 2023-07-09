@@ -59,5 +59,12 @@ namespace PeminjamanInventaris
             SuratPeminjamanForm suratPeminjaman = new SuratPeminjamanForm();
             suratPeminjaman.Show();
         }
+
+        private void btnPengelolaan_Click(object sender, EventArgs e)
+        {
+            PengelolaanForm pengelolaanForm = new PengelolaanForm();
+            pengelolaanForm.Show();
+            this.Hide();
+        }
     }
 }

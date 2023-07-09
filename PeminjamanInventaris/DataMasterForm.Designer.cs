@@ -37,6 +37,7 @@
             this.btnSurat = new System.Windows.Forms.Button();
             this.labelDataMaster = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnPengelolaan = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -159,6 +160,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(269, 353);
             this.tableLayoutPanel1.TabIndex = 73;
             // 
+            // btnPengelolaan
+            // 
+            this.btnPengelolaan.Location = new System.Drawing.Point(845, 282);
+            this.btnPengelolaan.Name = "btnPengelolaan";
+            this.btnPengelolaan.Size = new System.Drawing.Size(232, 141);
+            this.btnPengelolaan.TabIndex = 74;
+            this.btnPengelolaan.Text = "Pengelolaan Barang";
+            this.btnPengelolaan.UseVisualStyleBackColor = true;
+            this.btnPengelolaan.Click += new System.EventHandler(this.btnPengelolaan_Click);
+            // 
             // DataMasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -166,6 +177,7 @@
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1278, 894);
             this.ControlBox = false;
+            this.Controls.Add(this.btnPengelolaan);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.labelDataMaster);
             this.Controls.Add(this.btnBack);
@@ -193,5 +205,6 @@
         private System.Windows.Forms.Button btnSurat;
         private System.Windows.Forms.Label labelDataMaster;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnPengelolaan;
     }
 }
