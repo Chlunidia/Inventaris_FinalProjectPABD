@@ -55,6 +55,14 @@ namespace PeminjamanInventaris
             }
         }
 
+        private void ClearInputFields()
+        {
+            txtNamaBarang.Text = "";
+            txtNmB.Text = "";
+            txtJumlah.Text = "";
+            cbxKategori.SelectedIndex = -1;
+        }
+
         private void LoadKategoriData()
         {
             try
