@@ -94,10 +94,10 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 143);
+            this.dataGridView1.Location = new System.Drawing.Point(656, 143);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1197, 571);
+            this.dataGridView1.Size = new System.Drawing.Size(581, 567);
             this.dataGridView1.TabIndex = 72;
             // 
             // PeminjamForm
