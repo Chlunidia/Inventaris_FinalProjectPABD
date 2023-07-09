@@ -46,12 +46,12 @@
             this.datePengembalian = new System.Windows.Forms.DateTimePicker();
             this.labelTglPengembalian = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbxBarang = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.labelNamaPeminjam = new System.Windows.Forms.Label();
             this.labelBarang = new System.Windows.Forms.Label();
-            this.cbxStatus = new System.Windows.Forms.ComboBox();
+            this.cbxBarang = new System.Windows.Forms.ComboBox();
             this.cbxNamaPeminjam = new System.Windows.Forms.ComboBox();
+            this.cbxStatus = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjaman)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -263,6 +263,26 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(550, 291);
             this.tableLayoutPanel1.TabIndex = 98;
             // 
+            // labelNamaPeminjam
+            // 
+            this.labelNamaPeminjam.AutoSize = true;
+            this.labelNamaPeminjam.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNamaPeminjam.Location = new System.Drawing.Point(3, 0);
+            this.labelNamaPeminjam.Name = "labelNamaPeminjam";
+            this.labelNamaPeminjam.Size = new System.Drawing.Size(139, 22);
+            this.labelNamaPeminjam.TabIndex = 48;
+            this.labelNamaPeminjam.Text = "Nama Peminjam";
+            // 
+            // labelBarang
+            // 
+            this.labelBarang.AutoSize = true;
+            this.labelBarang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBarang.Location = new System.Drawing.Point(3, 48);
+            this.labelBarang.Name = "labelBarang";
+            this.labelBarang.Size = new System.Drawing.Size(117, 22);
+            this.labelBarang.TabIndex = 64;
+            this.labelBarang.Text = "Nama Barang";
+            // 
             // cbxBarang
             // 
             this.cbxBarang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -311,43 +331,53 @@
             this.cbxBarang.Size = new System.Drawing.Size(318, 30);
             this.cbxBarang.TabIndex = 98;
             // 
-            // panel1
+            // cbxNamaPeminjam
             // 
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.btnClear);
-            this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Controls.Add(this.labelIDPeminjaman);
-            this.panel1.Controls.Add(this.txtNmP);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.dataGridViewPeminjaman);
-            this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Controls.Add(this.labelPeminjaman);
-            this.panel1.Location = new System.Drawing.Point(1, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1270, 880);
-            this.panel1.TabIndex = 99;
-            // 
-            // labelNamaPeminjam
-            // 
-            this.labelNamaPeminjam.AutoSize = true;
-            this.labelNamaPeminjam.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNamaPeminjam.Location = new System.Drawing.Point(3, 0);
-            this.labelNamaPeminjam.Name = "labelNamaPeminjam";
-            this.labelNamaPeminjam.Size = new System.Drawing.Size(139, 22);
-            this.labelNamaPeminjam.TabIndex = 48;
-            this.labelNamaPeminjam.Text = "Nama Peminjam";
-            // 
-            // labelBarang
-            // 
-            this.labelBarang.AutoSize = true;
-            this.labelBarang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBarang.Location = new System.Drawing.Point(3, 48);
-            this.labelBarang.Name = "labelBarang";
-            this.labelBarang.Size = new System.Drawing.Size(117, 22);
-            this.labelBarang.TabIndex = 64;
-            this.labelBarang.Text = "Nama Barang";
+            this.cbxNamaPeminjam.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxNamaPeminjam.FormattingEnabled = true;
+            this.cbxNamaPeminjam.Items.AddRange(new object[] {
+            "Nanggroe Aceh Darussalam",
+            "Sumatera Utara",
+            "Sumatera Selatan",
+            "Sumatera Barat",
+            "Bengkulu",
+            "Riau",
+            "Kepulauan Riau",
+            "Jambi",
+            "Lampung",
+            "Bangka Belitung",
+            "Kalimantan Barat",
+            "Kalimantan Timur",
+            "Kalimantan Selatan",
+            "Kalimantan Tengah",
+            "Kalimantan Utara",
+            "Banten",
+            "DKI Jakarta",
+            "Jawa Barat",
+            "Jawa Tengah",
+            "Daerah Istimewa Yogyakarta",
+            "Jawa Timur",
+            "Bali",
+            "Nusa Tenggara Timur",
+            "Nusa Tenggara Barat",
+            "Gorontalo",
+            "Sulawesi Barat",
+            "Sulawesi Tengah",
+            "Sulawesi Utara",
+            "Sulawesi Tenggara",
+            "Sulawesi Selatan",
+            "Maluku Utara",
+            "Maluku",
+            "Papua Barat",
+            "Papua",
+            "Papua Tengah",
+            "Papua Pegunungan",
+            "Papua Selatan",
+            "Papua Barat Daya"});
+            this.cbxNamaPeminjam.Location = new System.Drawing.Point(223, 3);
+            this.cbxNamaPeminjam.Name = "cbxNamaPeminjam";
+            this.cbxNamaPeminjam.Size = new System.Drawing.Size(318, 30);
+            this.cbxNamaPeminjam.TabIndex = 100;
             // 
             // cbxStatus
             // 
@@ -397,53 +427,24 @@
             this.cbxStatus.Size = new System.Drawing.Size(318, 30);
             this.cbxStatus.TabIndex = 99;
             // 
-            // cbxNamaPeminjam
+            // panel1
             // 
-            this.cbxNamaPeminjam.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxNamaPeminjam.FormattingEnabled = true;
-            this.cbxNamaPeminjam.Items.AddRange(new object[] {
-            "Nanggroe Aceh Darussalam",
-            "Sumatera Utara",
-            "Sumatera Selatan",
-            "Sumatera Barat",
-            "Bengkulu",
-            "Riau",
-            "Kepulauan Riau",
-            "Jambi",
-            "Lampung",
-            "Bangka Belitung",
-            "Kalimantan Barat",
-            "Kalimantan Timur",
-            "Kalimantan Selatan",
-            "Kalimantan Tengah",
-            "Kalimantan Utara",
-            "Banten",
-            "DKI Jakarta",
-            "Jawa Barat",
-            "Jawa Tengah",
-            "Daerah Istimewa Yogyakarta",
-            "Jawa Timur",
-            "Bali",
-            "Nusa Tenggara Timur",
-            "Nusa Tenggara Barat",
-            "Gorontalo",
-            "Sulawesi Barat",
-            "Sulawesi Tengah",
-            "Sulawesi Utara",
-            "Sulawesi Tenggara",
-            "Sulawesi Selatan",
-            "Maluku Utara",
-            "Maluku",
-            "Papua Barat",
-            "Papua",
-            "Papua Tengah",
-            "Papua Pegunungan",
-            "Papua Selatan",
-            "Papua Barat Daya"});
-            this.cbxNamaPeminjam.Location = new System.Drawing.Point(223, 3);
-            this.cbxNamaPeminjam.Name = "cbxNamaPeminjam";
-            this.cbxNamaPeminjam.Size = new System.Drawing.Size(318, 30);
-            this.cbxNamaPeminjam.TabIndex = 100;
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Controls.Add(this.labelIDPeminjaman);
+            this.panel1.Controls.Add(this.txtNmP);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.dataGridViewPeminjaman);
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Controls.Add(this.labelPeminjaman);
+            this.panel1.Location = new System.Drawing.Point(1, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1270, 880);
+            this.panel1.TabIndex = 99;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // PeminjamanForm
             // 
