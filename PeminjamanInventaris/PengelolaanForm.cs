@@ -44,6 +44,15 @@ namespace PeminjamanInventaris
             }
         }
 
+        private void ClearFormFields()
+        {
+            cbxNamaPetugas.SelectedIndex = -1;
+            cbxNamaBarang.SelectedIndex = -1;
+            txtKeterangan.Text = string.Empty;
+            datePengelolaan.Value = DateTime.Now;
+        }
+
+
         private void LoadPetugasData()
         {
             try
@@ -178,7 +187,7 @@ namespace PeminjamanInventaris
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            ClearFormFields();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
