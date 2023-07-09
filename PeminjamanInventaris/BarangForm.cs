@@ -218,7 +218,7 @@ namespace PeminjamanInventaris
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            ClearInputFields();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
