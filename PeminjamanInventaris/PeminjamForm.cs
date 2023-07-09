@@ -63,7 +63,91 @@ namespace PeminjamanInventaris
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string namaPeminjam = txtPeminjam.Text;
+                string jalan = txtJalan.Text;
+                string kota = txtKota.Text;
+                string provinsi = cbxProvinsi.SelectedItem?.ToString();
+                string kodePos = txtKodePos.Text;
+                string noTlp = txtNoTlp.Text;
+                string organisasi = txtOrganisasi.Text;
 
+                using (SqlConnection connection = new SqlConnection(stringConnection))
+                {
+                    connection.Open();
+
+                    // Mengecek apakah petugas dengan nama yang sama sudah ada
+                    string checkQuery = "SELECT COUNT(*) FROM Peminjam WHERE nama_peminjam = @nama_peminjam";
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                    {
+                        checkCmd.Parameters.AddWithValue("@nama_peminjam", namaPeminjam);
+                        int count = (int)checkCmd.ExecuteScalar();
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Petugas dengan nama tersebut sudah ada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+
+                    // Membangkitkan ID petugas otomatis hanya jika tidak ada petugas dengan nama yang sama
+                    string idPeminjam = GenerateUniqueID(connection);
+
+                    // Menyimpan data petugas ke dalam tabel
+                    string insertQuery = "INSERT INTO Peminjam (id_peminjam, nama_peminjam, jalan, kota, provinsi, kode_pos, no_tlp_peminjam, organisasi_asal) VALUES (@id_peminjam, @nama_peminjam, @jalan, @kota, @provinsi, @kodePos, @noTlp, @organisasi)";
+                    using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
+                    {
+                        insertCmd.Parameters.AddWithValue("@id_peminjam", idPeminjam);
+                        insertCmd.Parameters.AddWithValue("@nama_peminjam", namaPeminjam);
+                        insertCmd.Parameters.AddWithValue("@jalan", jalan);
+                        insertCmd.Parameters.AddWithValue("@kota", kota);
+                        insertCmd.Parameters.AddWithValue("@provinsi", provinsi);
+                        insertCmd.Parameters.AddWithValue("@kodePos", kodePos);
+                        insertCmd.Parameters.AddWithValue("@noTlp", noTlp);
+                        insertCmd.Parameters.AddWithValue("@organisasi", organisasi);
+
+                        insertCmd.ExecuteNonQuery();
+                    }
+
+                    connection.Close();
+                }
+
+                MessageBox.Show("Data berhasil disimpan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                ClearInputFields();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private string GenerateUniqueID(SqlConnection connection)
+        {
+            string idPetugas = "";
+            int count = 1;
+
+            while (true)
+            {
+                idPetugas = "PJ" + count.ToString().PadLeft(4, '0');
+
+                // Mengecek apakah ID kategori barang sudah digunakan sebelumnya
+                string checkQuery = "SELECT COUNT(*) FROM Peminjam WHERE id_peminjam = @id_peminjam";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@id_peminjam", idPetugas);
+                    int existingCount = (int)checkCmd.ExecuteScalar();
+                    if (existingCount == 0)
+                    {
+                        // ID unik ditemukan
+                        break;
+                    }
+                }
+
+                count++;
+            }
+
+            return idPetugas;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
