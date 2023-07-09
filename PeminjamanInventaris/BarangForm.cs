@@ -160,7 +160,52 @@ namespace PeminjamanInventaris
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (dataGridViewBarang.SelectedCells.Count > 0)
+                {
+                    using (SqlConnection connection = new SqlConnection(stringConnection))
+                    {
+                        connection.Open();
 
+                        // Get the values from the input controls
+                        string idBarang = dataGridViewBarang.SelectedCells[0].Value.ToString();
+                        string namaBarang = txtNamaBarang.Text;
+                        string jumlah = txtJumlah.Text;
+                        string idKatBarang = cbxKategori.SelectedValue.ToString();
+
+                        // Update the record in the table
+                        string updateQuery = "UPDATE Barang SET nama_barang = @namaBarang, jumlah = @jumlah, id_kat_barang = @idKatBarang WHERE id_barang = @idBarang";
+                        using (SqlCommand updateCmd = new SqlCommand(updateQuery, connection))
+                        {
+                            updateCmd.Parameters.AddWithValue("@idBarang", idBarang);
+                            updateCmd.Parameters.AddWithValue("@namaBarang", namaBarang);
+                            updateCmd.Parameters.AddWithValue("@jumlah", jumlah);
+                            updateCmd.Parameters.AddWithValue("@idKatBarang", idKatBarang);
+                            int rowsAffected = updateCmd.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Data berhasil diperbarui.");
+                                refreshForm();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Gagal memperbarui data.");
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pilih baris data yang ingin diperbarui.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            dataGridView();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
