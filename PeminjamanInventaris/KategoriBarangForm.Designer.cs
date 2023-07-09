@@ -47,7 +47,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnClear.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(249, 426);
+            this.btnClear.Location = new System.Drawing.Point(266, 490);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(121, 52);
             this.btnClear.TabIndex = 58;
@@ -59,7 +59,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(122, 426);
+            this.btnAdd.Location = new System.Drawing.Point(76, 432);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(121, 52);
             this.btnAdd.TabIndex = 57;
@@ -100,7 +100,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(376, 426);
+            this.btnUpdate.Location = new System.Drawing.Point(330, 432);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(121, 52);
             this.btnUpdate.TabIndex = 60;
@@ -112,7 +112,7 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(817, 728);
+            this.btnSearch.Location = new System.Drawing.Point(203, 432);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(120, 52);
             this.btnSearch.TabIndex = 65;
@@ -135,7 +135,7 @@
             // 
             this.labelIDB.AutoSize = true;
             this.labelIDB.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIDB.Location = new System.Drawing.Point(667, 676);
+            this.labelIDB.Location = new System.Drawing.Point(51, 332);
             this.labelIDB.Name = "labelIDB";
             this.labelIDB.Size = new System.Drawing.Size(175, 22);
             this.labelIDB.TabIndex = 63;
@@ -145,7 +145,7 @@
             // 
             this.txtIDKat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDKat.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDKat.Location = new System.Drawing.Point(861, 673);
+            this.txtIDKat.Location = new System.Drawing.Point(245, 330);
             this.txtIDKat.Multiline = true;
             this.txtIDKat.Name = "txtIDKat";
             this.txtIDKat.Size = new System.Drawing.Size(353, 38);
@@ -155,7 +155,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(943, 728);
+            this.btnDelete.Location = new System.Drawing.Point(457, 432);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 52);
             this.btnDelete.TabIndex = 61;

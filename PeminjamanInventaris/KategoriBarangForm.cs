@@ -59,25 +59,38 @@ namespace PeminjamanInventaris
             btnDelete.Enabled = true;
             btnUpdate.Enabled = true;
             btnAdd.Enabled = true;
+            dataGridView();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string connString = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;Integrated Security=True;User ID=sa;Password=Chluni2350719";
             string namaKatBarang = txtNamaKatBarang.Text;
 
-            using (SqlConnection connection = new SqlConnection(connString))
+            using (SqlConnection connection = new SqlConnection(stringConnection))
             {
                 connection.Open();
 
-                // Membangkitkan ID kategori barang otomatis
-                string idKatBarang = GenerateUniqueID(connection);
+                // Mengecek apakah kategori barang dengan nama yang sama sudah ada
+                string checkQuery = "SELECT COUNT(*) FROM Kategori_Barang WHERE nama_kategori = @nama_kategori";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@nama_kategori", namaKatBarang);
+                    int count = (int)checkCmd.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Kategori barang dengan nama tersebut sudah ada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                // Membangkitkan ID kategori barang otomatis hanya jika tidak ada kategori dengan nama yang sama
+                string idKatBarang = GenerateUniqueID(connection, namaKatBarang);
 
                 // Menyimpan data barang ke dalam tabel
                 string insertQuery = "INSERT INTO Kategori_Barang (id_kat_barang, nama_kategori) VALUES (@id_kat_barang, @nama_kategori)";
                 using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
                 {
-                    insertCmd.Parameters.Add(new SqlParameter("@id_kat_barang", idKatBarang));
-                    insertCmd.Parameters.Add(new SqlParameter("@nama_kategori", namaKatBarang));
+                    insertCmd.Parameters.AddWithValue("@id_kat_barang", idKatBarang);
+                    insertCmd.Parameters.AddWithValue("@nama_kategori", namaKatBarang);
                     insertCmd.ExecuteNonQuery();
                 }
 
@@ -88,60 +101,116 @@ namespace PeminjamanInventaris
             refreshForm();
             dataGridView();
             txtNamaKatBarang.Text = "";
-
         }
 
-        private string GenerateUniqueID(SqlConnection connection)
+        private string GenerateUniqueID(SqlConnection connection, string namaKatBarang)
         {
             string idKatBarang = "";
-            string countQuery = "SELECT COUNT(*) FROM Kategori_Barang";
-            using (SqlCommand countCmd = new SqlCommand(countQuery, connection))
+            int count = 1;
+
+            while (true)
             {
-                int count = (int)countCmd.ExecuteScalar();
-                idKatBarang = "IK" + (count + 1).ToString().PadLeft(4, '0');
+                idKatBarang = "IK" + count.ToString().PadLeft(4, '0');
+
+                // Mengecek apakah ID kategori barang sudah digunakan sebelumnya
+                string checkQuery = "SELECT COUNT(*) FROM Kategori_Barang WHERE id_kat_barang = @id_kat_barang";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@id_kat_barang", idKatBarang);
+                    int existingCount = (int)checkCmd.ExecuteScalar();
+                    if (existingCount == 0)
+                    {
+                        // ID unik ditemukan
+                        break;
+                    }
+                }
+
+                count++;
             }
 
             return idKatBarang;
         }
 
+
+
         private void btnClear_Click(object sender, EventArgs e)
         {
+            txtIDKat.Text = "";
             txtNamaKatBarang.Text = "";
-            dataGridView();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string connString = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;Integrated Security=True;User ID=sa;Password=Chluni2350719";
-            string query = "UPDATE Kategori_Barang SET nama_kategori = @nama_kategori WHERE id_kat_barang = @id_kat_barang";
+            string idKatBarang = txtIDKat.Text;
             string namaKatBarang = txtNamaKatBarang.Text;
 
-            using (SqlConnection connection = new SqlConnection(connString))
+            if (string.IsNullOrEmpty(idKatBarang))
+            {
+                MessageBox.Show("Silakan masukkan ID kategori barang yang akan diperbarui.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(namaKatBarang))
+            {
+                MessageBox.Show("Silakan masukkan nama kategori barang yang baru.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (SqlConnection connection = new SqlConnection(stringConnection))
             {
                 connection.Open();
 
-                // Membangkitkan ID kategori barang otomatis
-                string idKatBarang = GenerateUniqueID(connection);
-
-               using (SqlCommand insertCmd = new SqlCommand(query, connection))
+                // Mengecek apakah kategori barang dengan ID yang dimasukkan ada
+                string checkQuery = "SELECT COUNT(*) FROM Kategori_Barang WHERE id_kat_barang = @id_kat_barang";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
                 {
-                    insertCmd.Parameters.Add(new SqlParameter("@id_kat_barang", idKatBarang));
-                    insertCmd.Parameters.Add(new SqlParameter("@nama_kategori", namaKatBarang));
-                    insertCmd.ExecuteNonQuery();
+                    checkCmd.Parameters.AddWithValue("@id_kat_barang", idKatBarang);
+                    int count = (int)checkCmd.ExecuteScalar();
+                    if (count == 0)
+                    {
+                        MessageBox.Show("Kategori barang dengan ID tersebut tidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                // Mengecek apakah kategori barang dengan nama yang sama sudah ada, kecuali untuk kategori dengan ID yang sama
+                string duplicateCheckQuery = "SELECT COUNT(*) FROM Kategori_Barang WHERE nama_kategori = @nama_kategori AND id_kat_barang != @id_kat_barang";
+                using (SqlCommand duplicateCheckCmd = new SqlCommand(duplicateCheckQuery, connection))
+                {
+                    duplicateCheckCmd.Parameters.AddWithValue("@nama_kategori", namaKatBarang);
+                    duplicateCheckCmd.Parameters.AddWithValue("@id_kat_barang", idKatBarang);
+                    int duplicateCount = (int)duplicateCheckCmd.ExecuteScalar();
+                    if (duplicateCount > 0)
+                    {
+                        MessageBox.Show("Kategori barang dengan nama tersebut sudah ada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                // Memperbarui data kategori barang
+                string updateQuery = "UPDATE Kategori_Barang SET nama_kategori = @nama_kategori WHERE id_kat_barang = @id_kat_barang";
+                using (SqlCommand updateCmd = new SqlCommand(updateQuery, connection))
+                {
+                    updateCmd.Parameters.AddWithValue("@nama_kategori", namaKatBarang);
+                    updateCmd.Parameters.AddWithValue("@id_kat_barang", idKatBarang);
+                    updateCmd.ExecuteNonQuery();
                 }
 
                 connection.Close();
             }
-            MessageBox.Show("Data berhasil disimpan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            MessageBox.Show("Data berhasil diperbarui.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             refreshForm();
+            dataGridView();
+            txtIDKat.Text = "";
+            txtNamaKatBarang.Text = "";
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string connString = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;Integrated Security=True;User ID=sa;Password=Chluni2350719";
             string query = "SELECT * FROM Kategori_Barang WHERE id_kat_barang = @id_kat_barang";
 
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(stringConnection))
             {
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -169,20 +238,29 @@ namespace PeminjamanInventaris
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string connString = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;Integrated Security=True;User ID=sa;Password=Chluni2350719";
             string query = "DELETE FROM Kategori_Barang WHERE id_kat_barang = @id_kat_barang";
+            string idKatBarang = txtIDKat.Text;
 
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(stringConnection))
             {
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@id_kat_barang", txtIDKat.Text);
+                    cmd.Parameters.AddWithValue("@id_kat_barang", idKatBarang);
 
                     try
                     {
                         conn.Open();
                         int rowsAffected = cmd.ExecuteNonQuery();
-                        MessageBox.Show("Data successfully deleted.");
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Data berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtIDKat.Text = "";
+                            dataGridView();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Data tidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     catch (SqlException ex)
                     {
@@ -195,7 +273,6 @@ namespace PeminjamanInventaris
                 }
             }
             txtIDKat.Text = "";
-            dataGridView();
         }
     }
 }

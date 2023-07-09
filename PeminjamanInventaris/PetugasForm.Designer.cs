@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridViewPeminjam = new System.Windows.Forms.DataGridView();
-            this.txtOrganisasi = new System.Windows.Forms.TextBox();
+            this.txtJabatan = new System.Windows.Forms.TextBox();
             this.txtNoTlp = new System.Windows.Forms.TextBox();
             this.txtKodePos = new System.Windows.Forms.TextBox();
             this.txtAKota = new System.Windows.Forms.TextBox();
@@ -53,7 +53,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxProvinsi = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjam)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -70,15 +70,15 @@
             this.dataGridViewPeminjam.Size = new System.Drawing.Size(627, 287);
             this.dataGridViewPeminjam.TabIndex = 45;
             // 
-            // txtOrganisasi
+            // txtJabatan
             // 
-            this.txtOrganisasi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtOrganisasi.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrganisasi.Location = new System.Drawing.Point(177, 311);
-            this.txtOrganisasi.Multiline = true;
-            this.txtOrganisasi.Name = "txtOrganisasi";
-            this.txtOrganisasi.Size = new System.Drawing.Size(311, 38);
-            this.txtOrganisasi.TabIndex = 43;
+            this.txtJabatan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtJabatan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJabatan.Location = new System.Drawing.Point(177, 311);
+            this.txtJabatan.Multiline = true;
+            this.txtJabatan.Name = "txtJabatan";
+            this.txtJabatan.Size = new System.Drawing.Size(311, 38);
+            this.txtJabatan.TabIndex = 43;
             // 
             // txtNoTlp
             // 
@@ -151,6 +151,7 @@
             this.btnDelete.TabIndex = 35;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -162,6 +163,7 @@
             this.btnClear.TabIndex = 34;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnAdd
             // 
@@ -173,6 +175,7 @@
             this.btnAdd.TabIndex = 33;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // labelJabatan
             // 
@@ -294,6 +297,7 @@
             this.btnSearch.TabIndex = 57;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnUpdate
             // 
@@ -305,6 +309,7 @@
             this.btnUpdate.TabIndex = 58;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnBack
             // 
@@ -318,11 +323,11 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // comboBox1
+            // cbxProvinsi
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxProvinsi.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxProvinsi.FormattingEnabled = true;
+            this.cbxProvinsi.Items.AddRange(new object[] {
             "Nanggroe Aceh Darussalam",
             "Sumatera Utara",
             "Sumatera Selatan",
@@ -361,10 +366,10 @@
             "Papua Pegunungan",
             "Papua Selatan",
             "Papua Barat Daya"});
-            this.comboBox1.Location = new System.Drawing.Point(177, 179);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(311, 30);
-            this.comboBox1.TabIndex = 63;
+            this.cbxProvinsi.Location = new System.Drawing.Point(177, 179);
+            this.cbxProvinsi.Name = "cbxProvinsi";
+            this.cbxProvinsi.Size = new System.Drawing.Size(311, 30);
+            this.cbxProvinsi.TabIndex = 63;
             // 
             // tableLayoutPanel1
             // 
@@ -372,13 +377,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.43788F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.56212F));
             this.tableLayoutPanel1.Controls.Add(this.labelIDPetugas, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.cbxProvinsi, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.labelNamaPetugas, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelAJalan, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelAKota, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.labelAProvinsi, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.labelKodePos, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.txtOrganisasi, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txtJabatan, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.labelNoTlp, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.txtNoTlp, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.labelJabatan, 0, 7);
@@ -422,6 +427,7 @@
             this.Name = "PetugasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Petugas";
+            this.Load += new System.EventHandler(this.PetugasForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjam)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -433,7 +439,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewPeminjam;
-        private System.Windows.Forms.TextBox txtOrganisasi;
+        private System.Windows.Forms.TextBox txtJabatan;
         private System.Windows.Forms.TextBox txtNoTlp;
         private System.Windows.Forms.TextBox txtKodePos;
         private System.Windows.Forms.TextBox txtAKota;
@@ -457,7 +463,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxProvinsi;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
