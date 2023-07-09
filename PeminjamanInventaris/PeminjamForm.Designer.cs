@@ -33,7 +33,7 @@
             this.labelIDB = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelPeminjam = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewPeminjam = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             this.txtNoTlp = new System.Windows.Forms.TextBox();
             this.txtOrganisasi = new System.Windows.Forms.TextBox();
             this.cbxProvinsi = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjam)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,15 +106,15 @@
             this.labelPeminjam.TabIndex = 73;
             this.labelPeminjam.Text = "Data Peminjam\r\n";
             // 
-            // dataGridView1
+            // dataGridViewPeminjam
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(656, 143);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(581, 567);
-            this.dataGridView1.TabIndex = 72;
+            this.dataGridViewPeminjam.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridViewPeminjam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPeminjam.Location = new System.Drawing.Point(656, 143);
+            this.dataGridViewPeminjam.Name = "dataGridViewPeminjam";
+            this.dataGridViewPeminjam.RowHeadersWidth = 62;
+            this.dataGridViewPeminjam.Size = new System.Drawing.Size(581, 567);
+            this.dataGridViewPeminjam.TabIndex = 72;
             // 
             // label1
             // 
@@ -282,13 +282,13 @@
             this.Controls.Add(this.labelIDB);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelPeminjam);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewPeminjam);
             this.Name = "PeminjamForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Peminjam";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjam)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -303,7 +303,7 @@
         private System.Windows.Forms.Label labelIDB;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelPeminjam;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewPeminjam;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
