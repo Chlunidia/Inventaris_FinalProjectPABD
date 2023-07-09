@@ -23,5 +23,15 @@ namespace PeminjamanInventaris
             dataMasterForm.Show();
             this.Hide();
         }
+
+        private void txtOrganisasi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtKota_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
