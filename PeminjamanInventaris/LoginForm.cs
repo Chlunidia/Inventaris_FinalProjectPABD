@@ -13,7 +13,6 @@ namespace PeminjamanInventaris
 {
     public partial class LoginForm : Form
     {
-        private const string connectionString = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;User ID=sa;Password=Chluni2350719";
         public LoginForm()
         {
             InitializeComponent();

@@ -40,6 +40,7 @@
             this.txtIDKat = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKatBarang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,13 +176,19 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(4, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1270, 880);
+            this.panel1.TabIndex = 101;
+            // 
             // KategoriBarangForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1278, 894);
-            this.ControlBox = false;
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dataGridViewKatBarang);
@@ -194,6 +201,7 @@
             this.Controls.Add(this.labelBarang);
             this.Controls.Add(this.txtNamaKatBarang);
             this.Controls.Add(this.labelNamaBarang);
+            this.Controls.Add(this.panel1);
             this.Name = "KategoriBarangForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kategori Barang";
@@ -218,5 +226,6 @@
         private System.Windows.Forms.TextBox txtIDKat;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Panel panel1;
     }
 }

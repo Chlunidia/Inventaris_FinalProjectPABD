@@ -53,8 +53,8 @@
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.cbxBarang = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnSurat = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjaman)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -115,7 +115,7 @@
             // 
             this.dataGridViewPeminjaman.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridViewPeminjaman.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPeminjaman.Location = new System.Drawing.Point(667, 148);
+            this.dataGridViewPeminjaman.Location = new System.Drawing.Point(651, 148);
             this.dataGridViewPeminjaman.Name = "dataGridViewPeminjaman";
             this.dataGridViewPeminjaman.RowHeadersWidth = 62;
             this.dataGridViewPeminjaman.RowTemplate.Height = 28;
@@ -126,7 +126,7 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(821, 688);
+            this.btnSearch.Location = new System.Drawing.Point(838, 688);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(120, 52);
             this.btnSearch.TabIndex = 90;
@@ -138,7 +138,7 @@
             // 
             this.labelIDPeminjaman.AutoSize = true;
             this.labelIDPeminjaman.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIDPeminjaman.Location = new System.Drawing.Point(641, 640);
+            this.labelIDPeminjaman.Location = new System.Drawing.Point(658, 640);
             this.labelIDPeminjaman.Name = "labelIDPeminjaman";
             this.labelIDPeminjaman.Size = new System.Drawing.Size(215, 22);
             this.labelIDPeminjaman.TabIndex = 89;
@@ -148,7 +148,7 @@
             // 
             this.txtIDPeminjaman.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDPeminjaman.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDPeminjaman.Location = new System.Drawing.Point(898, 637);
+            this.txtIDPeminjaman.Location = new System.Drawing.Point(915, 637);
             this.txtIDPeminjaman.Multiline = true;
             this.txtIDPeminjaman.Name = "txtIDPeminjaman";
             this.txtIDPeminjaman.Size = new System.Drawing.Size(318, 38);
@@ -158,7 +158,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(349, 688);
+            this.btnUpdate.Location = new System.Drawing.Point(385, 506);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(121, 52);
             this.btnUpdate.TabIndex = 93;
@@ -170,7 +170,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnClear.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(222, 688);
+            this.btnClear.Location = new System.Drawing.Point(258, 506);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(121, 52);
             this.btnClear.TabIndex = 92;
@@ -182,7 +182,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(95, 688);
+            this.btnAdd.Location = new System.Drawing.Point(131, 506);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(121, 52);
             this.btnAdd.TabIndex = 91;
@@ -244,7 +244,7 @@
             this.tableLayoutPanel1.Controls.Add(this.cbxBarang, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelTglPengembalian, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.datePengembalian, 1, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 163);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 200);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -417,35 +417,36 @@
             this.panel1.Controls.Add(this.dataGridViewPeminjaman);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.labelPeminjaman);
-            this.panel1.Location = new System.Drawing.Point(1, 2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1270, 880);
+            this.panel1.Size = new System.Drawing.Size(1278, 894);
             this.panel1.TabIndex = 99;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnSurat
+            // 
+            this.btnSurat.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnSurat.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSurat.Location = new System.Drawing.Point(838, 746);
+            this.btnSurat.Name = "btnSurat";
+            this.btnSurat.Size = new System.Drawing.Size(246, 52);
+            this.btnSurat.TabIndex = 100;
+            this.btnSurat.Text = "Surat Peminjaman";
+            this.btnSurat.UseVisualStyleBackColor = false;
+            this.btnSurat.Click += new System.EventHandler(this.btnSurat_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(947, 688);
+            this.btnDelete.Location = new System.Drawing.Point(964, 688);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 52);
             this.btnDelete.TabIndex = 99;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
-            // 
-            // btnSurat
-            // 
-            this.btnSurat.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnSurat.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSurat.Location = new System.Drawing.Point(807, 780);
-            this.btnSurat.Name = "btnSurat";
-            this.btnSurat.Size = new System.Drawing.Size(260, 49);
-            this.btnSurat.TabIndex = 100;
-            this.btnSurat.Text = "Surat Peminjaman";
-            this.btnSurat.UseVisualStyleBackColor = false;
-            this.btnSurat.Click += new System.EventHandler(this.btnSurat_Click);
             // 
             // PeminjamanForm
             // 

@@ -47,6 +47,7 @@
             this.labelIDP = new System.Windows.Forms.Label();
             this.txtIDP = new System.Windows.Forms.TextBox();
             this.dataGridViewPengelolaan = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPengelolaan)).BeginInit();
             this.SuspendLayout();
@@ -262,6 +263,13 @@
             this.dataGridViewPengelolaan.Size = new System.Drawing.Size(658, 494);
             this.dataGridViewPengelolaan.TabIndex = 102;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(4, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1270, 880);
+            this.panel1.TabIndex = 103;
+            // 
             // PengelolaanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -279,6 +287,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.labelPengelolaan);
+            this.Controls.Add(this.panel1);
             this.Name = "PengelolaanForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pengelolaan";
@@ -312,5 +321,6 @@
         private System.Windows.Forms.DataGridView dataGridViewPengelolaan;
         private System.Windows.Forms.Label labelTgl;
         private System.Windows.Forms.DateTimePicker datePengelolaan;
+        private System.Windows.Forms.Panel panel1;
     }
 }

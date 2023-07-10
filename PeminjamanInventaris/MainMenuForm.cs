@@ -69,5 +69,10 @@ namespace PeminjamanInventaris
             SuratPeminjamanForm suratPeminjaman = new SuratPeminjamanForm();
             suratPeminjaman.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

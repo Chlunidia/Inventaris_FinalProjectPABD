@@ -14,7 +14,6 @@ namespace PeminjamanInventaris
     public partial class PeminjamForm : Form
     {
         private string stringConnection = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;Integrated Security=True;User=sa;Password=Chluni2350719";
-        private SqlConnection connection;
         public PeminjamForm()
         {
             InitializeComponent();
@@ -23,8 +22,8 @@ namespace PeminjamanInventaris
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            DataMasterForm dataMasterForm = new DataMasterForm();
-            dataMasterForm.Show();
+            MainMenuForm mainMenuForm = new MainMenuForm();
+            mainMenuForm.Show();
             this.Hide();
         }
 
@@ -120,6 +119,7 @@ namespace PeminjamanInventaris
             {
                 MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            ClearInputFields();
         }
 
         private string GenerateUniqueID(SqlConnection connection)
@@ -214,6 +214,7 @@ namespace PeminjamanInventaris
             {
                 MessageBox.Show("Terjadi kesalahan: " + ex.Message);
             }
+            ClearInputFields();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

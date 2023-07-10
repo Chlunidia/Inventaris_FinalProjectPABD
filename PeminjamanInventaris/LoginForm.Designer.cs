@@ -35,6 +35,7 @@
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.labelKet = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // labelLogin
@@ -130,7 +131,14 @@
             this.labelKet.TabIndex = 6;
             this.labelKet.Text = "Please enter your username and password!";
             // 
-            // Form1
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1278, 894);
+            this.panel1.TabIndex = 101;
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +151,8 @@
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUserID);
             this.Controls.Add(this.labelLogin);
-            this.Name = "Form1";
+            this.Controls.Add(this.panel1);
+            this.Name = "LoginForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -163,6 +172,7 @@
         private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label labelKet;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

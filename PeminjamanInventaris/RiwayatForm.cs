@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PeminjamanInventaris
 {
-    public partial class CetakSuratForm : Form
+    public partial class RiwayatForm : Form
     {
-        public CetakSuratForm()
+        public RiwayatForm()
         {
             InitializeComponent();
         }

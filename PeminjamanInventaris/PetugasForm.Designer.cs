@@ -57,6 +57,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPetugas)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -432,6 +433,13 @@
             this.labelUsername.TabIndex = 65;
             this.labelUsername.Text = "Username";
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(4, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1270, 880);
+            this.panel1.TabIndex = 101;
+            // 
             // PetugasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -450,6 +458,7 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.labelPetugas);
+            this.Controls.Add(this.panel1);
             this.Name = "PetugasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Petugas";
@@ -493,5 +502,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Panel panel1;
     }
 }

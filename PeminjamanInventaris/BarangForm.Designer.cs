@@ -44,6 +44,7 @@
             this.labelJumlah = new System.Windows.Forms.Label();
             this.labelNamaBarang = new System.Windows.Forms.Label();
             this.txtJumlah = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBarang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,6 +221,14 @@
             this.txtJumlah.Size = new System.Drawing.Size(318, 38);
             this.txtJumlah.TabIndex = 82;
             // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1278, 894);
+            this.panel1.TabIndex = 100;
+            // 
             // BarangForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -241,6 +250,7 @@
             this.Controls.Add(this.labelJumlah);
             this.Controls.Add(this.labelNamaBarang);
             this.Controls.Add(this.txtJumlah);
+            this.Controls.Add(this.panel1);
             this.Name = "BarangForm";
             this.Text = "BarangForm";
             this.Load += new System.EventHandler(this.BarangForm_Load);
@@ -268,5 +278,6 @@
         private System.Windows.Forms.Label labelJumlah;
         private System.Windows.Forms.Label labelNamaBarang;
         private System.Windows.Forms.TextBox txtJumlah;
+        private System.Windows.Forms.Panel panel1;
     }
 }

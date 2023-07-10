@@ -53,6 +53,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjam)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -361,6 +362,13 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(4, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1270, 880);
+            this.panel1.TabIndex = 101;
+            // 
             // PeminjamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -379,6 +387,7 @@
             this.Controls.Add(this.txtIDPeminjam);
             this.Controls.Add(this.labelPeminjam);
             this.Controls.Add(this.dataGridViewPeminjam);
+            this.Controls.Add(this.panel1);
             this.Name = "PeminjamForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -420,5 +429,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Panel panel1;
     }
 }

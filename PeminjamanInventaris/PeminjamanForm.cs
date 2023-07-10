@@ -414,8 +414,79 @@ namespace PeminjamanInventaris
 
         private void btnSurat_Click(object sender, EventArgs e)
         {
-            SuratPeminjamanForm suratPeminjaman = new SuratPeminjamanForm();
-            suratPeminjaman.Show();
+            // Get the selected row from the data grid view
+            if (dataGridViewPeminjaman.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridViewPeminjaman.SelectedRows[0];
+
+                // Get the values from the selected row
+                string idPeminjaman = selectedRow.Cells["id_peminjaman"].Value.ToString();
+                string namaPetugas = selectedRow.Cells["nama_petugas"].Value.ToString();
+                string namaPeminjam = selectedRow.Cells["nama_peminjam"].Value.ToString();
+                string namaBarang = selectedRow.Cells["nama_barang"].Value.ToString();
+                string statusPeminjaman = selectedRow.Cells["status_peminjaman"].Value.ToString();
+                DateTime tanggalPeminjaman = Convert.ToDateTime(selectedRow.Cells["tanggal_peminjaman"].Value);
+                DateTime tanggalPengembalianHarus = Convert.ToDateTime(selectedRow.Cells["tanggal_pengembalian_harus"].Value);
+                DateTime tanggalPengembalian = Convert.ToDateTime(selectedRow.Cells["tanggal_pengembalian"].Value);
+
+                // Generate unique ID for id_surat
+                string idSurat = GenerateUniqueID();
+
+                // Create an instance of SuratPeminjamanForm
+                SuratPeminjamanForm suratPeminjaman = new SuratPeminjamanForm();
+
+                // Set the values of the properties in SuratPeminjamanForm
+                suratPeminjaman.IdSurat = idSurat;
+                suratPeminjaman.IdPeminjaman = idPeminjaman; // Pass id_peminjaman as well
+                suratPeminjaman.NamaPetugas = namaPetugas;
+                suratPeminjaman.NamaPeminjam = namaPeminjam;
+                suratPeminjaman.NamaBarang = namaBarang;
+                suratPeminjaman.StatusPeminjaman = statusPeminjaman;
+                suratPeminjaman.TanggalPeminjaman = tanggalPeminjaman;
+                suratPeminjaman.TanggalPengembalianHarus = tanggalPengembalianHarus;
+                suratPeminjaman.TanggalPengembalian = tanggalPengembalian;
+
+                // Show the SuratPeminjamanForm
+                suratPeminjaman.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to generate the surat peminjaman.");
+            }
         }
+
+        private string GenerateUniqueID()
+        {
+            string idSurat = "";
+            int count = 1;
+
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+
+                while (true)
+                {
+                    idSurat = "SR" + count.ToString().PadLeft(4, '0');
+
+                    // Check if the ID is already used in the Surat_Peminjaman table
+                    string checkQuery = "SELECT COUNT(*) FROM Surat_Peminjaman WHERE id_surat = @idSurat";
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                    {
+                        checkCmd.Parameters.AddWithValue("@idSurat", idSurat);
+                        int existingCount = (int)checkCmd.ExecuteScalar();
+                        if (existingCount == 0)
+                        {
+                            // Unique ID found
+                            break;
+                        }
+                    }
+
+                    count++;
+                }
+            }
+
+            return idSurat;
+        }
+
     }
 }
