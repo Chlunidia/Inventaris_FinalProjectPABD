@@ -1,6 +1,6 @@
 ﻿namespace PeminjamanInventaris
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -57,7 +57,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUserID.AutoSize = true;
             this.labelUserID.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUserID.Location = new System.Drawing.Point(401, 557);
+            this.labelUserID.Location = new System.Drawing.Point(398, 340);
             this.labelUserID.Name = "labelUserID";
             this.labelUserID.Size = new System.Drawing.Size(88, 22);
             this.labelUserID.TabIndex = 1;
@@ -70,7 +70,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(393, 639);
+            this.labelPassword.Location = new System.Drawing.Point(390, 422);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(88, 22);
             this.labelPassword.TabIndex = 2;
@@ -83,7 +83,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogin.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(397, 738);
+            this.btnLogin.Location = new System.Drawing.Point(394, 521);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(476, 59);
             this.btnLogin.TabIndex = 3;
@@ -98,7 +98,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUserID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserID.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserID.Location = new System.Drawing.Point(397, 582);
+            this.txtUserID.Location = new System.Drawing.Point(394, 365);
             this.txtUserID.Multiline = true;
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(476, 39);
@@ -111,7 +111,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(397, 664);
+            this.txtPassword.Location = new System.Drawing.Point(394, 447);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(476, 39);

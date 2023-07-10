@@ -24,7 +24,7 @@ namespace PeminjamanInventaris
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
+            LoginForm f1 = new LoginForm();
             f1.Show();
         }
 

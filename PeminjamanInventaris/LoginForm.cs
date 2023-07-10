@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace PeminjamanInventaris
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
         private const string connectionString = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;User ID=sa;Password=Chluni2350719";
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
