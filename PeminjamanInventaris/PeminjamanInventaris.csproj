@@ -141,6 +141,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RiwayatForm.resx">
+      <DependentUpon>RiwayatForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SuratPeminjamanForm.resx">
       <DependentUpon>SuratPeminjamanForm.cs</DependentUpon>
     </EmbeddedResource>

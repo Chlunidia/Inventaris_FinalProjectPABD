@@ -74,5 +74,11 @@ namespace PeminjamanInventaris
         {
 
         }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            RiwayatForm riwayatForm = new RiwayatForm();
+            riwayatForm.Show();
+        }
     }
 }
