@@ -70,16 +70,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="inventarisDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>inventarisDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="inventarisDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>inventarisDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="KategoriBarangForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,28 +156,6 @@
     <EmbeddedResource Include="SuratPeminjamanForm.resx">
       <DependentUpon>SuratPeminjamanForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="inventarisDataSet.xsc">
-      <DependentUpon>inventarisDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="inventarisDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>inventarisDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="inventarisDataSet.xss">
-      <DependentUpon>inventarisDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="inventarisDataSet1.xsc">
-      <DependentUpon>inventarisDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="inventarisDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>inventarisDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="inventarisDataSet1.xss">
-      <DependentUpon>inventarisDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

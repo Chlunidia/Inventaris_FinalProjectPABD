@@ -411,5 +411,11 @@ namespace PeminjamanInventaris
                 connection.Close();
             }
         }
+
+        private void btnSurat_Click(object sender, EventArgs e)
+        {
+            SuratPeminjamanForm suratPeminjaman = new SuratPeminjamanForm();
+            suratPeminjaman.Show();
+        }
     }
 }

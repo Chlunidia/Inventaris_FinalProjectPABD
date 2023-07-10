@@ -17,16 +17,45 @@ namespace PeminjamanInventaris
             InitializeComponent();
         }
 
+        private void MainMenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
             f1.Show();
         }
 
-        private void btnRiwayat_Click(object sender, EventArgs e)
+        private void btnKategori_Click(object sender, EventArgs e)
         {
-            RiwayatForm riwayat = new RiwayatForm();
-            riwayat.Show();
+            KategoriBarangForm kategoriBarangForm = new KategoriBarangForm();
+            kategoriBarangForm.Show();
+        }
+
+        private void btnBarang_Click(object sender, EventArgs e)
+        {
+            BarangForm barangForm = new BarangForm();
+            barangForm.Show();
+        }
+
+        private void btnPetugas_Click(object sender, EventArgs e)
+        {
+            PetugasForm petugasForm = new PetugasForm();
+            petugasForm.Show();
+        }
+
+        private void btnPengelolaan_Click(object sender, EventArgs e)
+        {
+            PengelolaanForm pengelolaanForm = new PengelolaanForm();
+            pengelolaanForm.Show();
+        }
+
+        private void btnPeminjam_Click(object sender, EventArgs e)
+        {
+            PeminjamForm peminjamForm = new PeminjamForm();
+            peminjamForm.Show();
         }
 
         private void btnPeminjaman_Click(object sender, EventArgs e)
@@ -35,15 +64,10 @@ namespace PeminjamanInventaris
             peminjaman.Show();
         }
 
-        private void btnDataMaster_Click(object sender, EventArgs e)
+        private void btnSurat_Click(object sender, EventArgs e)
         {
-            DataMasterForm dm = new DataMasterForm();
-            dm.Show();
-        }
-
-        private void MainMenuForm_Load(object sender, EventArgs e)
-        {
-
+            SuratPeminjamanForm suratPeminjaman = new SuratPeminjamanForm();
+            suratPeminjaman.Show();
         }
     }
 }
