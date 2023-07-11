@@ -296,5 +296,10 @@ namespace PeminjamanInventaris
                 MessageBox.Show("Terjadi kesalahan: " + ex.Message);
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

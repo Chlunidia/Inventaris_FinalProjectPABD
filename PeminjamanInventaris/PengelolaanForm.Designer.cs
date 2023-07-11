@@ -51,7 +51,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.dataGridViewPengelolaan = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2.SuspendLayout();
@@ -62,13 +62,14 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPengelolaan)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelPengelolaan
             // 
             this.labelPengelolaan.AutoSize = true;
             this.labelPengelolaan.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPengelolaan.Location = new System.Drawing.Point(473, 9);
+            this.labelPengelolaan.Location = new System.Drawing.Point(473, 63);
             this.labelPengelolaan.Name = "labelPengelolaan";
             this.labelPengelolaan.Size = new System.Drawing.Size(360, 114);
             this.labelPengelolaan.TabIndex = 74;
@@ -77,7 +78,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox2.Location = new System.Drawing.Point(21, 131);
+            this.groupBox2.Location = new System.Drawing.Point(15, 213);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(605, 248);
             this.groupBox2.TabIndex = 104;
@@ -192,7 +193,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnClear, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnUpdate, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAdd, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 385);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 467);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -238,7 +239,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox3.Location = new System.Drawing.Point(21, 465);
+            this.groupBox3.Location = new System.Drawing.Point(14, 547);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(606, 100);
             this.groupBox3.TabIndex = 106;
@@ -286,7 +287,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.btnSearch, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnDelete, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(21, 571);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(12, 653);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -322,31 +323,31 @@
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.btnBack, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(21, 648);
+            this.tableLayoutPanel6.Controls.Add(this.btnClose, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(12, 730);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(606, 71);
             this.tableLayoutPanel6.TabIndex = 108;
             // 
-            // btnBack
+            // btnClose
             // 
-            this.btnBack.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(3, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(600, 65);
-            this.btnBack.TabIndex = 94;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnClose.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnClose.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(3, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(600, 65);
+            this.btnClose.TabIndex = 94;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // dataGridViewPengelolaan
             // 
             this.dataGridViewPengelolaan.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridViewPengelolaan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPengelolaan.Location = new System.Drawing.Point(654, 134);
+            this.dataGridViewPengelolaan.Location = new System.Drawing.Point(644, 230);
             this.dataGridViewPengelolaan.Name = "dataGridViewPengelolaan";
             this.dataGridViewPengelolaan.RowHeadersWidth = 62;
             this.dataGridViewPengelolaan.RowTemplate.Height = 28;
@@ -355,9 +356,14 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.tableLayoutPanel6);
+            this.panel1.Controls.Add(this.tableLayoutPanel4);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Location = new System.Drawing.Point(12, 14);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1254, 817);
+            this.panel1.Size = new System.Drawing.Size(1254, 1017);
             this.panel1.TabIndex = 109;
             // 
             // PengelolaanForm
@@ -367,14 +373,9 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1278, 844);
-            this.Controls.Add(this.tableLayoutPanel6);
+            this.ClientSize = new System.Drawing.Size(1278, 1044);
             this.Controls.Add(this.dataGridViewPengelolaan);
-            this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.labelPengelolaan);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "PengelolaanForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -390,6 +391,7 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPengelolaan)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,7 +422,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridView dataGridViewPengelolaan;
         private System.Windows.Forms.Panel panel1;
     }

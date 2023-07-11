@@ -36,11 +36,20 @@ namespace PeminjamanInventaris
             using (SqlConnection connection = new SqlConnection(stringConnection))
             {
                 connection.Open();
-                string query = "SELECT * FROM dbo.Pengelolaan;";
+                string query = "SELECT P.id_pengelolaan, PT.nama_petugas, B.nama_barang, P.keterangan, P.tanggal_pengelolaan " +
+                               "FROM dbo.Pengelolaan P " +
+                               "JOIN Petugas PT ON P.id_petugas = PT.id_petugas " +
+                               "JOIN Barang B ON P.id_barang = B.id_barang";
+
                 SqlDataAdapter da = new SqlDataAdapter(query, connection);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 dataGridViewPengelolaan.DataSource = ds.Tables[0];
+                dataGridViewPengelolaan.Columns["id_pengelolaan"].HeaderText = "ID Pengelolaan";
+                dataGridViewPengelolaan.Columns["nama_petugas"].HeaderText = "Nama Petugas";
+                dataGridViewPengelolaan.Columns["nama_barang"].HeaderText = "Nama Barang";
+                dataGridViewPengelolaan.Columns["keterangan"].HeaderText = "Keterangan";
+                dataGridViewPengelolaan.Columns["tanggal_pengelolaan"].HeaderText = "Tanggal Pengelolaan";
             }
         }
 
@@ -155,6 +164,7 @@ namespace PeminjamanInventaris
 
             MessageBox.Show("Data berhasil disimpan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dataGridView();
+            ClearFormFields();
         }
 
         private string GenerateUniqueID(SqlConnection connection, string namaPengelolaan)

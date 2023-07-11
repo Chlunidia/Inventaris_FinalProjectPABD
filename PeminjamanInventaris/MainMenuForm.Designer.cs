@@ -49,7 +49,7 @@
             // 
             this.labelWelcome.AutoSize = true;
             this.labelWelcome.Font = new System.Drawing.Font("Girlie", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWelcome.Location = new System.Drawing.Point(523, 349);
+            this.labelWelcome.Location = new System.Drawing.Point(473, 432);
             this.labelWelcome.Name = "labelWelcome";
             this.labelWelcome.Size = new System.Drawing.Size(370, 147);
             this.labelWelcome.TabIndex = 5;
@@ -63,13 +63,13 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.btnLogout, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnRiwayat, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.btnPeminjam, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.btnPengelolaan, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnKategori, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnBarang, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnPetugas, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnPeminjam, 0, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -81,16 +81,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(272, 841);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(272, 1038);
             this.tableLayoutPanel1.TabIndex = 74;
             // 
             // btnPengelolaan
             // 
             this.btnPengelolaan.BackColor = System.Drawing.Color.AliceBlue;
             this.btnPengelolaan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPengelolaan.Location = new System.Drawing.Point(3, 318);
+            this.btnPengelolaan.Location = new System.Drawing.Point(3, 390);
             this.btnPengelolaan.Name = "btnPengelolaan";
-            this.btnPengelolaan.Size = new System.Drawing.Size(260, 99);
+            this.btnPengelolaan.Size = new System.Drawing.Size(260, 102);
             this.btnPengelolaan.TabIndex = 74;
             this.btnPengelolaan.Text = "Pengelolaan Barang";
             this.btnPengelolaan.UseVisualStyleBackColor = false;
@@ -102,7 +102,7 @@
             this.btnKategori.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKategori.Location = new System.Drawing.Point(3, 3);
             this.btnKategori.Name = "btnKategori";
-            this.btnKategori.Size = new System.Drawing.Size(260, 99);
+            this.btnKategori.Size = new System.Drawing.Size(260, 102);
             this.btnKategori.TabIndex = 69;
             this.btnKategori.Text = "Data Kategori Barang";
             this.btnKategori.UseVisualStyleBackColor = false;
@@ -112,9 +112,9 @@
             // 
             this.btnBarang.BackColor = System.Drawing.Color.AliceBlue;
             this.btnBarang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBarang.Location = new System.Drawing.Point(3, 108);
+            this.btnBarang.Location = new System.Drawing.Point(3, 132);
             this.btnBarang.Name = "btnBarang";
-            this.btnBarang.Size = new System.Drawing.Size(260, 99);
+            this.btnBarang.Size = new System.Drawing.Size(260, 102);
             this.btnBarang.TabIndex = 66;
             this.btnBarang.Text = "Data Barang";
             this.btnBarang.UseVisualStyleBackColor = false;
@@ -124,9 +124,9 @@
             // 
             this.btnPetugas.BackColor = System.Drawing.Color.AliceBlue;
             this.btnPetugas.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPetugas.Location = new System.Drawing.Point(3, 213);
+            this.btnPetugas.Location = new System.Drawing.Point(3, 261);
             this.btnPetugas.Name = "btnPetugas";
-            this.btnPetugas.Size = new System.Drawing.Size(260, 99);
+            this.btnPetugas.Size = new System.Drawing.Size(260, 102);
             this.btnPetugas.TabIndex = 68;
             this.btnPetugas.Text = "Data Petugas";
             this.btnPetugas.UseVisualStyleBackColor = false;
@@ -136,9 +136,9 @@
             // 
             this.btnLogout.BackColor = System.Drawing.Color.AliceBlue;
             this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(3, 738);
+            this.btnLogout.Location = new System.Drawing.Point(3, 906);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(266, 100);
+            this.btnLogout.Size = new System.Drawing.Size(266, 111);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -148,9 +148,9 @@
             // 
             this.btnRiwayat.BackColor = System.Drawing.Color.AliceBlue;
             this.btnRiwayat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRiwayat.Location = new System.Drawing.Point(3, 633);
+            this.btnRiwayat.Location = new System.Drawing.Point(3, 777);
             this.btnRiwayat.Name = "btnRiwayat";
-            this.btnRiwayat.Size = new System.Drawing.Size(260, 99);
+            this.btnRiwayat.Size = new System.Drawing.Size(260, 102);
             this.btnRiwayat.TabIndex = 75;
             this.btnRiwayat.Text = "Riwayat Peminjaman";
             this.btnRiwayat.UseVisualStyleBackColor = false;
@@ -160,9 +160,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.AliceBlue;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 528);
+            this.button1.Location = new System.Drawing.Point(3, 519);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(260, 99);
+            this.button1.Size = new System.Drawing.Size(260, 102);
             this.button1.TabIndex = 75;
             this.button1.Text = "Peminjaman";
             this.button1.UseVisualStyleBackColor = false;
@@ -172,9 +172,9 @@
             // 
             this.btnPeminjam.BackColor = System.Drawing.Color.AliceBlue;
             this.btnPeminjam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPeminjam.Location = new System.Drawing.Point(3, 423);
+            this.btnPeminjam.Location = new System.Drawing.Point(3, 648);
             this.btnPeminjam.Name = "btnPeminjam";
-            this.btnPeminjam.Size = new System.Drawing.Size(260, 99);
+            this.btnPeminjam.Size = new System.Drawing.Size(260, 102);
             this.btnPeminjam.TabIndex = 76;
             this.btnPeminjam.Text = "Data Peminjam";
             this.btnPeminjam.UseVisualStyleBackColor = false;
@@ -187,7 +187,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 844);
+            this.panel1.Size = new System.Drawing.Size(300, 1041);
             this.panel1.TabIndex = 75;
             // 
             // panel2
@@ -195,7 +195,7 @@
             this.panel2.Controls.Add(this.labelWelcome);
             this.panel2.Location = new System.Drawing.Point(306, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1254, 817);
+            this.panel2.Size = new System.Drawing.Size(1254, 1017);
             this.panel2.TabIndex = 100;
             // 
             // MainMenuForm
@@ -205,7 +205,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1575, 844);
+            this.ClientSize = new System.Drawing.Size(1575, 1041);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);

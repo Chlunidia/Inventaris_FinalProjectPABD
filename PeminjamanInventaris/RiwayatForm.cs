@@ -26,48 +26,40 @@ namespace PeminjamanInventaris
 
         private void LoadData()
         {
-            SqlConnection connection = new SqlConnection(stringConnection);
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+                string query = @"SELECT Peminjaman.id_peminjaman, Peminjam.nama_peminjam, Barang.nama_barang, Petugas.nama_petugas, Peminjaman.tanggal_peminjaman, Peminjaman.tanggal_pengembalian, Peminjaman.status_peminjaman
+                                 FROM Peminjaman
+                                 JOIN Peminjam ON Peminjaman.id_peminjam = Peminjam.id_peminjam
+                                 JOIN Barang ON Peminjaman.id_barang = Barang.id_barang
+                                 JOIN Petugas ON Peminjaman.id_petugas = Petugas.id_petugas;";
+                SqlDataAdapter da = new SqlDataAdapter(query, connection);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dataGridViewRiwayat.DataSource = ds.Tables[0];
+                // Ubah nama header kolom
+                dataGridViewRiwayat.Columns["id_peminjaman"].HeaderText = "ID Peminjaman";
+                dataGridViewRiwayat.Columns["nama_peminjam"].HeaderText = "Nama Peminjam";
+                dataGridViewRiwayat.Columns["nama_barang"].HeaderText = "Nama Barang";
+                dataGridViewRiwayat.Columns["nama_petugas"].HeaderText = "Nama Petugas";
+                dataGridViewRiwayat.Columns["tanggal_peminjaman"].HeaderText = "Tanggal Peminjaman";
+                dataGridViewRiwayat.Columns["tanggal_pengembalian"].HeaderText = "Tanggal Pengembalian";
+                dataGridViewRiwayat.Columns["status_peminjaman"].HeaderText = "Status Peminjaman";
 
-            // Membuat query SQL
-            string query = @"
-                SELECT
-                    PJM.id_peminjaman,
-                    PJM.tanggal_peminjaman,
-                    PJM.tanggal_pengembalian_harus,
-                    PJM.tanggal_pengembalian,
-                    SP.id_surat,
-                    PM.nama_peminjam,
-                    PM.alamat_peminjam
-                FROM
-                    Peminjaman PJM
-                    INNER JOIN Surat_Peminjaman SP ON PJM.id_peminjaman = SP.id_peminjaman
-                    INNER JOIN Peminjam PM ON PJM.id_peminjam = PM.id_peminjam
-            ";
-
-            // Create an adapter and dataset
-            SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-            DataSet dataSet = new DataSet();
-
-            // Fill the dataset with data from the adapter
-            adapter.Fill(dataSet);
-
-            // Set the dataset as the data source for the DataGridView
-            dataGridViewRiwayat.DataSource = dataSet.Tables[0];
-
-            // Change the header column names
-            dataGridViewRiwayat.Columns["id_peminjaman"].HeaderText = "ID Peminjaman";
-            dataGridViewRiwayat.Columns["tanggal_peminjaman"].HeaderText = "Tanggal Peminjaman";
-            dataGridViewRiwayat.Columns["tanggal_pengembalian_harus"].HeaderText = "Tanggal Pengembalian Harus";
-            dataGridViewRiwayat.Columns["tanggal_pengembalian"].HeaderText = "Tanggal Pengembalian";
-            dataGridViewRiwayat.Columns["id_surat"].HeaderText = "ID Surat";
-            dataGridViewRiwayat.Columns["nama_peminjam"].HeaderText = "Nama Peminjam";
-            dataGridViewRiwayat.Columns["alamat_peminjam"].HeaderText = "Alamat Peminjam";
-
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            MainMenuForm mainMenuForm = new MainMenuForm();
+            mainMenuForm.Show();
+            this.Hide();
         }
     }
 }

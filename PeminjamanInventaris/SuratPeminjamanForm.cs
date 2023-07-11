@@ -63,8 +63,6 @@ namespace PeminjamanInventaris
             float lineHeight = font.GetHeight();
             float x = e.MarginBounds.Left;
             float y = e.MarginBounds.Top;
-
-            // Prepare the content to be printed
             StringBuilder content = new StringBuilder();
             content.AppendLine("ID Surat: " + lblIdSurat.Text);
             content.AppendLine("ID Peminjaman: " + lblIdPeminjaman.Text);
@@ -75,22 +73,23 @@ namespace PeminjamanInventaris
             content.AppendLine("Tanggal Peminjaman: " + lblTanggalPeminjaman.Text);
             content.AppendLine("Tanggal Pengembalian Harus: " + lblTanggalPengembalianHarus.Text);
             content.AppendLine("Tanggal Pengembalian: " + lblTanggalPengembalian.Text);
-
-            // Print the content
             e.Graphics.DrawString(content.ToString(), font, brush, x, y);
-
-            // Move the cursor to the next line
             y += lineHeight;
-
-            // Check if there is more content to print
             if (y + lineHeight < e.MarginBounds.Bottom)
             {
-                e.HasMorePages = false;  // All content has been printed
+                e.HasMorePages = false; 
             }
             else
             {
-                e.HasMorePages = true;  // There is more content to print
+                e.HasMorePages = true; 
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            MainMenuForm mainMenuForm = new MainMenuForm();
+            mainMenuForm.Show();
+            this.Hide();
         }
     }
 }

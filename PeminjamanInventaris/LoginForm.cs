@@ -32,7 +32,6 @@ namespace PeminjamanInventaris
                 {
                     connection.Open();
 
-                    // Perform the login validation against the 'petugas' table
                     string query = "SELECT COUNT(*) FROM petugas WHERE username = @username AND kata_sandi = @password";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -72,6 +71,11 @@ namespace PeminjamanInventaris
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

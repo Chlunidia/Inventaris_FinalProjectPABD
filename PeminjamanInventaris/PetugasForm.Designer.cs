@@ -50,7 +50,7 @@
             this.labelIDP = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.cbxProvinsi = new System.Windows.Forms.ComboBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -72,13 +72,14 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewPetugas
             // 
             this.dataGridViewPetugas.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridViewPetugas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPetugas.Location = new System.Drawing.Point(641, 152);
+            this.dataGridViewPetugas.Location = new System.Drawing.Point(625, 264);
             this.dataGridViewPetugas.Name = "dataGridViewPetugas";
             this.dataGridViewPetugas.RowHeadersWidth = 62;
             this.dataGridViewPetugas.RowTemplate.Height = 28;
@@ -89,60 +90,60 @@
             // 
             this.txtJabatan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtJabatan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJabatan.Location = new System.Drawing.Point(241, 379);
+            this.txtJabatan.Location = new System.Drawing.Point(223, 379);
             this.txtJabatan.Multiline = true;
             this.txtJabatan.Name = "txtJabatan";
-            this.txtJabatan.Size = new System.Drawing.Size(310, 38);
+            this.txtJabatan.Size = new System.Drawing.Size(311, 38);
             this.txtJabatan.TabIndex = 43;
             // 
             // txtNoTlp
             // 
             this.txtNoTlp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNoTlp.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoTlp.Location = new System.Drawing.Point(241, 332);
+            this.txtNoTlp.Location = new System.Drawing.Point(223, 332);
             this.txtNoTlp.Multiline = true;
             this.txtNoTlp.Name = "txtNoTlp";
-            this.txtNoTlp.Size = new System.Drawing.Size(310, 38);
+            this.txtNoTlp.Size = new System.Drawing.Size(311, 38);
             this.txtNoTlp.TabIndex = 42;
             // 
             // txtKodePos
             // 
             this.txtKodePos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtKodePos.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKodePos.Location = new System.Drawing.Point(241, 191);
+            this.txtKodePos.Location = new System.Drawing.Point(223, 191);
             this.txtKodePos.Multiline = true;
             this.txtKodePos.Name = "txtKodePos";
-            this.txtKodePos.Size = new System.Drawing.Size(310, 38);
+            this.txtKodePos.Size = new System.Drawing.Size(311, 38);
             this.txtKodePos.TabIndex = 41;
             // 
             // txtAKota
             // 
             this.txtAKota.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAKota.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAKota.Location = new System.Drawing.Point(241, 97);
+            this.txtAKota.Location = new System.Drawing.Point(223, 97);
             this.txtAKota.Multiline = true;
             this.txtAKota.Name = "txtAKota";
-            this.txtAKota.Size = new System.Drawing.Size(310, 38);
+            this.txtAKota.Size = new System.Drawing.Size(311, 38);
             this.txtAKota.TabIndex = 39;
             // 
             // txtAJalan
             // 
             this.txtAJalan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAJalan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAJalan.Location = new System.Drawing.Point(241, 50);
+            this.txtAJalan.Location = new System.Drawing.Point(223, 50);
             this.txtAJalan.Multiline = true;
             this.txtAJalan.Name = "txtAJalan";
-            this.txtAJalan.Size = new System.Drawing.Size(310, 38);
+            this.txtAJalan.Size = new System.Drawing.Size(311, 38);
             this.txtAJalan.TabIndex = 38;
             // 
             // txtNamaPetugas
             // 
             this.txtNamaPetugas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNamaPetugas.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamaPetugas.Location = new System.Drawing.Point(241, 3);
+            this.txtNamaPetugas.Location = new System.Drawing.Point(223, 3);
             this.txtNamaPetugas.Multiline = true;
             this.txtNamaPetugas.Name = "txtNamaPetugas";
-            this.txtNamaPetugas.Size = new System.Drawing.Size(310, 38);
+            this.txtNamaPetugas.Size = new System.Drawing.Size(311, 38);
             this.txtNamaPetugas.TabIndex = 37;
             this.txtNamaPetugas.TextChanged += new System.EventHandler(this.txtNamaPetugas_TextChanged);
             // 
@@ -162,9 +163,9 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnClear.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(202, 3);
+            this.btnClear.Location = new System.Drawing.Point(196, 3);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(193, 68);
+            this.btnClear.Size = new System.Drawing.Size(187, 68);
             this.btnClear.TabIndex = 34;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -176,7 +177,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(3, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(193, 68);
+            this.btnAdd.Size = new System.Drawing.Size(187, 68);
             this.btnAdd.TabIndex = 33;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -256,7 +257,7 @@
             // 
             this.labelPetugas.AutoSize = true;
             this.labelPetugas.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPetugas.Location = new System.Drawing.Point(521, 15);
+            this.labelPetugas.Location = new System.Drawing.Point(521, 67);
             this.labelPetugas.Name = "labelPetugas";
             this.labelPetugas.Size = new System.Drawing.Size(235, 114);
             this.labelPetugas.TabIndex = 23;
@@ -298,25 +299,25 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(401, 3);
+            this.btnUpdate.Location = new System.Drawing.Point(389, 3);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(194, 68);
+            this.btnUpdate.Size = new System.Drawing.Size(189, 68);
             this.btnUpdate.TabIndex = 58;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnBack
+            // btnClose
             // 
-            this.btnBack.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(3, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(600, 65);
-            this.btnBack.TabIndex = 62;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnClose.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnClose.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(3, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(600, 65);
+            this.btnClose.TabIndex = 62;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // cbxProvinsi
             // 
@@ -361,29 +362,29 @@
             "Papua Pegunungan",
             "Papua Selatan",
             "Papua Barat Daya"});
-            this.cbxProvinsi.Location = new System.Drawing.Point(241, 144);
+            this.cbxProvinsi.Location = new System.Drawing.Point(223, 144);
             this.cbxProvinsi.Name = "cbxProvinsi";
-            this.cbxProvinsi.Size = new System.Drawing.Size(310, 30);
+            this.cbxProvinsi.Size = new System.Drawing.Size(311, 30);
             this.cbxProvinsi.TabIndex = 63;
             // 
             // txtUsername
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsername.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(241, 238);
+            this.txtUsername.Location = new System.Drawing.Point(223, 238);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(310, 38);
+            this.txtUsername.Size = new System.Drawing.Size(311, 38);
             this.txtUsername.TabIndex = 65;
             // 
             // txtPassword
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(241, 285);
+            this.txtPassword.Location = new System.Drawing.Point(223, 285);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(310, 38);
+            this.txtPassword.Size = new System.Drawing.Size(311, 38);
             this.txtPassword.TabIndex = 66;
             // 
             // labelPassword
@@ -409,9 +410,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 152);
+            this.groupBox2.Location = new System.Drawing.Point(17, 254);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(598, 483);
+            this.groupBox2.Size = new System.Drawing.Size(581, 483);
             this.groupBox2.TabIndex = 104;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Masukkan Data Peminjam";
@@ -419,8 +420,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.96029F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.03971F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.03053F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.96947F));
             this.tableLayoutPanel1.Controls.Add(this.labelAJalan, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelUsername, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.labelAKota, 0, 2);
@@ -451,7 +452,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(554, 425);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(537, 425);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -463,11 +464,11 @@
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnClear, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 641);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(17, 743);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(598, 74);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(581, 74);
             this.tableLayoutPanel2.TabIndex = 105;
             // 
             // tableLayoutPanel4
@@ -477,7 +478,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.btnSearch, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnDelete, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(638, 570);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(622, 669);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -489,8 +490,8 @@
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.btnBack, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(638, 644);
+            this.tableLayoutPanel6.Controls.Add(this.btnClose, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(622, 746);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -500,7 +501,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox1.Location = new System.Drawing.Point(638, 464);
+            this.groupBox1.Location = new System.Drawing.Point(622, 563);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(603, 100);
             this.groupBox1.TabIndex = 110;
@@ -523,9 +524,15 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.tableLayoutPanel2);
+            this.panel1.Controls.Add(this.tableLayoutPanel4);
+            this.panel1.Controls.Add(this.tableLayoutPanel6);
+            this.panel1.Controls.Add(this.dataGridViewPetugas);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(12, 14);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1254, 817);
+            this.panel1.Size = new System.Drawing.Size(1254, 1017);
             this.panel1.TabIndex = 111;
             // 
             // PetugasForm
@@ -535,14 +542,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1278, 844);
+            this.ClientSize = new System.Drawing.Size(1278, 1044);
             this.ControlBox = false;
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.tableLayoutPanel6);
-            this.Controls.Add(this.tableLayoutPanel4);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dataGridViewPetugas);
             this.Controls.Add(this.labelPetugas);
             this.Controls.Add(this.panel1);
             this.Name = "PetugasForm";
@@ -559,6 +560,7 @@
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,7 +590,7 @@
         private System.Windows.Forms.Label labelIDP;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ComboBox cbxProvinsi;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;

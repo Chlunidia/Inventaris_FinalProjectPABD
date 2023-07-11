@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.labelIDB = new System.Windows.Forms.Label();
             this.txtIDPeminjaman = new System.Windows.Forms.TextBox();
@@ -83,19 +83,20 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnBack
+            // btnClose
             // 
-            this.btnBack.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(3, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(597, 65);
-            this.btnBack.TabIndex = 77;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnClose.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnClose.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(3, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(597, 65);
+            this.btnClose.TabIndex = 77;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnSearch
             // 
@@ -103,7 +104,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(3, 3);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(297, 65);
+            this.btnSearch.Size = new System.Drawing.Size(295, 65);
             this.btnSearch.TabIndex = 76;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -133,7 +134,7 @@
             // 
             this.labelPeminjam.AutoSize = true;
             this.labelPeminjam.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPeminjam.Location = new System.Drawing.Point(417, 15);
+            this.labelPeminjam.Location = new System.Drawing.Point(417, 34);
             this.labelPeminjam.Name = "labelPeminjam";
             this.labelPeminjam.Size = new System.Drawing.Size(442, 114);
             this.labelPeminjam.TabIndex = 73;
@@ -143,10 +144,10 @@
             // 
             this.dataGridViewPeminjaman.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridViewPeminjaman.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPeminjaman.Location = new System.Drawing.Point(647, 164);
+            this.dataGridViewPeminjaman.Location = new System.Drawing.Point(636, 164);
             this.dataGridViewPeminjaman.Name = "dataGridViewPeminjaman";
             this.dataGridViewPeminjaman.RowHeadersWidth = 4;
-            this.dataGridViewPeminjaman.Size = new System.Drawing.Size(606, 566);
+            this.dataGridViewPeminjaman.Size = new System.Drawing.Size(600, 566);
             this.dataGridViewPeminjaman.TabIndex = 72;
             // 
             // label1
@@ -177,7 +178,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.cbxProvinsi, 1, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 34);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 34);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -345,9 +346,9 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnClear.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(306, 3);
+            this.btnClear.Location = new System.Drawing.Point(300, 3);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(297, 65);
+            this.btnClear.Size = new System.Drawing.Size(291, 65);
             this.btnClear.TabIndex = 81;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -359,7 +360,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(3, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(297, 65);
+            this.btnAdd.Size = new System.Drawing.Size(291, 65);
             this.btnAdd.TabIndex = 80;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -383,7 +384,7 @@
             this.tableLayoutPanel2.Controls.Add(this.datePHarus, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.labelTglPengembalian, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.datePengembalian, 1, 5);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 36);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(18, 36);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -550,9 +551,9 @@
             // 
             this.btnSurat.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnSurat.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSurat.Location = new System.Drawing.Point(306, 3);
+            this.btnSurat.Location = new System.Drawing.Point(304, 3);
             this.btnSurat.Name = "btnSurat";
-            this.btnSurat.Size = new System.Drawing.Size(297, 65);
+            this.btnSurat.Size = new System.Drawing.Size(296, 65);
             this.btnSurat.TabIndex = 101;
             this.btnSurat.Text = "Surat Peminjaman";
             this.btnSurat.UseVisualStyleBackColor = false;
@@ -563,7 +564,7 @@
             this.groupBox1.Controls.Add(this.tableLayoutPanel2);
             this.groupBox1.Location = new System.Drawing.Point(24, 563);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(606, 351);
+            this.groupBox1.Size = new System.Drawing.Size(594, 351);
             this.groupBox1.TabIndex = 102;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Masukkan Data Peminjaman";
@@ -573,7 +574,7 @@
             this.groupBox2.Controls.Add(this.tableLayoutPanel1);
             this.groupBox2.Location = new System.Drawing.Point(25, 164);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(605, 393);
+            this.groupBox2.Size = new System.Drawing.Size(593, 393);
             this.groupBox2.TabIndex = 103;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Masukkan Data Peminjam";
@@ -581,7 +582,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox3.Location = new System.Drawing.Point(647, 737);
+            this.groupBox3.Location = new System.Drawing.Point(624, 722);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(606, 100);
             this.groupBox3.TabIndex = 104;
@@ -609,12 +610,12 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.btnSearch, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnSurat, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(647, 843);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(624, 828);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(606, 71);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(603, 71);
             this.tableLayoutPanel4.TabIndex = 105;
             // 
             // tableLayoutPanel5
@@ -624,20 +625,20 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.btnClear, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnAdd, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(24, 920);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(12, 905);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(606, 71);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(594, 71);
             this.tableLayoutPanel5.TabIndex = 106;
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.btnBack, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(647, 920);
+            this.tableLayoutPanel6.Controls.Add(this.btnClose, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(624, 905);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -646,10 +647,13 @@
             // 
             // panel1
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Controls.Add(this.tableLayoutPanel5);
+            this.panel1.Controls.Add(this.tableLayoutPanel6);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.tableLayoutPanel4);
+            this.panel1.Location = new System.Drawing.Point(12, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1278, 1044);
+            this.panel1.Size = new System.Drawing.Size(1254, 1017);
             this.panel1.TabIndex = 108;
             // 
             // PeminjamanForm
@@ -661,10 +665,6 @@
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1278, 1044);
             this.ControlBox = false;
-            this.Controls.Add(this.tableLayoutPanel6);
-            this.Controls.Add(this.tableLayoutPanel5);
-            this.Controls.Add(this.tableLayoutPanel4);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.labelPeminjam);
             this.Controls.Add(this.dataGridViewPeminjaman);
@@ -689,6 +689,7 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -696,7 +697,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label labelIDB;
         private System.Windows.Forms.TextBox txtIDPeminjaman;

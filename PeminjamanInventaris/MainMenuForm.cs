@@ -107,9 +107,8 @@ namespace PeminjamanInventaris
             PeminjamanForm pe = new PeminjamanForm();
             pe.TopLevel = false;
             pe.FormBorderStyle = FormBorderStyle.None;
-            pe.Size = panel2.Size;  // Set the form's size to match the panel's size
+            pe.Size = panel2.Size;
             panel2.Controls.Add(pe);
-            panel2.AutoScroll = true;  // Enable auto-scrolling
             panel2.Tag = pe;
             pe.BringToFront();
             pe.Show();
