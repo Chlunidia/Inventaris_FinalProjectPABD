@@ -113,6 +113,7 @@
             this.dataGridViewBarang.RowTemplate.Height = 28;
             this.dataGridViewBarang.Size = new System.Drawing.Size(610, 500);
             this.dataGridViewBarang.TabIndex = 89;
+            this.dataGridViewBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBarang_CellContentClick);
             // 
             // labelIDB
             // 

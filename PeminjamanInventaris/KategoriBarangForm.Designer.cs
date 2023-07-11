@@ -40,17 +40,26 @@
             this.txtIDKat = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKatBarang)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnClear.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(266, 490);
+            this.btnClear.Location = new System.Drawing.Point(389, 3);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(121, 52);
+            this.btnClear.Size = new System.Drawing.Size(189, 68);
             this.btnClear.TabIndex = 58;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -60,9 +69,9 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(76, 432);
+            this.btnAdd.Location = new System.Drawing.Point(3, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(121, 52);
+            this.btnAdd.Size = new System.Drawing.Size(187, 68);
             this.btnAdd.TabIndex = 57;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -81,17 +90,17 @@
             // txtNamaKatBarang
             // 
             this.txtNamaKatBarang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNamaKatBarang.Location = new System.Drawing.Point(245, 374);
+            this.txtNamaKatBarang.Location = new System.Drawing.Point(244, 33);
             this.txtNamaKatBarang.Multiline = true;
             this.txtNamaKatBarang.Name = "txtNamaKatBarang";
-            this.txtNamaKatBarang.Size = new System.Drawing.Size(353, 38);
+            this.txtNamaKatBarang.Size = new System.Drawing.Size(318, 38);
             this.txtNamaKatBarang.TabIndex = 55;
             // 
             // labelNamaBarang
             // 
             this.labelNamaBarang.AutoSize = true;
             this.labelNamaBarang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNamaBarang.Location = new System.Drawing.Point(51, 374);
+            this.labelNamaBarang.Location = new System.Drawing.Point(19, 34);
             this.labelNamaBarang.Name = "labelNamaBarang";
             this.labelNamaBarang.Size = new System.Drawing.Size(130, 22);
             this.labelNamaBarang.TabIndex = 53;
@@ -101,9 +110,9 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(330, 432);
+            this.btnUpdate.Location = new System.Drawing.Point(196, 3);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(121, 52);
+            this.btnUpdate.Size = new System.Drawing.Size(187, 68);
             this.btnUpdate.TabIndex = 60;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -113,9 +122,9 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(203, 432);
+            this.btnSearch.Location = new System.Drawing.Point(3, 3);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(120, 52);
+            this.btnSearch.Size = new System.Drawing.Size(284, 65);
             this.btnSearch.TabIndex = 65;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -125,40 +134,40 @@
             // 
             this.dataGridViewKatBarang.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridViewKatBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKatBarang.Location = new System.Drawing.Point(640, 154);
+            this.dataGridViewKatBarang.Location = new System.Drawing.Point(646, 161);
             this.dataGridViewKatBarang.Name = "dataGridViewKatBarang";
             this.dataGridViewKatBarang.RowHeadersWidth = 62;
             this.dataGridViewKatBarang.RowTemplate.Height = 28;
-            this.dataGridViewKatBarang.Size = new System.Drawing.Size(600, 496);
-            this.dataGridViewKatBarang.TabIndex = 64;
+            this.dataGridViewKatBarang.Size = new System.Drawing.Size(600, 430);
+            this.dataGridViewKatBarang.TabIndex = 90;
             // 
             // labelIDB
             // 
             this.labelIDB.AutoSize = true;
             this.labelIDB.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIDB.Location = new System.Drawing.Point(51, 332);
+            this.labelIDB.Location = new System.Drawing.Point(19, 34);
             this.labelIDB.Name = "labelIDB";
-            this.labelIDB.Size = new System.Drawing.Size(175, 22);
+            this.labelIDB.Size = new System.Drawing.Size(188, 22);
             this.labelIDB.TabIndex = 63;
-            this.labelIDB.Text = "Masukkan ID Barang";
+            this.labelIDB.Text = "Masukkan ID Kategori";
             // 
             // txtIDKat
             // 
             this.txtIDKat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDKat.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDKat.Location = new System.Drawing.Point(245, 330);
+            this.txtIDKat.Location = new System.Drawing.Point(244, 32);
             this.txtIDKat.Multiline = true;
             this.txtIDKat.Name = "txtIDKat";
-            this.txtIDKat.Size = new System.Drawing.Size(353, 38);
+            this.txtIDKat.Size = new System.Drawing.Size(318, 38);
             this.txtIDKat.TabIndex = 62;
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(457, 432);
+            this.btnDelete.Location = new System.Drawing.Point(293, 3);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 52);
+            this.btnDelete.Size = new System.Drawing.Size(285, 65);
             this.btnDelete.TabIndex = 61;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -168,45 +177,104 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(579, 803);
+            this.btnBack.Location = new System.Drawing.Point(3, 3);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(120, 52);
+            this.btnBack.Size = new System.Drawing.Size(575, 65);
             this.btnBack.TabIndex = 66;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // panel1
+            // groupBox1
             // 
-            this.panel1.Location = new System.Drawing.Point(4, 7);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1270, 880);
-            this.panel1.TabIndex = 101;
+            this.groupBox1.Controls.Add(this.labelNamaBarang);
+            this.groupBox1.Controls.Add(this.txtNamaKatBarang);
+            this.groupBox1.Location = new System.Drawing.Point(33, 161);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(581, 95);
+            this.groupBox1.TabIndex = 95;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Masukkan Data Kategori Barang Baru";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtIDKat);
+            this.groupBox2.Controls.Add(this.labelIDB);
+            this.groupBox2.Location = new System.Drawing.Point(33, 342);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(581, 95);
+            this.groupBox2.TabIndex = 96;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Masukkan Data Kategori Baru";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.btnClear, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnAdd, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnUpdate, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(33, 262);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(581, 74);
+            this.tableLayoutPanel1.TabIndex = 97;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.btnDelete, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnSearch, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(33, 443);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(581, 71);
+            this.tableLayoutPanel2.TabIndex = 98;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.btnBack, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(33, 520);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(581, 71);
+            this.tableLayoutPanel3.TabIndex = 99;
             // 
             // KategoriBarangForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1278, 894);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnSearch);
+            this.ClientSize = new System.Drawing.Size(1278, 644);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewKatBarang);
-            this.Controls.Add(this.labelIDB);
-            this.Controls.Add(this.txtIDKat);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.labelBarang);
-            this.Controls.Add(this.txtNamaKatBarang);
-            this.Controls.Add(this.labelNamaBarang);
-            this.Controls.Add(this.panel1);
             this.Name = "KategoriBarangForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kategori Barang";
             this.Load += new System.EventHandler(this.KategoriBarangForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKatBarang)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,6 +294,10 @@
         private System.Windows.Forms.TextBox txtIDKat;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }

@@ -66,5 +66,10 @@ namespace PeminjamanInventaris
                 dataGridView1.Rows.Add(row["id_peminjaman"], row["tanggal_peminjaman"], row["tanggal_pengembalian_harus"], row["tanggal_pengembalian"], row["id_surat"], row["nama_peminjam"], row["alamat_peminjam"]);
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

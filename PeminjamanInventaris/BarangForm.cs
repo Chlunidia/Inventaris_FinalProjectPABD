@@ -325,5 +325,10 @@ namespace PeminjamanInventaris
             mainMenuForm.Show();
             this.Hide();
         }
+
+        private void dataGridViewBarang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

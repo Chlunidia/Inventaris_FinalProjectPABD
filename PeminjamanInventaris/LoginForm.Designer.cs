@@ -34,8 +34,8 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.labelKet = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelLogin
@@ -45,7 +45,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelLogin.AutoSize = true;
             this.labelLogin.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogin.Location = new System.Drawing.Point(563, 107);
+            this.labelLogin.Location = new System.Drawing.Point(267, 67);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(174, 114);
             this.labelLogin.TabIndex = 0;
@@ -58,7 +58,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUserID.AutoSize = true;
             this.labelUserID.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUserID.Location = new System.Drawing.Point(398, 340);
+            this.labelUserID.Location = new System.Drawing.Point(20, 34);
             this.labelUserID.Name = "labelUserID";
             this.labelUserID.Size = new System.Drawing.Size(88, 22);
             this.labelUserID.TabIndex = 1;
@@ -71,7 +71,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(390, 422);
+            this.labelPassword.Location = new System.Drawing.Point(20, 91);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(88, 22);
             this.labelPassword.TabIndex = 2;
@@ -84,9 +84,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogin.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(394, 521);
+            this.btnLogin.Location = new System.Drawing.Point(35, 409);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(476, 59);
+            this.btnLogin.Size = new System.Drawing.Size(609, 69);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -99,10 +99,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUserID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserID.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserID.Location = new System.Drawing.Point(394, 365);
+            this.txtUserID.Location = new System.Drawing.Point(164, 34);
             this.txtUserID.Multiline = true;
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(476, 39);
+            this.txtUserID.Size = new System.Drawing.Size(415, 42);
             this.txtUserID.TabIndex = 4;
             // 
             // txtPassword
@@ -112,52 +112,42 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(394, 447);
+            this.txtPassword.Location = new System.Drawing.Point(164, 89);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(476, 39);
+            this.txtPassword.Size = new System.Drawing.Size(415, 41);
             this.txtPassword.TabIndex = 5;
             // 
-            // labelKet
+            // groupBox1
             // 
-            this.labelKet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelKet.AutoSize = true;
-            this.labelKet.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKet.Location = new System.Drawing.Point(458, 237);
-            this.labelKet.Name = "labelKet";
-            this.labelKet.Size = new System.Drawing.Size(346, 22);
-            this.labelKet.TabIndex = 6;
-            this.labelKet.Text = "Please enter your username and password!";
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1278, 894);
-            this.panel1.TabIndex = 101;
+            this.groupBox1.Controls.Add(this.labelUserID);
+            this.groupBox1.Controls.Add(this.txtUserID);
+            this.groupBox1.Controls.Add(this.txtPassword);
+            this.groupBox1.Controls.Add(this.labelPassword);
+            this.groupBox1.Location = new System.Drawing.Point(35, 233);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(609, 155);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Masukkan Username dan Password";
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1278, 894);
-            this.Controls.Add(this.labelKet);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUserID);
+            this.ClientSize = new System.Drawing.Size(678, 644);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.labelUserID);
             this.Controls.Add(this.labelLogin);
-            this.Controls.Add(this.panel1);
             this.Name = "LoginForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,8 +161,7 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label labelKet;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
