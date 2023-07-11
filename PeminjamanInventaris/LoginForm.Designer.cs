@@ -35,6 +35,7 @@
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelLogin.AutoSize = true;
             this.labelLogin.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogin.Location = new System.Drawing.Point(267, 67);
+            this.labelLogin.Location = new System.Drawing.Point(572, 165);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(174, 114);
             this.labelLogin.TabIndex = 0;
@@ -84,7 +85,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogin.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(35, 409);
+            this.btnLogin.Location = new System.Drawing.Point(340, 492);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(609, 69);
             this.btnLogin.TabIndex = 3;
@@ -124,22 +125,32 @@
             this.groupBox1.Controls.Add(this.txtUserID);
             this.groupBox1.Controls.Add(this.txtPassword);
             this.groupBox1.Controls.Add(this.labelPassword);
-            this.groupBox1.Location = new System.Drawing.Point(35, 233);
+            this.groupBox1.Location = new System.Drawing.Point(340, 331);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(609, 155);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Masukkan Username dan Password";
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 14);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1254, 817);
+            this.panel1.TabIndex = 100;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(678, 644);
+            this.ClientSize = new System.Drawing.Size(1278, 844);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.labelLogin);
+            this.Controls.Add(this.panel1);
             this.Name = "LoginForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -162,6 +173,7 @@
         private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

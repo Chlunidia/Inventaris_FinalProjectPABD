@@ -53,6 +53,7 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.btnBack = new System.Windows.Forms.Button();
             this.dataGridViewPengelolaan = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -67,7 +68,7 @@
             // 
             this.labelPengelolaan.AutoSize = true;
             this.labelPengelolaan.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPengelolaan.Location = new System.Drawing.Point(431, 24);
+            this.labelPengelolaan.Location = new System.Drawing.Point(473, 9);
             this.labelPengelolaan.Name = "labelPengelolaan";
             this.labelPengelolaan.Size = new System.Drawing.Size(360, 114);
             this.labelPengelolaan.TabIndex = 74;
@@ -76,7 +77,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox2.Location = new System.Drawing.Point(22, 156);
+            this.groupBox2.Location = new System.Drawing.Point(21, 131);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(605, 248);
             this.groupBox2.TabIndex = 104;
@@ -191,7 +192,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnClear, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnUpdate, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAdd, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 410);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 385);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -237,7 +238,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox3.Location = new System.Drawing.Point(22, 490);
+            this.groupBox3.Location = new System.Drawing.Point(21, 465);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(606, 100);
             this.groupBox3.TabIndex = 106;
@@ -285,7 +286,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.btnSearch, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnDelete, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(22, 596);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(21, 571);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -322,7 +323,7 @@
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.btnBack, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(22, 673);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(21, 648);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -345,19 +346,28 @@
             // 
             this.dataGridViewPengelolaan.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridViewPengelolaan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPengelolaan.Location = new System.Drawing.Point(655, 159);
+            this.dataGridViewPengelolaan.Location = new System.Drawing.Point(654, 134);
             this.dataGridViewPengelolaan.Name = "dataGridViewPengelolaan";
             this.dataGridViewPengelolaan.RowHeadersWidth = 62;
             this.dataGridViewPengelolaan.RowTemplate.Height = 28;
             this.dataGridViewPengelolaan.Size = new System.Drawing.Size(590, 585);
             this.dataGridViewPengelolaan.TabIndex = 102;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 14);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1254, 817);
+            this.panel1.TabIndex = 109;
+            // 
             // PengelolaanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1278, 781);
+            this.ClientSize = new System.Drawing.Size(1278, 844);
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.dataGridViewPengelolaan);
             this.Controls.Add(this.tableLayoutPanel4);
@@ -365,6 +375,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.panel1);
             this.Name = "PengelolaanForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pengelolaan";
@@ -411,5 +422,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGridView dataGridViewPengelolaan;
+        private System.Windows.Forms.Panel panel1;
     }
 }

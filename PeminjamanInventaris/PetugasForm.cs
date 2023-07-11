@@ -19,7 +19,7 @@ namespace PeminjamanInventaris
         {
             InitializeComponent();
             connection = new SqlConnection(stringConnection);
-            refreshForm();
+            dataGridView();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -34,22 +34,6 @@ namespace PeminjamanInventaris
 
         }
 
-        private void refreshForm()
-        {
-            txtAJalan.Enabled = true;
-            txtAKota.Enabled = true;
-            cbxProvinsi.Enabled = true;
-            txtKodePos.Enabled = true;
-            txtNoTlp.Enabled = true;
-            txtJabatan.Enabled = true;
-            btnClear.Enabled = true;
-            btnSearch.Enabled = true;
-            btnDelete.Enabled = true;
-            btnUpdate.Enabled = true;
-            btnAdd.Enabled = true;
-            dataGridView();
-        }
-
         private void dataGridView()
         {
             using (SqlConnection connection = new SqlConnection(stringConnection))
@@ -60,6 +44,14 @@ namespace PeminjamanInventaris
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 dataGridViewPetugas.DataSource = ds.Tables[0];
+
+                dataGridViewPetugas.Columns["id_petugas"].HeaderText = "ID";
+                dataGridViewPetugas.Columns["nama_petugas"].HeaderText = "Nama";
+                dataGridViewPetugas.Columns["no_tlp_petugas"].HeaderText = "No. Telepon";
+                dataGridViewPetugas.Columns["jabatan"].HeaderText = "Jabatan";
+                dataGridViewPetugas.Columns["username"].HeaderText = "Username";
+                dataGridViewPetugas.Columns["kata_sandi"].HeaderText = "Password";
+                dataGridViewPetugas.Columns["alamat_petugas"].HeaderText = "Alamat";
             }
         }
 
@@ -131,7 +123,6 @@ namespace PeminjamanInventaris
                 }
 
                 MessageBox.Show("Data berhasil disimpan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                refreshForm();
                 dataGridView();
                 ClearInputFields();
             }
@@ -171,15 +162,7 @@ namespace PeminjamanInventaris
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtNamaPetugas.Text = "";
-            txtAJalan.Text = "";
-            txtAKota.Text = "";
-            cbxProvinsi.SelectedIndex = -1;
-            txtKodePos.Text = "";
-            txtNoTlp.Text = "";
-            txtJabatan.Text = "";
-            txtUsername.Text = "";
-            txtPassword.Text = "";
+            ClearInputFields();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -227,7 +210,6 @@ namespace PeminjamanInventaris
                             if (rowsAffected > 0)
                             {
                                 MessageBox.Show("Data berhasil diperbarui.");
-                                refreshForm();
                             }
                             else
                             {
@@ -309,7 +291,6 @@ namespace PeminjamanInventaris
                                 if (rowsAffected > 0)
                                 {
                                     MessageBox.Show("Data berhasil dihapus.");
-                                    refreshForm();
                                 }
                                 else
                                 {

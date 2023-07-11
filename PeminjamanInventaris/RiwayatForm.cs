@@ -44,27 +44,25 @@ namespace PeminjamanInventaris
                     INNER JOIN Peminjam PM ON PJM.id_peminjam = PM.id_peminjam
             ";
 
-            // Membuat adapter dan dataset
+            // Create an adapter and dataset
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-            DataTable dataTable = new DataTable();
+            DataSet dataSet = new DataSet();
 
-            // Mengisi DataTable dengan data dari adapter
-            adapter.Fill(dataTable);
+            // Fill the dataset with data from the adapter
+            adapter.Fill(dataSet);
 
-            // Menambahkan kolom ke DataGridView
-            dataGridView1.Columns.Add("id_peminjaman", "ID Peminjaman");
-            dataGridView1.Columns.Add("tanggal_peminjaman", "Tanggal Peminjaman");
-            dataGridView1.Columns.Add("tanggal_pengembalian_harus", "Tanggal Pengembalian Harus");
-            dataGridView1.Columns.Add("tanggal_pengembalian", "Tanggal Pengembalian");
-            dataGridView1.Columns.Add("id_surat", "ID Surat");
-            dataGridView1.Columns.Add("nama_peminjam", "Nama Peminjam");
-            dataGridView1.Columns.Add("alamat_peminjam", "Alamat Peminjam");
+            // Set the dataset as the data source for the DataGridView
+            dataGridViewRiwayat.DataSource = dataSet.Tables[0];
 
-            // Menampilkan data dalam DataGridView
-            foreach (DataRow row in dataTable.Rows)
-            {
-                dataGridView1.Rows.Add(row["id_peminjaman"], row["tanggal_peminjaman"], row["tanggal_pengembalian_harus"], row["tanggal_pengembalian"], row["id_surat"], row["nama_peminjam"], row["alamat_peminjam"]);
-            }
+            // Change the header column names
+            dataGridViewRiwayat.Columns["id_peminjaman"].HeaderText = "ID Peminjaman";
+            dataGridViewRiwayat.Columns["tanggal_peminjaman"].HeaderText = "Tanggal Peminjaman";
+            dataGridViewRiwayat.Columns["tanggal_pengembalian_harus"].HeaderText = "Tanggal Pengembalian Harus";
+            dataGridViewRiwayat.Columns["tanggal_pengembalian"].HeaderText = "Tanggal Pengembalian";
+            dataGridViewRiwayat.Columns["id_surat"].HeaderText = "ID Surat";
+            dataGridViewRiwayat.Columns["nama_peminjam"].HeaderText = "Nama Peminjam";
+            dataGridViewRiwayat.Columns["alamat_peminjam"].HeaderText = "Alamat Peminjam";
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

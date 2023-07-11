@@ -49,12 +49,14 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBarang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBack
@@ -107,11 +109,11 @@
             // 
             this.dataGridViewBarang.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridViewBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBarang.Location = new System.Drawing.Point(644, 190);
+            this.dataGridViewBarang.Location = new System.Drawing.Point(635, 223);
             this.dataGridViewBarang.Name = "dataGridViewBarang";
             this.dataGridViewBarang.RowHeadersWidth = 5;
             this.dataGridViewBarang.RowTemplate.Height = 28;
-            this.dataGridViewBarang.Size = new System.Drawing.Size(610, 500);
+            this.dataGridViewBarang.Size = new System.Drawing.Size(610, 512);
             this.dataGridViewBarang.TabIndex = 89;
             this.dataGridViewBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBarang_CellContentClick);
             // 
@@ -175,7 +177,7 @@
             // 
             this.labelBarang.AutoSize = true;
             this.labelBarang.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBarang.Location = new System.Drawing.Point(512, 30);
+            this.labelBarang.Location = new System.Drawing.Point(504, 44);
             this.labelBarang.Name = "labelBarang";
             this.labelBarang.Size = new System.Drawing.Size(239, 114);
             this.labelBarang.TabIndex = 83;
@@ -233,13 +235,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
             this.groupBox1.Controls.Add(this.labelNamaBarang);
             this.groupBox1.Controls.Add(this.labelJumlah);
             this.groupBox1.Controls.Add(this.cbxKategori);
             this.groupBox1.Controls.Add(this.txtNamaBarang);
             this.groupBox1.Controls.Add(this.labelKategori);
             this.groupBox1.Controls.Add(this.txtJumlah);
-            this.groupBox1.Location = new System.Drawing.Point(28, 178);
+            this.groupBox1.Location = new System.Drawing.Point(22, 211);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(581, 172);
             this.groupBox1.TabIndex = 94;
@@ -250,7 +253,7 @@
             // 
             this.groupBox2.Controls.Add(this.txtIB);
             this.groupBox2.Controls.Add(this.labelIDB);
-            this.groupBox2.Location = new System.Drawing.Point(28, 436);
+            this.groupBox2.Location = new System.Drawing.Point(22, 469);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(581, 100);
             this.groupBox2.TabIndex = 95;
@@ -266,7 +269,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnClear, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(28, 356);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 389);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -280,7 +283,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.btnSearch, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnDelete, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(31, 542);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(22, 575);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -293,25 +296,36 @@
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.btnBack, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(34, 619);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(22, 652);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(575, 71);
             this.tableLayoutPanel3.TabIndex = 98;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.labelBarang);
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Controls.Add(this.tableLayoutPanel2);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.tableLayoutPanel3);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1254, 817);
+            this.panel1.TabIndex = 99;
+            // 
             // BarangForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 744);
-            this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(1278, 844);
             this.Controls.Add(this.dataGridViewBarang);
-            this.Controls.Add(this.labelBarang);
+            this.Controls.Add(this.panel1);
             this.Name = "BarangForm";
             this.Text = "BarangForm";
             this.Load += new System.EventHandler(this.BarangForm_Load);
@@ -323,8 +337,9 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -351,5 +366,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Panel panel1;
     }
 }

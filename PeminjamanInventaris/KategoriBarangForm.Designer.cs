@@ -45,12 +45,14 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKatBarang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClear
@@ -81,7 +83,7 @@
             // 
             this.labelBarang.AutoSize = true;
             this.labelBarang.Font = new System.Drawing.Font("Girlie", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBarang.Location = new System.Drawing.Point(425, 19);
+            this.labelBarang.Location = new System.Drawing.Point(388, 64);
             this.labelBarang.Name = "labelBarang";
             this.labelBarang.Size = new System.Drawing.Size(456, 114);
             this.labelBarang.TabIndex = 56;
@@ -134,7 +136,7 @@
             // 
             this.dataGridViewKatBarang.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridViewKatBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKatBarang.Location = new System.Drawing.Point(646, 161);
+            this.dataGridViewKatBarang.Location = new System.Drawing.Point(643, 264);
             this.dataGridViewKatBarang.Name = "dataGridViewKatBarang";
             this.dataGridViewKatBarang.RowHeadersWidth = 62;
             this.dataGridViewKatBarang.RowTemplate.Height = 28;
@@ -189,7 +191,7 @@
             // 
             this.groupBox1.Controls.Add(this.labelNamaBarang);
             this.groupBox1.Controls.Add(this.txtNamaKatBarang);
-            this.groupBox1.Location = new System.Drawing.Point(33, 161);
+            this.groupBox1.Location = new System.Drawing.Point(18, 250);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(581, 95);
             this.groupBox1.TabIndex = 95;
@@ -200,7 +202,7 @@
             // 
             this.groupBox2.Controls.Add(this.txtIDKat);
             this.groupBox2.Controls.Add(this.labelIDB);
-            this.groupBox2.Location = new System.Drawing.Point(33, 342);
+            this.groupBox2.Location = new System.Drawing.Point(18, 431);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(581, 95);
             this.groupBox2.TabIndex = 96;
@@ -216,7 +218,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnClear, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnUpdate, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(33, 262);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(18, 351);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -230,7 +232,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.btnDelete, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnSearch, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(33, 443);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(18, 532);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -243,26 +245,36 @@
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.btnBack, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(33, 520);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(18, 609);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(581, 71);
             this.tableLayoutPanel3.TabIndex = 99;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.labelBarang);
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Controls.Add(this.tableLayoutPanel2);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.tableLayoutPanel3);
+            this.panel1.Location = new System.Drawing.Point(12, 14);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1254, 817);
+            this.panel1.TabIndex = 100;
+            // 
             // KategoriBarangForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1278, 644);
-            this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1278, 844);
             this.Controls.Add(this.dataGridViewKatBarang);
-            this.Controls.Add(this.labelBarang);
+            this.Controls.Add(this.panel1);
             this.Name = "KategoriBarangForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kategori Barang";
@@ -275,8 +287,9 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -299,5 +312,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Panel panel1;
     }
 }

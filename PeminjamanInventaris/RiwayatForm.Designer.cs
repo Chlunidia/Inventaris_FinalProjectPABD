@@ -28,37 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewRiwayat = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRiwayat)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewRiwayat
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 90);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1208, 534);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridViewRiwayat.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridViewRiwayat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRiwayat.Location = new System.Drawing.Point(28, 110);
+            this.dataGridViewRiwayat.Name = "dataGridViewRiwayat";
+            this.dataGridViewRiwayat.RowHeadersWidth = 62;
+            this.dataGridViewRiwayat.RowTemplate.Height = 28;
+            this.dataGridViewRiwayat.Size = new System.Drawing.Size(1208, 534);
+            this.dataGridViewRiwayat.TabIndex = 0;
+            this.dataGridViewRiwayat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 14);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1254, 817);
+            this.panel1.TabIndex = 100;
             // 
             // RiwayatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 744);
-            this.Controls.Add(this.dataGridView1);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(1278, 844);
+            this.Controls.Add(this.dataGridViewRiwayat);
+            this.Controls.Add(this.panel1);
             this.Name = "RiwayatForm";
             this.Text = "RiwayatForm";
             this.Load += new System.EventHandler(this.RiwayatForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRiwayat)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewRiwayat;
+        private System.Windows.Forms.Panel panel1;
     }
 }

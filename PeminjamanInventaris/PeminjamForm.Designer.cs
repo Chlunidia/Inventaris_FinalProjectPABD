@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridViewPeminjam = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjam)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,12 +43,22 @@
             this.dataGridViewPeminjam.Size = new System.Drawing.Size(1164, 451);
             this.dataGridViewPeminjam.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 14);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1254, 817);
+            this.panel1.TabIndex = 100;
+            // 
             // PeminjamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 894);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1278, 844);
             this.Controls.Add(this.dataGridViewPeminjam);
+            this.Controls.Add(this.panel1);
             this.Name = "PeminjamForm";
             this.Text = "PeminjamForm";
             this.Load += new System.EventHandler(this.PeminjamForm_Load);
@@ -59,5 +70,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewPeminjam;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -318,44 +318,69 @@ namespace PeminjamanInventaris
 
         private void btnSurat_Click(object sender, EventArgs e)
         {
-            // Get the selected row from the data grid view
-            if (dataGridViewPeminjaman.SelectedRows.Count > 0)
+            string idPeminjaman = txtIDPeminjaman.Text.Trim();
+
+            if (!string.IsNullOrEmpty(idPeminjaman))
             {
-                DataGridViewRow selectedRow = dataGridViewPeminjaman.SelectedRows[0];
+                using (SqlConnection connection = new SqlConnection(stringConnection))
+                {
+                    connection.Open();
 
-                // Get the values from the selected row
-                string idPeminjaman = selectedRow.Cells["id_peminjaman"].Value.ToString();
-                string namaPetugas = selectedRow.Cells["nama_petugas"].Value.ToString();
-                string namaPeminjam = selectedRow.Cells["nama_peminjam"].Value.ToString();
-                string namaBarang = selectedRow.Cells["nama_barang"].Value.ToString();
-                string statusPeminjaman = selectedRow.Cells["status_peminjaman"].Value.ToString();
-                DateTime tanggalPeminjaman = Convert.ToDateTime(selectedRow.Cells["tanggal_peminjaman"].Value);
-                DateTime tanggalPengembalianHarus = Convert.ToDateTime(selectedRow.Cells["tanggal_pengembalian_harus"].Value);
-                DateTime tanggalPengembalian = Convert.ToDateTime(selectedRow.Cells["tanggal_pengembalian"].Value);
+                    string query = @"SELECT p.id_peminjaman, pt.nama_petugas, pm.nama_peminjam, b.nama_barang, p.status_peminjaman, p.tanggal_peminjaman, p.tanggal_pengembalian_harus, p.tanggal_pengembalian
+                             FROM Peminjaman p
+                             INNER JOIN Peminjam pm ON p.id_peminjam = pm.id_peminjam
+                             INNER JOIN Barang b ON p.id_barang = b.id_barang
+                             INNER JOIN Petugas pt ON p.id_petugas = pt.id_petugas
+                             WHERE p.id_peminjaman = @idPeminjaman";
 
-                // Generate unique ID for id_surat
-                string idSurat = GenerateUniqueIDSurat();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@idPeminjaman", idPeminjaman);
 
-                // Create an instance of SuratPeminjamanForm
-                SuratPeminjamanForm suratPeminjaman = new SuratPeminjamanForm();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string idPeminjamanResult = reader["id_peminjaman"].ToString();
+                                string namaPetugas = reader["nama_petugas"].ToString();
+                                string namaPeminjam = reader["nama_peminjam"].ToString();
+                                string namaBarang = reader["nama_barang"].ToString();
+                                string statusPeminjaman = reader["status_peminjaman"].ToString();
+                                DateTime tanggalPeminjaman = Convert.ToDateTime(reader["tanggal_peminjaman"]);
+                                DateTime tanggalPengembalianHarus = Convert.ToDateTime(reader["tanggal_pengembalian_harus"]);
+                                DateTime tanggalPengembalian = Convert.ToDateTime(reader["tanggal_pengembalian"]);
 
-                // Set the values of the properties in SuratPeminjamanForm
-                suratPeminjaman.IdSurat = idSurat;
-                suratPeminjaman.IdPeminjaman = idPeminjaman; // Pass id_peminjaman as well
-                suratPeminjaman.NamaPetugas = namaPetugas;
-                suratPeminjaman.NamaPeminjam = namaPeminjam;
-                suratPeminjaman.NamaBarang = namaBarang;
-                suratPeminjaman.StatusPeminjaman = statusPeminjaman;
-                suratPeminjaman.TanggalPeminjaman = tanggalPeminjaman;
-                suratPeminjaman.TanggalPengembalianHarus = tanggalPengembalianHarus;
-                suratPeminjaman.TanggalPengembalian = tanggalPengembalian;
+                                // Generate unique ID for id_surat
+                                string idSurat = GenerateUniqueIDSurat();
 
-                // Show the SuratPeminjamanForm
-                suratPeminjaman.Show();
+                                // Create an instance of SuratPeminjamanForm
+                                SuratPeminjamanForm suratPeminjaman = new SuratPeminjamanForm();
+
+                                // Set the values of the properties in SuratPeminjamanForm
+                                suratPeminjaman.IdSurat = idSurat;
+                                suratPeminjaman.IdPeminjaman = idPeminjamanResult; // Pass id_peminjaman as well
+                                suratPeminjaman.NamaPetugas = namaPetugas;
+                                suratPeminjaman.NamaPeminjam = namaPeminjam;
+                                suratPeminjaman.NamaBarang = namaBarang;
+                                suratPeminjaman.StatusPeminjaman = statusPeminjaman;
+                                suratPeminjaman.TanggalPeminjaman = tanggalPeminjaman;
+                                suratPeminjaman.TanggalPengembalianHarus = tanggalPengembalianHarus;
+                                suratPeminjaman.TanggalPengembalian = tanggalPengembalian;
+
+                                // Show the SuratPeminjamanForm
+                                suratPeminjaman.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Data peminjaman tidak ditemukan.");
+                            }
+                        }
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("Please select a row to generate the surat peminjaman.");
+                MessageBox.Show("Please enter an ID peminjaman.");
             }
         }
         private string GenerateUniqueIDSurat()

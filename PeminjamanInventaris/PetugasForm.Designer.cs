@@ -63,6 +63,7 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPetugas)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -504,7 +505,7 @@
             this.groupBox1.Size = new System.Drawing.Size(603, 100);
             this.groupBox1.TabIndex = 110;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Cari Data Petugas";
             // 
             // tableLayoutPanel3
             // 
@@ -520,12 +521,21 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(554, 52);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 14);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1254, 817);
+            this.panel1.TabIndex = 111;
+            // 
             // PetugasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1278, 754);
+            this.ClientSize = new System.Drawing.Size(1278, 844);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tableLayoutPanel6);
@@ -534,6 +544,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridViewPetugas);
             this.Controls.Add(this.labelPetugas);
+            this.Controls.Add(this.panel1);
             this.Name = "PetugasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Petugas";
@@ -590,5 +601,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Panel panel1;
     }
 }
