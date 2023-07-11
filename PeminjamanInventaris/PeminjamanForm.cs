@@ -380,7 +380,7 @@ namespace PeminjamanInventaris
             }
             else
             {
-                MessageBox.Show("Please enter an ID peminjaman.");
+                MessageBox.Show("Masukkan ID peminjaman.");
             }
         }
         private string GenerateUniqueIDSurat()

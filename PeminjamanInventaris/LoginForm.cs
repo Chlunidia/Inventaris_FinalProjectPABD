@@ -42,7 +42,7 @@ namespace PeminjamanInventaris
                         if (count > 0)
                         {
                             // Login successful
-                            MessageBox.Show("Login successful!");
+                            MessageBox.Show("Berhasil login!");
                             MainMenuForm mainMenu = new MainMenuForm();
                             mainMenu.Show();
                             this.Hide();
@@ -50,13 +50,13 @@ namespace PeminjamanInventaris
                         else
                         {
                             // Login failed
-                            MessageBox.Show("Invalid username or password.");
+                            MessageBox.Show("Username atau password salah.");
                         }
                     }
                 }
                 catch (SqlException ex)
                 {
-                    string errorMessage = "Error connecting to the database:\n";
+                    string errorMessage = "Gagal terhubung dengan database:\n";
                     foreach (SqlError error in ex.Errors)
                     {
                         errorMessage += "Message: " + error.Message + "\n";
