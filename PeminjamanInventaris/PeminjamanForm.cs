@@ -13,33 +13,26 @@ namespace PeminjamanInventaris
 {
     public partial class PeminjamanForm : Form
     {
-        private string stringConnection = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;Integrated Security=True;User=sa;Password=Chluni2350719";
         private SqlConnection connection;
         private SqlCommand command;
         private SqlDataAdapter adapter;
+
+        private string stringConnection = "Data Source=CHLUNIDIA;Initial Catalog=inventaris;Integrated Security=True;User=sa;Password=Chluni2350719";
         public PeminjamanForm()
         {
             InitializeComponent();
             connection = new SqlConnection(stringConnection);
             dataGridView();
-            LoadBarangData();
-            LoadPeminjamData();
             LoadPetugasData();
+            LoadBarangData();
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            MainMenuForm mainMenu = new MainMenuForm();
-            mainMenu.Show();
+            MainMenuForm mainMenuForm = new MainMenuForm();
+            mainMenuForm.Show();
             this.Hide();
-        }
-
-        private void PeminjamanForm_Load(object sender, EventArgs e)
-        {
-            cbxStatus.Items.Add("Dipinjam");
-            cbxStatus.Items.Add("Dikembalikan");
-            cbxStatus.Items.Add("Terlambat");
-            cbxStatus.SelectedIndex = 0;
         }
 
         private void dataGridView()
@@ -59,32 +52,29 @@ namespace PeminjamanInventaris
             }
         }
 
-        private void LoadPeminjamData()
+        private void ClearInputFields()
         {
-            try
-            {
-                connection.Open();
+            txtPeminjam.Text = "";
+            txtJalan.Text = "";
+            txtKota.Text = "";
+            cbxProvinsi.SelectedIndex = -1;
+            txtKodePos.Text = "";
+            txtNoTlp.Text = "";
+            txtOrganisasi.Text = "";
+            cbxBarang.SelectedIndex = -1;
+            cbxPetugas.SelectedIndex = -1;
+            cbxStatus.SelectedIndex = -1;
+            datePeminjaman.Value = DateTime.Now;
+            datePHarus.Value = DateTime.Now;
+            datePengembalian.Value = DateTime.Now;
+        }
 
-                string query = "SELECT id_peminjam, nama_peminjam FROM Peminjam";
-                command = new SqlCommand(query, connection);
-                DataTable peminjam = new DataTable();
-
-                adapter = new SqlDataAdapter(command);
-                adapter.Fill(peminjam);
-
-                cbxNamaPeminjam.DisplayMember = "nama_peminjam";
-                cbxNamaPeminjam.ValueMember = "id_peminjam";
-
-                cbxNamaPeminjam.DataSource = peminjam;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+        private void PeminjamanForm_Load(object sender, EventArgs e)
+        {
+            cbxStatus.Items.Add("Dipinjam");
+            cbxStatus.Items.Add("Dikembalikan");
+            cbxStatus.Items.Add("Terlambat");
+            cbxStatus.SelectedIndex = 0;
         }
 
         private void LoadBarangData()
@@ -109,10 +99,8 @@ namespace PeminjamanInventaris
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            finally
-            {
-                connection.Close();
-            }
+            finally { connection.Close(); }
+            
         }
 
         private void LoadPetugasData()
@@ -137,79 +125,114 @@ namespace PeminjamanInventaris
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            finally
-            {
-                connection.Close();
-            }
+            finally { connection.Close(); }
+
+        }
+        private void txtOrganisasi_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
-        private void ClearFields()
+        private void txtKota_TextChanged(object sender, EventArgs e)
         {
-            cbxNamaPeminjam.SelectedIndex = -1;
-            cbxBarang.SelectedIndex = -1;
-            cbxPetugas.SelectedIndex = -1;
-            cbxStatus.SelectedIndex = -1;
-            datePeminjaman.Value = DateTime.Now;
-            datePHarus.Value = DateTime.Now;
-            datePengembalian.Value = DateTime.Now;
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string idPeminjam = cbxNamaPeminjam.SelectedValue.ToString();
-            string idBarang = cbxBarang.SelectedValue.ToString();
-            string idPetugas = cbxPetugas.SelectedValue.ToString();
-            DateTime tanggalPeminjaman = datePeminjaman.Value;
-            DateTime tanggalPHarus = datePHarus.Value;
-            DateTime tanggalPengembalian = datePengembalian.Value;
-
             try
             {
-                connection.Open();
+                string namaPeminjam = txtPeminjam.Text;
+                string jalan = txtJalan.Text;
+                string kota = txtKota.Text;
+                string provinsi = cbxProvinsi.SelectedItem?.ToString();
+                string kodePos = txtKodePos.Text;
+                string noTlp = txtNoTlp.Text;
+                string organisasi = txtOrganisasi.Text;
+                string idBarang = cbxBarang.SelectedValue.ToString();
+                string idPetugas = cbxPetugas.SelectedValue.ToString();
+                DateTime tanggalPeminjaman = datePeminjaman.Value;
+                DateTime tanggalPHarus = datePHarus.Value;
+                DateTime tanggalPengembalian = datePengembalian.Value;
 
-                // Generate unique ID for peminjaman
-                string idPeminjaman = GenerateUniqueID(connection, idPeminjam);
-
-                string query = "INSERT INTO Peminjaman (id_peminjaman, id_peminjam, id_barang, id_petugas, status_peminjaman, tanggal_peminjaman, tanggal_pengembalian_harus, tanggal_pengembalian) " +
-                               "VALUES (@id_peminjaman, @idPeminjam, @idBarang, @idPetugas, @statusPeminjaman, @tanggalPeminjaman, @tanggalPHarus, @tanggalPengembalian)";
-                command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@id_peminjaman", idPeminjaman);
-                command.Parameters.AddWithValue("@idPeminjam", idPeminjam);
-                command.Parameters.AddWithValue("@idBarang", idBarang);
-                command.Parameters.AddWithValue("@idPetugas", idPetugas);
-                command.Parameters.AddWithValue("@statusPeminjaman", cbxStatus.SelectedItem.ToString());
-                command.Parameters.AddWithValue("@tanggalPeminjaman", tanggalPeminjaman);
-                command.Parameters.AddWithValue("@tanggalPHarus", tanggalPHarus);
-                command.Parameters.AddWithValue("@tanggalPengembalian", tanggalPengembalian);
-
-                int rowsAffected = command.ExecuteNonQuery();
-
-                if (rowsAffected > 0)
+                using (SqlConnection connection = new SqlConnection(stringConnection))
                 {
-                    MessageBox.Show("Data peminjaman berhasil ditambahkan.");
+                    connection.Open();
+                    // Membangkitkan ID petugas otomatis hanya jika tidak ada petugas dengan nama yang sama
+                    string idPeminjam = GenerateUniqueIDPeminjam(connection);
 
-                    // Refresh data grid view
-                    dataGridView();
+                    // Menyimpan data petugas ke dalam tabel
+                    string insertQuery = "INSERT INTO Peminjam (id_peminjam, nama_peminjam, jalan, kota, provinsi, kode_pos, no_tlp_peminjam, organisasi_asal) VALUES (@id_peminjam, @nama_peminjam, @jalan, @kota, @provinsi, @kodePos, @noTlp, @organisasi)";
+                    using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
+                    {
+                        insertCmd.Parameters.AddWithValue("@id_peminjam", idPeminjam);
+                        insertCmd.Parameters.AddWithValue("@nama_peminjam", namaPeminjam);
+                        insertCmd.Parameters.AddWithValue("@jalan", jalan);
+                        insertCmd.Parameters.AddWithValue("@kota", kota);
+                        insertCmd.Parameters.AddWithValue("@provinsi", provinsi);
+                        insertCmd.Parameters.AddWithValue("@kodePos", kodePos);
+                        insertCmd.Parameters.AddWithValue("@noTlp", noTlp);
+                        insertCmd.Parameters.AddWithValue("@organisasi", organisasi);
 
-                    // Clear input fields
-                    ClearFields();
+                        insertCmd.ExecuteNonQuery();
+                    }
+                    string idPeminjaman = GenerateUniqueIDPeminjaman(connection, idPeminjam);
+
+                    string query = "INSERT INTO Peminjaman (id_peminjaman, id_peminjam, id_barang, id_petugas, status_peminjaman, tanggal_peminjaman, tanggal_pengembalian_harus, tanggal_pengembalian) " +
+                                   "VALUES (@id_peminjaman, @idPeminjam, @idBarang, @idPetugas, @statusPeminjaman, @tanggalPeminjaman, @tanggalPHarus, @tanggalPengembalian)";
+                    command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@id_peminjaman", idPeminjaman);
+                    command.Parameters.AddWithValue("@idPeminjam", idPeminjam);
+                    command.Parameters.AddWithValue("@idBarang", idBarang);
+                    command.Parameters.AddWithValue("@idPetugas", idPetugas);
+                    command.Parameters.AddWithValue("@statusPeminjaman", cbxStatus.SelectedItem.ToString());
+                    command.Parameters.AddWithValue("@tanggalPeminjaman", tanggalPeminjaman);
+                    command.Parameters.AddWithValue("@tanggalPHarus", tanggalPHarus);
+                    command.Parameters.AddWithValue("@tanggalPengembalian", tanggalPengembalian);
+                    command.ExecuteNonQuery();
+                    connection.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Gagal menambahkan data peminjaman.");
-                }
+
+                MessageBox.Show("Data berhasil disimpan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                ClearInputFields();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                connection.Close();
-            }
+            ClearInputFields();
         }
 
-        private string GenerateUniqueID(SqlConnection connection, string nama)
+        private string GenerateUniqueIDPeminjam(SqlConnection connection)
+        {
+            string idPeminjam = "";
+            int count = 1;
+
+            while (true)
+            {
+                idPeminjam = "PJ" + count.ToString().PadLeft(4, '0');
+
+                // Mengecek apakah ID kategori barang sudah digunakan sebelumnya
+                string checkQuery = "SELECT COUNT(*) FROM Peminjam WHERE id_peminjam = @id_peminjam";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@id_peminjam", idPeminjam);
+                    int existingCount = (int)checkCmd.ExecuteScalar();
+                    if (existingCount == 0)
+                    {
+                        // ID unik ditemukan
+                        break;
+                    }
+                }
+
+                count++;
+            }
+
+            return idPeminjam;
+        }
+
+        private string GenerateUniqueIDPeminjaman(SqlConnection connection, string nama)
         {
             string idPeminjaman = "";
             int count = 1;
@@ -236,6 +259,12 @@ namespace PeminjamanInventaris
 
             return idPeminjaman;
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearInputFields();
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string idPeminjaman = txtIDPeminjaman.Text.Trim();
@@ -277,139 +306,14 @@ namespace PeminjamanInventaris
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            string idPeminjaman = txtIDPeminjaman.Text.Trim();
-
-            try
-            {
-                connection.Open();
-
-                // Cek apakah ID Peminjaman yang akan diupdate ada dalam database
-                string checkQuery = "SELECT COUNT(*) FROM Peminjaman WHERE id_peminjaman = @idPeminjaman";
-                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
-                {
-                    checkCmd.Parameters.AddWithValue("@idPeminjaman", idPeminjaman);
-                    int existingCount = (int)checkCmd.ExecuteScalar();
-                    if (existingCount == 0)
-                    {
-                        MessageBox.Show("ID Peminjaman tidak ditemukan.");
-                        return;
-                    }
-                }
-
-                // Tampung nilai-nilai baru dari kontrol input
-                string idPeminjam = cbxNamaPeminjam.SelectedValue.ToString();
-                string idBarang = cbxBarang.SelectedValue.ToString();
-                string idPetugas = cbxPetugas.SelectedValue.ToString();
-                DateTime tanggalPeminjaman = datePeminjaman.Value;
-                DateTime tanggalPHarus = datePHarus.Value;
-                DateTime tanggalPengembalian = datePengembalian.Value;
-
-                // Update data peminjaman
-                string query = @"UPDATE Peminjaman 
-                         SET id_peminjam = @idPeminjam, id_barang = @idBarang, id_petugas = @idPetugas, 
-                             status_peminjaman = @statusPeminjaman, tanggal_peminjaman = @tanggalPeminjaman, 
-                             tanggal_pengembalian_harus = @tanggalPHarus, tanggal_pengembalian = @tanggalPengembalian
-                         WHERE id_peminjaman = @idPeminjaman";
-
-                command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@idPeminjaman", idPeminjaman);
-                command.Parameters.AddWithValue("@idPeminjam", idPeminjam);
-                command.Parameters.AddWithValue("@idBarang", idBarang);
-                command.Parameters.AddWithValue("@idPetugas", idPetugas);
-                command.Parameters.AddWithValue("@statusPeminjaman", cbxStatus.SelectedItem.ToString());
-                command.Parameters.AddWithValue("@tanggalPeminjaman", tanggalPeminjaman);
-                command.Parameters.AddWithValue("@tanggalPHarus", tanggalPHarus);
-                command.Parameters.AddWithValue("@tanggalPengembalian", tanggalPengembalian);
-
-                int rowsAffected = command.ExecuteNonQuery();
-
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Data peminjaman berhasil diupdate.");
-
-                    // Refresh data grid view
-                    dataGridView();
-                }
-                else
-                {
-                    MessageBox.Show("Gagal mengupdate data peminjaman.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            ClearFields();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void PeminjamForm_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnDelete_Click_1(object sender, EventArgs e)
+        private void btnPinjam_Click(object sender, EventArgs e)
         {
-            string idPeminjaman = txtIDPeminjaman.Text.Trim();
 
-            try
-            {
-                connection.Open();
-
-                // Cek apakah ID Peminjaman yang akan dihapus ada dalam database
-                string checkQuery = "SELECT COUNT(*) FROM Peminjaman WHERE id_peminjaman = @idPeminjaman";
-                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
-                {
-                    checkCmd.Parameters.AddWithValue("@idPeminjaman", idPeminjaman);
-                    int existingCount = (int)checkCmd.ExecuteScalar();
-                    if (existingCount == 0)
-                    {
-                        MessageBox.Show("ID Peminjaman tidak ditemukan.");
-                        return;
-                    }
-                }
-
-                // Konfirmasi penghapusan data
-                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data peminjaman?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    // Hapus data peminjaman
-                    string query = "DELETE FROM Peminjaman WHERE id_peminjaman = @idPeminjaman";
-                    command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@idPeminjaman", idPeminjaman);
-
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Data peminjaman berhasil dihapus.");
-
-                        // Refresh data grid view
-                        dataGridView();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Gagal menghapus data peminjaman.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
         }
 
         private void btnSurat_Click(object sender, EventArgs e)
@@ -430,7 +334,7 @@ namespace PeminjamanInventaris
                 DateTime tanggalPengembalian = Convert.ToDateTime(selectedRow.Cells["tanggal_pengembalian"].Value);
 
                 // Generate unique ID for id_surat
-                string idSurat = GenerateUniqueID();
+                string idSurat = GenerateUniqueIDSurat();
 
                 // Create an instance of SuratPeminjamanForm
                 SuratPeminjamanForm suratPeminjaman = new SuratPeminjamanForm();
@@ -454,8 +358,7 @@ namespace PeminjamanInventaris
                 MessageBox.Show("Please select a row to generate the surat peminjaman.");
             }
         }
-
-        private string GenerateUniqueID()
+        private string GenerateUniqueIDSurat()
         {
             string idSurat = "";
             int count = 1;
@@ -487,6 +390,5 @@ namespace PeminjamanInventaris
 
             return idSurat;
         }
-
     }
 }

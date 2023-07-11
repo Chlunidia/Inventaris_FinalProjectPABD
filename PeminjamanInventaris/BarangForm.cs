@@ -47,11 +47,24 @@ namespace PeminjamanInventaris
             using (SqlConnection connection = new SqlConnection(stringConnection))
             {
                 connection.Open();
-                string query = "SELECT * FROM dbo.Barang;";
-                SqlDataAdapter da = new SqlDataAdapter(query, connection);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                dataGridViewBarang.DataSource = ds.Tables[0];
+                string query = @"SELECT Barang.id_barang, Barang.nama_barang, Barang.jumlah, Kategori_Barang.nama_kategori
+                                 FROM Barang
+                                 JOIN Kategori_Barang ON Barang.id_kat_barang = Kategori_Barang.id_kat_barang;";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                DataTable dataTable = new DataTable();
+
+                // Mengisi DataTable dengan data dari adapter
+                adapter.Fill(dataTable);
+                // Menambahkan kolom ke DataGridView
+                dataGridViewBarang.Columns.Add("id_barang", "ID Barang");
+                dataGridViewBarang.Columns.Add("nama_barang", "Nama Barang");
+                dataGridViewBarang.Columns.Add("jumlah", "Jumlah");
+                dataGridViewBarang.Columns.Add("nama_kategori", "Kategori Barang");
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    dataGridViewBarang.Rows.Add(row["id_barang"], row["nama_barang"], row["Jumlah"], row["nama_kategori"]);
+                }
+
             }
         }
 

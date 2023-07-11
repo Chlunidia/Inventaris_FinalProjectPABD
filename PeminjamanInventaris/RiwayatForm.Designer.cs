@@ -35,18 +35,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(64, 104);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 89);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1023, 469);
+            this.dataGridView1.Size = new System.Drawing.Size(1208, 534);
             this.dataGridView1.TabIndex = 0;
             // 
             // RiwayatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1138, 575);
+            this.ClientSize = new System.Drawing.Size(1278, 744);
             this.Controls.Add(this.dataGridView1);
             this.Name = "RiwayatForm";
             this.Text = "RiwayatForm";

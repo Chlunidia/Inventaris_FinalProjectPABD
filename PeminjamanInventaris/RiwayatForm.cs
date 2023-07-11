@@ -51,10 +51,6 @@ namespace PeminjamanInventaris
             // Mengisi DataTable dengan data dari adapter
             adapter.Fill(dataTable);
 
-            // Membersihkan DataGridView
-            dataGridView1.Rows.Clear();
-            dataGridView1.Columns.Clear();
-
             // Menambahkan kolom ke DataGridView
             dataGridView1.Columns.Add("id_peminjaman", "ID Peminjaman");
             dataGridView1.Columns.Add("tanggal_peminjaman", "Tanggal Peminjaman");
