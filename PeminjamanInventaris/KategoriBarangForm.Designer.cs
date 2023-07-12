@@ -138,7 +138,7 @@
             this.dataGridViewKatBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewKatBarang.Location = new System.Drawing.Point(631, 294);
             this.dataGridViewKatBarang.Name = "dataGridViewKatBarang";
-            this.dataGridViewKatBarang.RowHeadersWidth = 62;
+            this.dataGridViewKatBarang.RowHeadersWidth = 200;
             this.dataGridViewKatBarang.RowTemplate.Height = 28;
             this.dataGridViewKatBarang.Size = new System.Drawing.Size(600, 430);
             this.dataGridViewKatBarang.TabIndex = 90;

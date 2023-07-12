@@ -48,6 +48,13 @@ namespace PeminjamanInventaris
                 SqlDataAdapter da = new SqlDataAdapter(query, connection);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
+                dataGridViewPeminjaman.Columns["id_peminjaman"].HeaderText = "ID Peminjaman";
+                dataGridViewPeminjaman.Columns["nama_peminjam"].HeaderText = "Nama Peminjam";
+                dataGridViewPeminjaman.Columns["nama_petugas"].HeaderText = "Petugas";
+                dataGridViewPeminjaman.Columns["tanggal_peminjaman"].HeaderText = "Tanggal Peminjaman";
+                dataGridViewPeminjaman.Columns["tanggal_pengembalian_harus"].HeaderText = "Tanggal Pengembalian Harus";
+                dataGridViewPeminjaman.Columns["tanggal_pengembalian"].HeaderText = "Tanggal Pengembalian";
+                dataGridViewPeminjaman.Columns["status_peminjaman"].HeaderText = "Status Peminjaman";
                 dataGridViewPeminjaman.DataSource = ds.Tables[0];
             }
         }

@@ -41,6 +41,8 @@ namespace PeminjamanInventaris
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridViewKatBarang.DataSource = ds.Tables[0];
+            dataGridViewKatBarang.Columns["id_kat_barang"].HeaderText = "ID Kategori Barang";
+            dataGridViewKatBarang.Columns["nama_kategori"].HeaderText = "Kategori Barang";
             connection.Close();
         }
 

@@ -45,7 +45,7 @@ namespace PeminjamanInventaris
                 da.Fill(ds);
                 dataGridViewPetugas.DataSource = ds.Tables[0];
 
-                dataGridViewPetugas.Columns["id_petugas"].HeaderText = "ID";
+                dataGridViewPetugas.Columns["id_petugas"].HeaderText = "ID Petugas";
                 dataGridViewPetugas.Columns["nama_petugas"].HeaderText = "Nama";
                 dataGridViewPetugas.Columns["no_tlp_petugas"].HeaderText = "No. Telepon";
                 dataGridViewPetugas.Columns["jabatan"].HeaderText = "Jabatan";
