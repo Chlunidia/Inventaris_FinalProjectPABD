@@ -210,11 +210,7 @@ namespace PeminjamanInventaris
             try
             {
                 connection.Open();
-
-                // Retrieve the search keyword from a TextBox or any other input control
                 string idPengelolaan = txtIDP.Text;
-
-                // Perform the search query
                 string query = "SELECT * FROM Pengelolaan WHERE id_pengelolaan = @id_pengelolaan";
                 command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@id_pengelolaan", idPengelolaan);
@@ -222,8 +218,6 @@ namespace PeminjamanInventaris
                 DataTable searchResults = new DataTable();
                 adapter = new SqlDataAdapter(command);
                 adapter.Fill(searchResults);
-
-                // Bind the search results to the DataGridView
                 dataGridViewPengelolaan.DataSource = searchResults;
             }
             catch (Exception ex)
@@ -241,15 +235,10 @@ namespace PeminjamanInventaris
             try
             {
                 connection.Open();
-
-                // Retrieve the ID of the record to be deleted
                 string idPengelolaan = txtIDP.Text;
-
-                // Confirm with the user before deleting the record
-                DialogResult result = MessageBox.Show("Are you sure you want to delete this record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    // Perform the delete query
                     string query = "DELETE FROM Pengelolaan WHERE id_pengelolaan = @id_pengelolaan";
                     command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@id_pengelolaan", idPengelolaan);
@@ -257,14 +246,12 @@ namespace PeminjamanInventaris
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Record deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Data berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Record not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Data tidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-                    // Refresh the DataGridView after deletion
                     dataGridView();
                 }
             }

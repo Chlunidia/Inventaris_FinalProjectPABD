@@ -61,5 +61,30 @@ namespace PeminjamanInventaris
             mainMenuForm.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string keyword = txtIDPeminjaman.Text;
+
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+                string query = @"SELECT Peminjaman.id_peminjaman, Peminjam.nama_peminjam, Barang.nama_barang, Petugas.nama_petugas, Peminjaman.tanggal_peminjaman, Peminjaman.tanggal_pengembalian, Peminjaman.status_peminjaman
+                         FROM Peminjaman
+                         JOIN Peminjam ON Peminjaman.id_peminjam = Peminjam.id_peminjam
+                         JOIN Barang ON Peminjaman.id_barang = Barang.id_barang
+                         JOIN Petugas ON Peminjaman.id_petugas = Petugas.id_petugas
+                         WHERE Peminjaman.id_peminjaman LIKE '%' + @keyword + '%'
+                            OR Peminjam.nama_peminjam LIKE '%' + @keyword + '%'
+                            OR Barang.nama_barang LIKE '%' + @keyword + '%'
+                            OR Petugas.nama_petugas LIKE '%' + @keyword + '%';";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, connection);
+                da.SelectCommand.Parameters.AddWithValue("@keyword", keyword);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dataGridViewRiwayat.DataSource = ds.Tables[0];
+            }
+        }
     }
 }

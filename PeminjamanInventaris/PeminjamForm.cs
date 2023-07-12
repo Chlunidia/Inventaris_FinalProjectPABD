@@ -52,27 +52,16 @@ namespace PeminjamanInventaris
                 using (SqlConnection connection = new SqlConnection(stringConnection))
                 {
                     connection.Open();
-
-                    // Get the search keyword from the text box
                     string keyword = txtNama.Text.Trim();
-
-                    // Create the SQL query with a parameterized WHERE clause to search for matching records
                     string query = @"SELECT id_peminjam, nama_peminjam, no_tlp_peminjam, organisasi_asal, alamat_peminjam
                              FROM Peminjam
                              WHERE nama_peminjam LIKE '%' + @keyword + '%';";
-
-                    // Create a SqlCommand object with the query and connection
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        // Set the value of the parameter
                         command.Parameters.AddWithValue("@keyword", keyword);
-
-                        // Create a SqlDataAdapter to execute the query and fill the DataTable
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
-
-                        // Bind the DataTable to the DataGridView to display the search results
                         dataGridViewPeminjam.DataSource = dataTable;
                     }
                 }
