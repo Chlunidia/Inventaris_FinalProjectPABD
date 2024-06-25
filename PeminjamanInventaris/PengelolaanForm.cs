@@ -174,7 +174,7 @@ namespace PeminjamanInventaris
 
             while (true)
             {
-                idPengelolaan = "IP" + count.ToString().PadLeft(4, '0');
+                idPengelolaan = "PL" + count.ToString().PadLeft(4, '0');
 
                 // Mengecek apakah ID kategori barang sudah digunakan sebelumnya
                 string checkQuery = "SELECT COUNT(*) FROM Pengelolaan WHERE id_pengelolaan = @id_pengelolaan";

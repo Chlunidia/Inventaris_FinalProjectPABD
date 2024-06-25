@@ -220,7 +220,7 @@ namespace PeminjamanInventaris
 
             while (true)
             {
-                idPeminjam = "PJ" + count.ToString().PadLeft(4, '0');
+                idPeminjam = "PM" + count.ToString().PadLeft(4, '0');
 
                 // Mengecek apakah ID kategori barang sudah digunakan sebelumnya
                 string checkQuery = "SELECT COUNT(*) FROM Peminjam WHERE id_peminjam = @id_peminjam";
@@ -248,7 +248,7 @@ namespace PeminjamanInventaris
 
             while (true)
             {
-                idPeminjaman = "PM" + count.ToString().PadLeft(4, '0');
+                idPeminjaman = "PJ" + count.ToString().PadLeft(4, '0');
 
                 // Mengecek apakah ID kategori barang sudah digunakan sebelumnya
                 string checkQuery = "SELECT COUNT(*) FROM Peminjaman WHERE id_peminjaman = @id_peminjaman";

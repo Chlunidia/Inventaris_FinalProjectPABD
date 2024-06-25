@@ -112,7 +112,7 @@ namespace PeminjamanInventaris
 
             while (true)
             {
-                idKatBarang = "IK" + count.ToString().PadLeft(4, '0');
+                idKatBarang = "KB" + count.ToString().PadLeft(4, '0');
 
                 // Mengecek apakah ID kategori barang sudah digunakan sebelumnya
                 string checkQuery = "SELECT COUNT(*) FROM Kategori_Barang WHERE id_kat_barang = @id_kat_barang";
